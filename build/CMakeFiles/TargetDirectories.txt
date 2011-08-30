@@ -1,0 +1,1 @@
+/home/lolcio/safarix/build/src/CMakeFiles/game.dir

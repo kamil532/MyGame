@@ -1,0 +1,36 @@
+#ifndef SPRITEGRID_HPP
+#define SPRITEGRID_HPP
+#include "Heders.hpp"
+#include "Level.hpp"
+#include "Sprite.hpp"
+
+class SpriteGrid{
+public:
+    explicit SpriteGrid();
+    void SetLevel( LevelPtr );
+    void Draw() const;
+    void StoreSprite(FT::FieldType, SpritePtr);
+    bool DeleteGrid(SDL_Rect Rect){
+	  int x=(Rect.x-CORNER_X)/TILE_SIZE;
+	  int y=(Rect.y-CORNER_Y)/TILE_SIZE;
+	 if(x>=0 && y>=0)
+	  m_grid.at(y).at(x).reset();      
+    }  
+    
+private:
+   void SetSprite(size_t x,size_t y,SpritePtr sprite, FT::FieldType Ft){
+        m_grid.at(y).at(x) = sprite;
+	m_grid[y][x]->SetType(Ft);;
+    }
+    
+private: 
+
+    std::vector<SpritePtr> m_sprites;  
+    std::vector< std::vector< SpritePtr > > m_grid;
+    LevelPtr m_level;
+    ushort m_level_width;
+    ushort m_level_height;
+
+};
+
+#endif
