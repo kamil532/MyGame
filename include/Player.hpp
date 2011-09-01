@@ -4,10 +4,12 @@
 #include "Sprite.hpp"
 #include "SpriteGrid.hpp"
 #include "Engine.hpp"
+#include "ProgressBar.hpp"
 
 class Player{
 public:
     explicit Player();
+    
     void Draw() const;
     void Update( double );  
     void GoLeft() {
@@ -66,8 +68,6 @@ private:
         return m_y + m_vy * dt * m_running_factor;
       }     
      void CorectPos(float& x, float& y);
-     void IncreaseLive(double);
-     void DecreaseLive();
      
 private:  
       float m_x;
@@ -76,15 +76,7 @@ private:
       float m_vx;
       float m_vy;
       float m_running_factor;
-      
-      SpritePtr m_live_border;
-      
-      SpritePtr m_live_background;
-      double m_live_time;
-      float m_live_mount;
-      ushort m_live_width;
-      short m_live_accumulator;
-      
+      ProgressBarPtr m_progressBar;     
       
       SpriteGrid* m_grid; //adres obiektu nalezacego do engine  
       map<PS::PlayerState, SpritePtr > m_sprites;

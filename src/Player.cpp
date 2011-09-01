@@ -1,5 +1,29 @@
 #include "Player.hpp"
 
+Player::Player():m_x(PLAYER_X), m_y(PLAYER_Y),m_state(PS::Stand),m_vx(0.0f), 
+m_vy(0.0f), m_running_factor(1.0f){
+
+    m_sprites.insert(std::make_pair(PS::Stand,
+                                    *(new SpritePtr(new Sprite("stand")))));
+
+    m_sprites.insert(std::make_pair(PS::GoLeft,
+                                    *(new SpritePtr(new Sprite("goLeft")))));
+
+    m_sprites.insert(std::make_pair(PS::GoRight,
+                                    *(new SpritePtr(new Sprite("goRight")))));
+
+    m_sprites.insert(std::make_pair(PS::GoUp,
+                                    *(new SpritePtr(new Sprite("goUp")))));
+
+    m_sprites.insert(std::make_pair(PS::GoDown,
+                                    *(new SpritePtr(new Sprite("goDown")))));
+  
+    SDL_Rect ProgressRamka={110,40,130,30};
+    SDL_Rect ProgressWypelnienie={112,42,122,20};    
+    m_progressBar.reset(new ProgressBar(ProgressWypelnienie,ProgressRamka));
+   
+}
+
 void Player::CorectPos(float& next_x, float& next_y){
     //Funkcja zmienia polozenie postaci
     //tak aby latwiej bylo skrecic
@@ -118,9 +142,7 @@ void Player::Update(double dt) {
 
   //Sprawdzanie czy player nie odnalazl czegos
   tmp.x=next_x+10; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35;
- if( Engine::Get().GetTreasure()->CheckScore(tmp)){
-      m_live_width+=10;
-   
+ if( Engine::Get().GetTreasure()->CheckScore(tmp)){  
    
 }
 
@@ -128,50 +150,17 @@ void Player::Update(double dt) {
     m_x = next_x;
     m_y = next_y;
     
-    IncreaseLive(dt);
+
     
    //aktualizacja sprita, ktory jest aktualnie 
    m_sprites.find(m_state)->second->Update( dt );
-}
-
-Player::Player():m_x(PLAYER_X), m_y(PLAYER_Y),m_state(PS::Stand),
-        m_vx(0.0f), m_vy(0.0f), m_running_factor(1.0f),
-        m_live_mount(1), m_live_width(120),m_live_accumulator(0){
-
-    m_sprites.insert(std::make_pair(PS::Stand,
-                                    *(new SpritePtr(new Sprite("stand")))));
-
-    m_sprites.insert(std::make_pair(PS::GoLeft,
-                                    *(new SpritePtr(new Sprite("goLeft")))));
-
-    m_sprites.insert(std::make_pair(PS::GoRight,
-                                    *(new SpritePtr(new Sprite("goRight")))));
-
-    m_sprites.insert(std::make_pair(PS::GoUp,
-                                    *(new SpritePtr(new Sprite("goUp")))));
-
-    m_sprites.insert(std::make_pair(PS::GoDown,
-                                    *(new SpritePtr(new Sprite("goDown")))));
-  
-   m_live_border.reset(new Sprite("livebar",
-	0.1 * Engine::Get().GetScreenWidth(), 40 )); 
-   
-   m_live_background.reset(new Sprite("livebarback",
-	0.1 * Engine::Get().GetScreenWidth() + 5, 40 ));
-    
-   m_live_background->SetWidth( m_live_width);
-   
 }
 
 void Player::Draw() const {
     if (m_sprites.find(m_state) !=m_sprites.end()) ;
     else throw ("[Critical] Player state not found");
     m_sprites.find(m_state)->second->Draw( m_x, m_y );
-    
-    //rysowanie ramki livebaru i wypelnienia
-    //wypelnienie okreslone na podstawie ilosci zycia
-    m_live_background->Draw();  
-    m_live_border->Draw();    
+    m_progressBar->Draw();     
 }
 
 void Player::StopState() {
@@ -193,28 +182,3 @@ void Player::StopState() {
       }
 }
 
-void Player::IncreaseLive(double Time){
- 
-  m_live_time+=Time;
-  
-  if( m_live_time > 0.9 && m_live_mount >= 0.05 ) {
-    m_live_time-=0.9;
-    m_live_mount-=0.01; 
-    m_live_accumulator += m_live_width - (m_live_width * m_live_mount);    
-
-  }
-  
-      if(m_live_accumulator > 0){
-      --m_live_accumulator;
-      --m_live_width;      
-      m_live_background->SetWidth( m_live_width);
-    } 
-    
-  
-    
-}
-
-void Player::DecreaseLive(){
-  
-  
-}

@@ -10,6 +10,18 @@
 Heders.hpp
 ../include/Heders.hpp
 
+../include/App.hpp
+Heders.hpp
+../include/Heders.hpp
+Engine.hpp
+../include/Engine.hpp
+Level.hpp
+../include/Level.hpp
+SpriteGrid.hpp
+../include/SpriteGrid.hpp
+Player.hpp
+../include/Player.hpp
+
 ../include/Consts.hpp
 Heders.hpp
 ../include/Heders.hpp
@@ -56,6 +68,18 @@ Consts.hpp
 Heders.hpp
 ../include/Heders.hpp
 
+../include/Player.hpp
+Heders.hpp
+../include/Heders.hpp
+Sprite.hpp
+../include/Sprite.hpp
+SpriteGrid.hpp
+../include/SpriteGrid.hpp
+Engine.hpp
+../include/Engine.hpp
+ProgressBar.hpp
+../include/ProgressBar.hpp
+
 ../include/ProgressBar.hpp
 Heders.hpp
 ../include/Heders.hpp
@@ -96,7 +120,25 @@ SpriteGrid.hpp
 Heders.hpp
 ../include/Heders.hpp
 
+/home/lolcio/safarix/src/App.cpp
+App.hpp
+/home/lolcio/safarix/src/App.hpp
+lua.h
+/home/lolcio/safarix/src/lua.h
+lualib.h
+/home/lolcio/safarix/src/lualib.h
+lauxlib.h
+/home/lolcio/safarix/src/lauxlib.h
+
+/home/lolcio/safarix/src/Player.cpp
+Player.hpp
+/home/lolcio/safarix/src/Player.hpp
+
 /home/lolcio/safarix/src/ProgressBar.cpp
 ProgressBar.hpp
 /home/lolcio/safarix/src/ProgressBar.hpp
+
+/home/lolcio/safarix/src/main.cpp
+App.hpp
+/home/lolcio/safarix/src/App.hpp
 

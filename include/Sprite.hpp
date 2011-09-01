@@ -36,6 +36,7 @@ public:
       ushort GetWidth() const { return m_date.width; }
       
       void SetWidth(ushort W){ m_date.width=W; }
+      void SetHeight(ushort H){ m_date.height=H; }
       short GetX() const { return m_date.pos_x; }
       void SetX(short x){ m_date.pos_x=x; }
       

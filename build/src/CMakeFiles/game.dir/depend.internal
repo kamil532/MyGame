@@ -14,6 +14,7 @@ src/CMakeFiles/game.dir/App.cpp.o
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Player.hpp
+ ../include/ProgressBar.hpp
  ../include/Renderer.hpp
  ../include/Sprite.hpp
  ../include/SpriteConfig.hpp
@@ -38,6 +39,7 @@ src/CMakeFiles/game.dir/Player.cpp.o
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Player.hpp
+ ../include/ProgressBar.hpp
  ../include/Renderer.hpp
  ../include/Sprite.hpp
  ../include/SpriteConfig.hpp
@@ -131,6 +133,7 @@ src/CMakeFiles/game.dir/main.cpp.o
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Player.hpp
+ ../include/ProgressBar.hpp
  ../include/Renderer.hpp
  ../include/Sprite.hpp
  ../include/SpriteConfig.hpp
