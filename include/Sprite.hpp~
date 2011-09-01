@@ -13,6 +13,7 @@ public:
 			}
 			
       void SetType(FT::FieldType Ft){ m_type=Ft; }
+      FT::FieldType GetType() const { return m_type; }
       
       bool IsMap() const { 
 	  if(  m_type == FT::PlatformLeftEnd
@@ -43,7 +44,7 @@ public:
       ushort GetTexX() const { return m_date.tex_x; }
       ushort GetTexY() const { return m_date.tex_y; }  
             
-	  uint GetFrame() const { return m_frame_count; }	
+      uint GetFrame() const { return m_frame_count; }	
 
 private:
     FT::FieldType m_type;

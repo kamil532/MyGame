@@ -1,38 +1,33 @@
-#tutaj można dodać nowe pliki źródłowe
-set(SOURCES main.cpp
-	    App.cpp  
-	    Renderer.cpp
-	    Sprite.cpp
-	    SpriteConfig.cpp
-	    Level.cpp
-	    SpriteGrid.cpp
-	    Player.cpp
-	    Aabb.cpp
-	    Writer.cpp
-	    Treasure.cpp
-	    ) 
+# Minimalna wersja cmake`a
+CMAKE_MINIMUM_REQUIRED (VERSION 2.6)
 
-#dodawanie nowych bibliotek
-find_package(SDL REQUIRED)
-find_package(OpenGL REQUIRED)
+# Pliki zrodlowe dodane do projektu
+set(SOURCES main.cpp			App.cpp			Renderer.cpp
+	    Sprite.cpp			SpriteConfig.cpp	Level.cpp
+	    SpriteGrid.cpp		Player.cpp		Aabb.cpp
+	    Writer.cpp			Treasure.cpp    	Entity.cpp
+    ) 
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR})        #można zmienić na ${CMAKE_SOURCE_DIR}, żeby binarki lądowały w głównym katalogu kodu
-set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR})           #nie ma to znaczenia przy Visual Studio
+# Ustawienia katalogow
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}) #jezeli: ${CMAKE_SOURCE_DIR} to binarki laduja w katalogu kodu
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}) 
 
+#dolaczenie katalogow z kodem
 include_directories(${CMAKE_SOURCE_DIR}/include)
-include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(${SDL_INCLUDE_DIR})
-
 link_directories(${CMAKE_SOURCE_ROOT}/lib)
 link_directories(${LIBRARY_OUTPUT_PATH})
 
+#Dolaczenie SDL`a
+find_package(SDL REQUIRED)
+
+#nazwa pliku wykonywalnego
 add_executable(game ${SOURCES})
-#target_link_libraries( ${SDL_LIBRARY} ${OPENGL_LIBRARIES})    #tutaj należy dodawać nowe biblioteki do dolinkowania
 
-link_libraries(
-  ${SDL_LIBRARY} SDLmain
-) 
+#flagi kompilatora
+ADD_DEFINITIONS( "-Wall -ansi -pedantic")
+########################################################
 
-SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wall -std=c++0x ")  
+
 
 

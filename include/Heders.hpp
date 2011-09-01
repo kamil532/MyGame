@@ -11,6 +11,7 @@
 #include <SDL/SDL_ttf.h>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 namespace GAMESPACE{
 	using std::cout;
@@ -19,6 +20,10 @@ namespace GAMESPACE{
 	using std::vector;
 	using std::fstream;
 	using std::map;
+	using std::list;
+	
+	typedef list<SDL_Rect>::iterator list_rec_it;
+	typedef vector<SDL_Rect>::iterator vec_rec_it;
 }
 using namespace GAMESPACE;
 
@@ -44,6 +49,12 @@ namespace PS {
 }
 
 #include "Consts.hpp"
+
+inline void ShowBox( SDL_Rect& checkBox ){
+        cout<<checkBox.x<<" : "<<checkBox.y<<" : "
+            <<checkBox.w<<" : "<<checkBox.h<<endl;  
+}
+
 
 #endif 
 

@@ -10,7 +10,7 @@ void Aabb::PrintBox( SDL_Rect& checkBox ){
 
 bool Aabb::AddBox( SDL_Rect& newBox ){  
     if ( Contain( newBox ) ) return false;  
-    m_boxMap.push_back( newBox );  
+    m_boxMap.push_back( newBox ); return true; 
 }
 
 
@@ -29,8 +29,6 @@ bool Aabb::Contain( const SDL_Rect& Box){
 
 bool Aabb::Collides( SDL_Rect& checkBox ){
 
-    vector<SDL_Rect>::iterator it = m_boxMap.begin();
-
     BOOST_FOREACH(SDL_Rect it, m_boxMap) {
         if (   (it.x) > ( checkBox.x + checkBox.w )
                 ||(it.x + it.w) < ( checkBox.x)
@@ -45,7 +43,6 @@ bool Aabb::Collides( SDL_Rect& checkBox ){
 
 
 SDL_Rect Aabb::CollidesBox( SDL_Rect& checkBox ){
-  vector<SDL_Rect>::iterator it = m_boxMap.begin();
 
     BOOST_FOREACH(SDL_Rect it, m_boxMap) {
         if (   (it.x) >= ( checkBox.x + checkBox.w )
@@ -55,6 +52,8 @@ SDL_Rect Aabb::CollidesBox( SDL_Rect& checkBox ){
            ) continue;
         else return it;
     }
+    SDL_Rect _NULL_RECT={0,0,0,0}; 
+   return  _NULL_RECT; 
 }
 
 

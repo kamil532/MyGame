@@ -10,7 +10,8 @@ public:
     void SetLevel( LevelPtr );
     void Draw() const;
     void StoreSprite(FT::FieldType, SpritePtr);
-    bool DeleteGrid(SDL_Rect Rect){
+    
+    void DeleteGrid(SDL_Rect Rect){
 	  int x=(Rect.x-CORNER_X)/TILE_SIZE;
 	  int y=(Rect.y-CORNER_Y)/TILE_SIZE;
 	 if(x>=0 && y>=0)
@@ -25,13 +26,14 @@ private:
 	m_grid[y][x]->SetType(Ft);;
     }
     
-private: 
-
+private:
+    ushort m_level_height;
+    ushort m_level_width;    
+    SDL_Surface* m_background;
     std::vector<SpritePtr> m_sprites;  
     std::vector< std::vector< SpritePtr > > m_grid;
     LevelPtr m_level;
-    ushort m_level_width;
-    ushort m_level_height;
+    
 
 };
 

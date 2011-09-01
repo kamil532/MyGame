@@ -13,10 +13,12 @@ public:
               size_t width, size_t height );
     void Draw( const SpritePtr _Sprite );
     void Draw( const Sprite* _Sprite, uint frame);
+    void Draw( SDL_Surface* _Surface ,SDL_Rect dest);
 
 private:
-    SDL_Surface* m_screen;
-    SDL_Surface* m_atlas;
+    SDL_Surface* m_screen; // 
+    SDL_Surface* m_atlas;  //
+  
 };
 typedef boost::shared_ptr<Renderer> RendererPtr;
 

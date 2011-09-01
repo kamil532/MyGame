@@ -3,7 +3,12 @@
 
 Renderer::Renderer(SDL_Surface* Screen, const string& filename)
 		:m_screen(Screen), m_atlas(NULL) {				
-			m_atlas = IMG_Load(filename.c_str());  
+			m_atlas =
+			//SDL_DisplayFormat(
+			IMG_Load(filename.c_str())
+			//	 )
+			; 
+
 			if (!m_atlas) {	throw "[Critical] Not found sprite atlas file\n"; }			
 }
 
@@ -64,3 +69,13 @@ void Renderer::Draw(const SpritePtr _Sprite ){
    /// Odbijanie dpowiedniego fragmentu atlasu na ekranie
    SDL_BlitSurface(m_atlas, &b , m_screen, &a);	
 }		
+
+void Renderer::Draw( SDL_Surface* _Surface,SDL_Rect dest){
+
+    SDL_BlitSurface(_Surface, NULL , m_screen, &dest);	 
+}
+
+void Renderer::Draw(SDL_Surface* _Surface){
+      
+      SDL_BlitSurface(_Surface,NULL , m_screen, NULL);	 
+}

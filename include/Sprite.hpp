@@ -35,6 +35,7 @@ public:
       ushort GetHeight() const { return m_date.height; }
       ushort GetWidth() const { return m_date.width; }
       
+      void SetWidth(ushort W){ m_date.width=W; }
       short GetX() const { return m_date.pos_x; }
       void SetX(short x){ m_date.pos_x=x; }
       
@@ -44,7 +45,7 @@ public:
       ushort GetTexX() const { return m_date.tex_x; }
       ushort GetTexY() const { return m_date.tex_y; }  
             
-	  uint GetFrame() const { return m_frame_count; }	
+      uint GetFrame() const { return m_frame_count; }	
 
 private:
     FT::FieldType m_type;

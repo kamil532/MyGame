@@ -1,5 +1,10 @@
 #include "App.hpp"
 
+extern "C" {
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+}
 void App::InitSDL() throw (const char*) {
 
     //![1] Inicjacja SDL-a
@@ -8,6 +13,9 @@ void App::InitSDL() throw (const char*) {
                   |SDL_INIT_TIMER ) == -1) 
       throw "[Critical] Nie udalo sie zainicjowac SDL-a\n";
 
+    
+    if( TTF_Init() == -1 ) throw "[Critical] Inicjacja SDL_ttf";
+    
     SDL_ShowCursor(false);
     SDL_WM_SetCaption( STITLE.c_str() , STITLE.c_str() );
 
@@ -19,7 +27,8 @@ void App::InitSDL() throw (const char*) {
     m_screen = SDL_SetVideoMode(m_screen_w, m_screen_h, 32, 0
                                 |SDL_HWSURFACE
                                 |SDL_DOUBLEBUF
-                                //|SDL_FULLSCREEN
+                              //|SDL_HWACCEL
+                                |SDL_FULLSCREEN
                                 |SDL_ANYFORMAT    );
 
     if (m_screen==NULL) throw "[Critical] Nie udalo sie utworzyc powierchni glownej\n";
@@ -29,7 +38,7 @@ void App::InitSDL() throw (const char*) {
 App::App(): m_screen(NULL), m_is_done(false) {
 
     InitSDL();
-    Engine::Get().SetScreen(m_screen);
+    Engine::Get().SetScreen(m_screen, m_screen_w, m_screen_h);
     Engine::Get().Load();
 
     m_level.reset(new Level());
@@ -45,6 +54,10 @@ m_grid.SetLevel(m_level);
 m_player.reset( new Player() );
 m_player->SetGrid(&m_grid);
 Engine::Get().GetTreasure()->SetGrid(&m_grid);
+
+
+ //lua_State *L = lua_open();
+  //lua_close(L);
 }
 
 void App::Run() {
@@ -60,7 +73,9 @@ void App::Run() {
         dt = (ticks - last_ticks) / 1000.0;
         last_ticks = ticks;
         accumulator += dt;
-
+	
+    time=ticks-last_ticks;
+    
         ProcessEvents();
 
         while (accumulator > TIME_STEP)
@@ -89,11 +104,9 @@ void App::Draw() const {
     }
 
     SDL_FillRect( m_screen,NULL,0x0f);
-
-    //rysowanie
-   
-    m_player->Draw(); m_grid.Draw();
-    Engine::Get().GetWriter()->Write();
+    m_grid.Draw();
+    m_player->Draw();
+    Engine::Get().GetWriter()->Render();
     
     /// Odblokowanie ekranu
     if ( SDL_MUSTLOCK(m_screen) ) {
@@ -101,6 +114,7 @@ void App::Draw() const {
     }
 
     SDL_Flip(m_screen);
+    SDL_Delay(10);
 
 }
 
@@ -147,6 +161,12 @@ void App::ProcessEvents() {
         else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_DOWN) {
 	  m_player->StopState();    
 	  m_player->GoDown();
+        }
+        else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_LSHIFT) {
+	  m_player->StartRun();   
+        }
+        else if (event.type == SDL_KEYUP && event.key.keysym.sym == SDLK_LSHIFT) {
+	  m_player->StopRun();
         }
     }
 }

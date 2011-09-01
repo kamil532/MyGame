@@ -21,7 +21,7 @@ void Sprite::Draw() const{
 void Sprite::Draw(ushort x, ushort y) const{
 	
 	Engine::Get().GetRenderer()->Draw(
-				 m_date.tex_x,
+				 m_frame_count * m_date.width + m_date.tex_x,
 				 m_date.tex_y,
 				 x,
 				 y,
@@ -30,7 +30,7 @@ void Sprite::Draw(ushort x, ushort y) const{
 } 
 
 void Sprite::Update(double time){
-  
+
  m_current_frame_duration+=time;
 
     if(m_current_frame_duration >= m_date.frame_time){

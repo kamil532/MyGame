@@ -21,6 +21,11 @@ src/CMakeFiles/game.dir/App.cpp.o: ../include/Treasure.hpp
 src/CMakeFiles/game.dir/App.cpp.o: ../include/Writer.hpp
 src/CMakeFiles/game.dir/App.cpp.o: ../src/App.cpp
 
+src/CMakeFiles/game.dir/Entity.cpp.o: ../include/Consts.hpp
+src/CMakeFiles/game.dir/Entity.cpp.o: ../include/Entity.hpp
+src/CMakeFiles/game.dir/Entity.cpp.o: ../include/Heders.hpp
+src/CMakeFiles/game.dir/Entity.cpp.o: ../src/Entity.cpp
+
 src/CMakeFiles/game.dir/Level.cpp.o: ../include/Consts.hpp
 src/CMakeFiles/game.dir/Level.cpp.o: ../include/Heders.hpp
 src/CMakeFiles/game.dir/Level.cpp.o: ../include/Level.hpp
@@ -78,17 +83,29 @@ src/CMakeFiles/game.dir/SpriteGrid.cpp.o: ../include/Treasure.hpp
 src/CMakeFiles/game.dir/SpriteGrid.cpp.o: ../include/Writer.hpp
 src/CMakeFiles/game.dir/SpriteGrid.cpp.o: ../src/SpriteGrid.cpp
 
+src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Aabb.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Consts.hpp
+src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Engine.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Heders.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Level.hpp
+src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Renderer.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Sprite.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/SpriteConfig.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/SpriteGrid.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Treasure.hpp
+src/CMakeFiles/game.dir/Treasure.cpp.o: ../include/Writer.hpp
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../src/Treasure.cpp
 
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Aabb.hpp
 src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Consts.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Engine.hpp
 src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Heders.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Level.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Renderer.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Sprite.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/SpriteConfig.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/SpriteGrid.hpp
+src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Treasure.hpp
 src/CMakeFiles/game.dir/Writer.cpp.o: ../include/Writer.hpp
 src/CMakeFiles/game.dir/Writer.cpp.o: ../src/Writer.cpp
 

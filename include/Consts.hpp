@@ -15,7 +15,9 @@ const ushort CORNER_Y( 100 );
 
 const double PLAYER_X( 124 );
 const double PLAYER_Y( 124 );
-const ushort PLAYER_SIZE( 41 );
-const ushort CURVERS_SIZE( 7 ); //margin wspomagania skretu
+const ushort PLAYER_SIZE( 40 );
+const string FONT_PATH ("data/font.ttf");
+const float SPEED(200.0f);
+
 
 #endif

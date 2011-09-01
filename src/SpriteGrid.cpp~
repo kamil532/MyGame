@@ -1,7 +1,10 @@
 #include "SpriteGrid.hpp"
 #include "Engine.hpp"
 
-SpriteGrid::SpriteGrid():m_level_height(0),m_level_width(0){ }
+SpriteGrid::SpriteGrid():m_level_height(0),m_level_width(0),
+ m_background( IMG_Load("data/tex.bmp"))
+{ 	  
+  if( m_background == NULL ) throw "[ERROR] No background found";	}
 
 void SpriteGrid::StoreSprite(FT::FieldType ft, SpritePtr Sprite){
   //dodawanie sprite do bazy danych tej klasy
@@ -33,7 +36,7 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 			      CORNER_X + TILE_SIZE * y,
 			      TILE_SIZE*2,TILE_SIZE*2};
 			      
-			      Engine::Get().GetAabb()->AddTreasure(tmp);
+			      Engine::Get().GetTreasure()->AddTreasure(tmp);
 	      }
 		
 		
@@ -63,6 +66,10 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 }
 
 void SpriteGrid::Draw() const{
+SDL_Rect rec={100,100,1280,800};
+Engine::Get().GetRenderer()->Draw(m_background);
+
+  
      for (size_t y = 0; y < m_grid.size(); ++y) {
             const std::vector<SpritePtr>& row = m_grid.at(y);
 		for (size_t x = 0; x < row.size(); ++x) {

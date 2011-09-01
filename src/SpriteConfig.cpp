@@ -12,6 +12,8 @@ SpriteConfig::SpriteConfig(){
   Insert("platform_mid", 0, 220, 0, 0, TILE_SIZE, TILE_SIZE, 1, 1, false);
   Insert("platform_right", 0, 220, 0, 0, TILE_SIZE, TILE_SIZE, 1, 1, false);
   Insert("fruit", 400-(TILE_SIZE*2), 0, 0, 0, TILE_SIZE*2, TILE_SIZE*2, 1, 1, false);
+  Insert("livebar", 0, 78, 20 , 20 , 130, 45, 1, 1, false);
+  Insert("livebarback", 0, 350, 10 , 20 , 110, 25, 1, 1, false);
   
 }
 

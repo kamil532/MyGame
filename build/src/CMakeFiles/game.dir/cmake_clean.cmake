@@ -10,6 +10,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/Aabb.cpp.o"
   "CMakeFiles/game.dir/Writer.cpp.o"
   "CMakeFiles/game.dir/Treasure.cpp.o"
+  "CMakeFiles/game.dir/Entity.cpp.o"
   "../game.pdb"
   "../game"
 )

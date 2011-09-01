@@ -13,6 +13,8 @@ public:
               size_t width, size_t height );
     void Draw( const SpritePtr _Sprite );
     void Draw( const Sprite* _Sprite, uint frame);
+    void Draw( SDL_Surface* _Surface ,SDL_Rect dest);
+    void Draw( SDL_Surface* _Surface );
 
 private:
     SDL_Surface* m_screen; // 
