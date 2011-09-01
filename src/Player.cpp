@@ -204,7 +204,7 @@ void Player::IncreaseLive(double Time){
       --m_live_accumulator;
       --m_live_width;      
       m_live_background->SetWidth( m_live_width);
-    }
+    } 
     
   
     
