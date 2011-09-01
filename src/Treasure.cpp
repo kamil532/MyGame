@@ -1,7 +1,7 @@
 #include "Treasure.hpp"
 #include <Engine.hpp>
 
-void Treasure::CheckScore( SDL_Rect& Box){
+bool Treasure::CheckScore( SDL_Rect& Box){
  bool find = false;
 list_rec_it it_tmp = FindTreasure( Box , find );
  if (find){
@@ -9,8 +9,9 @@ list_rec_it it_tmp = FindTreasure( Box , find );
     ushort tmp = Engine::Get().GetWriter()->GetScore();
     Engine::Get().GetWriter()->SetScore( tmp + 100 );
     m_treasure.erase( it_tmp ); 
+    return true;
  }
-    
+    return false;
 }
 
 bool Treasure::AddTreasure(const SDL_Rect& newBox ){

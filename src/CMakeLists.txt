@@ -6,6 +6,7 @@ set(SOURCES main.cpp			App.cpp			Renderer.cpp
 	    Sprite.cpp			SpriteConfig.cpp	Level.cpp
 	    SpriteGrid.cpp		Player.cpp		Aabb.cpp
 	    Writer.cpp			Treasure.cpp    	Entity.cpp
+	    ProgressBar.cpp
     ) 
 
 # Ustawienia katalogow

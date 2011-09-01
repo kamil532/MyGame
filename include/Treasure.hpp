@@ -6,7 +6,7 @@
 class Treasure{
 public:
     Treasure():m_grid(NULL){};
-    void CheckScore( SDL_Rect&);    
+    bool CheckScore( SDL_Rect&);    
     void SetGrid(SpriteGrid* Grid){ m_grid=Grid; }
     bool AddTreasure( const SDL_Rect& );
 private:

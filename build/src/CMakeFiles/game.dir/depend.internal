@@ -45,6 +45,20 @@ src/CMakeFiles/game.dir/Player.cpp.o
  ../include/Treasure.hpp
  ../include/Writer.hpp
  /home/lolcio/safarix/src/Player.cpp
+src/CMakeFiles/game.dir/ProgressBar.cpp.o
+ ../include/Aabb.hpp
+ ../include/Consts.hpp
+ ../include/Engine.hpp
+ ../include/Heders.hpp
+ ../include/Level.hpp
+ ../include/ProgressBar.hpp
+ ../include/Renderer.hpp
+ ../include/Sprite.hpp
+ ../include/SpriteConfig.hpp
+ ../include/SpriteGrid.hpp
+ ../include/Treasure.hpp
+ ../include/Writer.hpp
+ /home/lolcio/safarix/src/ProgressBar.cpp
 src/CMakeFiles/game.dir/Renderer.cpp.o
  ../include/Consts.hpp
  ../include/Heders.hpp

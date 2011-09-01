@@ -229,6 +229,30 @@ Player.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+ProgressBar.o: ProgressBar.cpp.o
+.PHONY : ProgressBar.o
+
+# target to build an object file
+ProgressBar.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/ProgressBar.cpp.o
+.PHONY : ProgressBar.cpp.o
+
+ProgressBar.i: ProgressBar.cpp.i
+.PHONY : ProgressBar.i
+
+# target to preprocess a source file
+ProgressBar.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/ProgressBar.cpp.i
+.PHONY : ProgressBar.cpp.i
+
+ProgressBar.s: ProgressBar.cpp.s
+.PHONY : ProgressBar.s
+
+# target to generate assembly for a file
+ProgressBar.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/ProgressBar.cpp.s
+.PHONY : ProgressBar.cpp.s
+
 Renderer.o: Renderer.cpp.o
 .PHONY : Renderer.o
 
@@ -421,6 +445,9 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... ProgressBar.o"
+	@echo "... ProgressBar.i"
+	@echo "... ProgressBar.s"
 	@echo "... Renderer.o"
 	@echo "... Renderer.i"
 	@echo "... Renderer.s"

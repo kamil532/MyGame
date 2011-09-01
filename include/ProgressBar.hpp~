@@ -1,0 +1,21 @@
+#ifndef PROGRESSBAR_HPP
+#define PROGRESSBAR_HPP
+#include "Heders.hpp"
+#include "Engine.hpp"
+
+class ProgressBar{
+public:  
+      ProgressBar();
+  
+  
+private:
+      bool m_pusty;
+      bool m_pelny;
+      float m_dlugosc_paska;
+      float m_dlugosc_wykorzystana;
+  
+};
+typedef boost::shared_ptr<ProgressBar> ProgressBarPtr;
+
+
+#endif

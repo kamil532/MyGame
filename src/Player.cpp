@@ -118,7 +118,11 @@ void Player::Update(double dt) {
 
   //Sprawdzanie czy player nie odnalazl czegos
   tmp.x=next_x+10; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35;
-  Engine::Get().GetTreasure()->CheckScore(tmp);
+ if( Engine::Get().GetTreasure()->CheckScore(tmp)){
+      m_live_width+=10;
+   
+   
+}
 
   //zmiana pozycji postaci
     m_x = next_x;

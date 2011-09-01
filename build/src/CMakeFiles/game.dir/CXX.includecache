@@ -33,11 +33,11 @@ vector
 -
 list
 -
-SDL/SDL.h
--
 boost/smart_ptr.hpp
 -
 boost/foreach.hpp
+-
+SDL/SDL.h
 -
 SDL/SDL_image.h
 -
@@ -56,13 +56,11 @@ Consts.hpp
 Heders.hpp
 ../include/Heders.hpp
 
-../include/Player.hpp
+../include/ProgressBar.hpp
 Heders.hpp
 ../include/Heders.hpp
 Sprite.hpp
 ../include/Sprite.hpp
-SpriteGrid.hpp
-../include/SpriteGrid.hpp
 Engine.hpp
 ../include/Engine.hpp
 
@@ -98,7 +96,7 @@ SpriteGrid.hpp
 Heders.hpp
 ../include/Heders.hpp
 
-/home/lolcio/safarix/src/Player.cpp
-Player.hpp
-/home/lolcio/safarix/src/Player.hpp
+/home/lolcio/safarix/src/ProgressBar.cpp
+ProgressBar.hpp
+/home/lolcio/safarix/src/ProgressBar.hpp
 

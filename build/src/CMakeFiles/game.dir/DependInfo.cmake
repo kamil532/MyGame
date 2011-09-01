@@ -9,6 +9,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/lolcio/safarix/src/Entity.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Entity.cpp.o"
   "/home/lolcio/safarix/src/Level.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Level.cpp.o"
   "/home/lolcio/safarix/src/Player.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Player.cpp.o"
+  "/home/lolcio/safarix/src/ProgressBar.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/ProgressBar.cpp.o"
   "/home/lolcio/safarix/src/Renderer.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Renderer.cpp.o"
   "/home/lolcio/safarix/src/Sprite.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Sprite.cpp.o"
   "/home/lolcio/safarix/src/SpriteConfig.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/SpriteConfig.cpp.o"
