@@ -130,15 +130,3 @@ lualib.h
 lauxlib.h
 /home/lolcio/safarix/src/lauxlib.h
 
-/home/lolcio/safarix/src/Player.cpp
-Player.hpp
-/home/lolcio/safarix/src/Player.hpp
-
-/home/lolcio/safarix/src/ProgressBar.cpp
-ProgressBar.hpp
-/home/lolcio/safarix/src/ProgressBar.hpp
-
-/home/lolcio/safarix/src/main.cpp
-App.hpp
-/home/lolcio/safarix/src/App.hpp
-

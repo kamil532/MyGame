@@ -65,11 +65,10 @@ void App::Run() {
     float dt (0.0f);
     float accumulator (0.0f);
     float last_ticks = SDL_GetTicks();
-
+    size_t ticks=0;
     /// Glowna petla programu
     while ( !m_is_done ) {
-
-        size_t ticks = SDL_GetTicks();
+        ticks = SDL_GetTicks();
         dt = (ticks - last_ticks) / 1000.0;
         last_ticks = ticks;
         accumulator += dt;
@@ -94,22 +93,22 @@ void App::Update(double dt) {
 
 void App::Draw() const {
 
-    /// Zablokowanie ekranu na czas rysowania
+  /*  /// Zablokowanie ekranu na czas rysowania
     if ( SDL_MUSTLOCK(m_screen) ) {
         if ( SDL_LockSurface(m_screen) < 0 ) {
             return;
         }
-    }
+    }*/
 
-    SDL_FillRect( m_screen,NULL,0x0f);
+  //SDL_FillRect( m_screen,NULL,0x0f);
     m_grid.Draw();
     m_player->Draw();
     Engine::Get().GetWriter()->Render();
     
-    /// Odblokowanie ekranu
+  /*  /// Odblokowanie ekranu
     if ( SDL_MUSTLOCK(m_screen) ) {
         SDL_UnlockSurface(m_screen);
-    }
+    }*/
 
     SDL_Flip(m_screen);
     SDL_Delay(10);

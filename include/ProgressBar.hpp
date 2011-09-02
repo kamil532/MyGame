@@ -7,18 +7,19 @@
 class ProgressBar{
 public:  
       ProgressBar( const SDL_Rect&,const SDL_Rect& );
-      void Update( const float& );
+      void Update( const double& );
       void Draw() const;
+      bool LessThen(const double&) const;
+      
 private:
       bool m_empty;
       bool m_full;
-      float m_width_bar;
-      float m_width_uses;
+      double m_width_bar;
+      double m_width_uses;
       const float m_long_bar;
       
       SpritePtr m_border;
-      SpritePtr m_filling;
-      
+      SpritePtr m_filling;     
 };
 
 typedef boost::shared_ptr<ProgressBar> ProgressBarPtr;

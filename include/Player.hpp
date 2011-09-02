@@ -11,7 +11,7 @@ public:
     explicit Player();
     
     void Draw() const;
-    void Update( double );  
+    void Update(const double& );  
     void GoLeft() {
       if( m_state == PS::Stand || m_state == PS::GoLeft){    
         m_vx-=SPEED;
@@ -55,10 +55,27 @@ public:
         m_vy-=SPEED;
         m_state=PS::Stand;}
     }
-    void StartRun(){ m_running_factor=1.5 ; }
-    void StopRun(){ m_running_factor=1; }    
-    void StopState();
+    void StartRun(){m_running_factor= 2 ; }
+    void StopRun(){ m_running_factor= 1; }    
     void SetGrid( SpriteGrid* Grid ){ m_grid=Grid; }
+    void StopState(){
+      //znajduje aktualny stan postaci i wylacza go
+    switch (m_state) {
+    case ( PS::GoLeft ):
+        StopLeft();
+        break;
+    case ( PS::GoRight ):
+        StopRight();
+        break;
+    case ( PS::GoUp ):
+        StopUp();
+        break;
+    case ( PS::GoDown ):
+        StopDown();
+        break;	
+    case ( PS::Stand ): break;
+      }   
+  }
 
 private:  
      float GetNextXPosition(double dt) const {
@@ -68,6 +85,8 @@ private:
         return m_y + m_vy * dt * m_running_factor;
       }     
      void CorectPos(float& x, float& y);
+     void ControlSpeed(const double&);
+     void ControlLive(SDL_Rect&,const double&);
      
 private:  
       float m_x;
@@ -76,7 +95,14 @@ private:
       float m_vx;
       float m_vy;
       float m_running_factor;
-      ProgressBarPtr m_progressBar;     
+      
+      ProgressBarPtr m_progressBar;  
+      double m_live;
+      double m_live_dt;
+      
+      ProgressBarPtr m_speedBar;
+      double m_speed;
+      double m_speed_dt;
       
       SpriteGrid* m_grid; //adres obiektu nalezacego do engine  
       map<PS::PlayerState, SpritePtr > m_sprites;

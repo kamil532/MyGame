@@ -27,7 +27,9 @@ add_executable(game ${SOURCES})
 
 #flagi kompilatora
 ADD_DEFINITIONS( "-Wall -ansi -pedantic")
-########################################################
+
+############################################################################
+ enable_testing()
 
 
 

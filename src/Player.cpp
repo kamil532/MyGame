@@ -1,7 +1,8 @@
 #include "Player.hpp"
 
 Player::Player():m_x(PLAYER_X), m_y(PLAYER_Y),m_state(PS::Stand),m_vx(0.0f), 
-m_vy(0.0f), m_running_factor(1.0f){
+m_vy(0.0f), m_running_factor(1.0f),m_live(1.0),m_live_dt(0.0),m_speed(1.0),
+m_speed_dt(0.0){
 
     m_sprites.insert(std::make_pair(PS::Stand,
                                     *(new SpritePtr(new Sprite("stand")))));
@@ -20,7 +21,12 @@ m_vy(0.0f), m_running_factor(1.0f){
   
     SDL_Rect ProgressRamka={110,40,130,30};
     SDL_Rect ProgressWypelnienie={112,42,122,20};    
-    m_progressBar.reset(new ProgressBar(ProgressWypelnienie,ProgressRamka));
+    m_progressBar.reset(new ProgressBar(ProgressRamka,ProgressWypelnienie));
+    
+    SDL_Rect SpeedRamka={310,40,130,30};
+    SDL_Rect SpeedWypelnienie={312,42,122,20}; 
+    m_speedBar.reset(new ProgressBar(SpeedRamka, SpeedWypelnienie));
+    
    
 }
 
@@ -111,12 +117,11 @@ void Player::CorectPos(float& next_x, float& next_y){
       } 
 }
 
-void Player::Update(double dt) {
+void Player::Update(const double& dt) {
         
     //funckcja obliaczajaca nastepne wspolrzedne postaci
     float next_x=GetNextXPosition(dt);
     float next_y=GetNextYPosition(dt);
-
 
     //Funckcje wpsomaga skrecanie playera w sciezce
     CorectPos(next_x, next_y);
@@ -140,45 +145,67 @@ void Player::Update(double dt) {
         next_y=m_y;
     }
 
-  //Sprawdzanie czy player nie odnalazl czegos
-  tmp.x=next_x+10; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35;
- if( Engine::Get().GetTreasure()->CheckScore(tmp)){  
-   
-}
+  tmp.x=next_x+10; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35; 
+  ControlLive(tmp,dt);
+  ControlSpeed(dt);
 
-  //zmiana pozycji postaci
+
+    //aktualizacja paskow 
+    m_progressBar->Update(m_live); 
+    m_speedBar->Update(m_speed);
+        
+    //zmiana pozycji postaci
     m_x = next_x;
     m_y = next_y;
-    
-
-    
+       
    //aktualizacja sprita, ktory jest aktualnie 
    m_sprites.find(m_state)->second->Update( dt );
+}
+
+
+void Player::ControlSpeed(const double& dt){
+
+    m_speed_dt+=dt;
+    
+    if(m_running_factor > 1 && m_speed < 0.1) StopRun();
+    
+
+    if (m_speed_dt > 0.1 && m_running_factor > 1) {
+        m_speed-=0.03;
+        m_speed_dt-=0.1;
+    }
+    else if (m_speed_dt > 0.01 && m_running_factor == 1 ) {
+        m_speed+=0.001;
+        m_speed_dt-=0.01;
+    }
+
+    if (m_speed > 1.05) m_speed=1.05;
+    else if (m_speed < 0) m_speed=0;
+
+
+}
+
+void Player::ControlLive(SDL_Rect& tmp ,const double& dt){
+    m_live_dt+=dt;
+    if (m_live_dt > 0.1) {
+        m_live_dt-=0.1;
+        if (m_live>= 0.005) m_live-=0.005;
+    }
+
+    //Sprawdzanie czy player nie odnalazl czegos
+
+    if ( Engine::Get().GetTreasure()->CheckScore(tmp)) {
+        if (m_live<=0.95) m_live+=0.1;
+    }  
+    
+    if(m_live<0) m_live=0;
 }
 
 void Player::Draw() const {
     if (m_sprites.find(m_state) !=m_sprites.end()) ;
     else throw ("[Critical] Player state not found");
     m_sprites.find(m_state)->second->Draw( m_x, m_y );
-    m_progressBar->Draw();     
-}
-
-void Player::StopState() {
-  //znajduje aktualny stan postaci i wylacza go
-    switch (m_state) {
-    case ( PS::GoLeft ):
-        StopLeft();
-        break;
-    case ( PS::GoRight ):
-        StopRight();
-        break;
-    case ( PS::GoUp ):
-        StopUp();
-        break;
-    case ( PS::GoDown ):
-        StopDown();
-        break;	
-    case ( PS::Stand ): break;
-      }
+    m_progressBar->Draw();   
+    m_speedBar->Draw();
 }
 
