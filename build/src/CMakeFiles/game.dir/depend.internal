@@ -11,9 +11,9 @@ src/CMakeFiles/game.dir/App.cpp.o
  ../include/App.hpp
  ../include/Consts.hpp
  ../include/Engine.hpp
+ ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
- ../include/Menu.hpp
  ../include/Player.hpp
  ../include/PlayerPrototype.hpp
  ../include/ProgressBar.hpp
@@ -29,18 +29,13 @@ src/CMakeFiles/game.dir/Entity.cpp.o
  ../include/Entity.hpp
  ../include/Heders.hpp
  /home/lolcio/safarix/src/Entity.cpp
-src/CMakeFiles/game.dir/Level.cpp.o
- ../include/Consts.hpp
- ../include/Heders.hpp
- ../include/Level.hpp
- /home/lolcio/safarix/src/Level.cpp
-src/CMakeFiles/game.dir/Menu.cpp.o
+src/CMakeFiles/game.dir/Game.cpp.o
  ../include/Aabb.hpp
  ../include/Consts.hpp
  ../include/Engine.hpp
+ ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
- ../include/Menu.hpp
  ../include/Player.hpp
  ../include/PlayerPrototype.hpp
  ../include/ProgressBar.hpp
@@ -50,6 +45,16 @@ src/CMakeFiles/game.dir/Menu.cpp.o
  ../include/SpriteGrid.hpp
  ../include/Treasure.hpp
  ../include/Writer.hpp
+ /home/lolcio/safarix/src/Game.cpp
+src/CMakeFiles/game.dir/Level.cpp.o
+ ../include/Consts.hpp
+ ../include/Heders.hpp
+ ../include/Level.hpp
+ /home/lolcio/safarix/src/Level.cpp
+src/CMakeFiles/game.dir/Menu.cpp.o
+ ../include/Consts.hpp
+ ../include/Heders.hpp
+ ../include/Menu.hpp
  /home/lolcio/safarix/src/Menu.cpp
 src/CMakeFiles/game.dir/Player.cpp.o
  ../include/Aabb.hpp
@@ -125,6 +130,9 @@ src/CMakeFiles/game.dir/Treasure.cpp.o
  ../include/Engine.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
+ ../include/Player.hpp
+ ../include/PlayerPrototype.hpp
+ ../include/ProgressBar.hpp
  ../include/Renderer.hpp
  ../include/Sprite.hpp
  ../include/SpriteConfig.hpp
@@ -150,9 +158,9 @@ src/CMakeFiles/game.dir/main.cpp.o
  ../include/App.hpp
  ../include/Consts.hpp
  ../include/Engine.hpp
+ ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
- ../include/Menu.hpp
  ../include/Player.hpp
  ../include/PlayerPrototype.hpp
  ../include/ProgressBar.hpp

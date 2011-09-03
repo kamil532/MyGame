@@ -67,6 +67,7 @@ private:
     LevelPtr m_level;
     SpriteGrid m_grid;
     
+    // Informacje o glownym Surface
     SDL_Surface* m_screen;
     ushort m_screen_h;
     ushort m_screen_w;

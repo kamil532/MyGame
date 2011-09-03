@@ -20,6 +20,7 @@ const string FONT_PATH ("data/font.ttf");
 const float SPEED(180.0f);
 const ushort INTRO_TIME(1000);
 const ushort RUN_FACTOR(2);
+const ushort FONT_SIZE(42);
 
 
 #endif

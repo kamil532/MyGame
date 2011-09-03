@@ -14,6 +14,9 @@ public:
     void Draw() const;
     void Update(const double& );    
     void SetGrid( SpriteGrid* Grid ){ m_grid=Grid; }
+    static void AddScore(const ulong& Score){
+      m_score+=Score;      
+    }
 
 private:         
      void CorectPos(float& x, float& y);
@@ -31,6 +34,9 @@ private:
       
      SpriteGrid* m_grid; //adres obiektu nalezacego do engine  
      map<PS::PlayerState, SpritePtr > m_sprites;
+     
+     static ulong m_score;
+     SDL_Rect m_score_rect;
   
 };
 typedef boost::shared_ptr<Player> PlayerPtr;

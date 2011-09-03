@@ -1,17 +1,18 @@
 #include "Treasure.hpp"
-#include <Engine.hpp>
+#include "Engine.hpp"
+#include "Player.hpp"
 
 bool Treasure::CheckScore( SDL_Rect& Box){
  bool find = false;
 list_rec_it it_tmp = FindTreasure( Box , find );
  if (find){
     m_grid->DeleteGrid(CollidesTreasure(Box));
-    ushort tmp = Engine::Get().GetWriter()->GetScore();
-    Engine::Get().GetWriter()->SetScore( tmp + 100 );
+    Player::AddScore(100);
     m_treasure.erase( it_tmp ); 
     return true;
  }
-    return false;
+  
+  return false;
 }
 
 bool Treasure::AddTreasure(const SDL_Rect& newBox ){

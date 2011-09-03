@@ -3,6 +3,7 @@
 #include "Heders.hpp"
 #include "SpriteGrid.hpp"
 
+
 class Treasure{
 public:
     Treasure():m_grid(NULL){};

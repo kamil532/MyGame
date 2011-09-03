@@ -5,7 +5,7 @@
 #include "Level.hpp"
 #include "SpriteGrid.hpp"
 #include "Player.hpp"
-#include "Menu.hpp"
+#include "Game.hpp"
 
 class App {
 public:
@@ -22,7 +22,7 @@ private:
     SDL_Surface* m_screen;
     size_t m_screen_h, m_screen_w;    
     Uint32 m_full;
-    Menuptr m_menu;     
+    Gameptr m_game;     
 };
 
 #endif

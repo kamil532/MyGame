@@ -2,6 +2,7 @@
 #define TREASURE_HPP
 #include "Heders.hpp"
 #include "SpriteGrid.hpp"
+#include "Player.hpp"
 
 class Treasure{
 public:
@@ -12,8 +13,7 @@ public:
     bool WasFoundAll(void) const { 
 		  if(m_treasure.empty()) return true; 
 		  else return false;
-	  }
-    
+	  }   
 private:
     bool Contain(const SDL_Rect&);
 

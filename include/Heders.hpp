@@ -4,7 +4,9 @@
 /* Plik dolacza do projektu pliki bibliotek
  * oraz zawiera enumeratory uzywany w klasach
  * Dolacza plik Consts.hpp zawiera zmienne globalne 
- * uzywane w miejscu liczb magicznych */
+ * uzywane w miejscu liczb magicznych 
+ *
+ * Tutaj znajduja sie naglowki funkcji globalnych (badz tez ich ciala) */
 
 #include <map>
 #include <vector>
@@ -68,6 +70,16 @@ inline void ShowBox( SDL_Rect& checkBox ){
             <<checkBox.w<<" : "<<checkBox.h<<endl;  
 }
 
+inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Surface* display)
+{
+  // 'display' is the surface whose format you want to match
+  //  if this is really the display format, then use the surface returned from SDL_SetVideoMode
+
+  const SDL_PixelFormat& fmt = *(display->format);
+  return SDL_CreateRGBSurface(flags,width,height,
+                  fmt.BitsPerPixel,
+                  fmt.Rmask,fmt.Gmask,fmt.Bmask,fmt.Amask );
+}
 
 #endif 
 

@@ -181,6 +181,30 @@ Entity.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Entity.cpp.s
 .PHONY : Entity.cpp.s
 
+Game.o: Game.cpp.o
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 Level.o: Level.cpp.o
 .PHONY : Level.o
 
@@ -463,6 +487,9 @@ help:
 	@echo "... Entity.o"
 	@echo "... Entity.i"
 	@echo "... Entity.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... Level.o"
 	@echo "... Level.i"
 	@echo "... Level.s"

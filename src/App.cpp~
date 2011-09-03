@@ -51,13 +51,10 @@ m_is_done( new bool(false) ), m_screen(NULL), m_full(SDL_FULLSCREEN){
     InitSDL();
     
     //Inicjowanie klasy Menu, ktora "przejmie" kontrole nad applikacja
-    m_menu.reset( new Menu( m_screen, m_screen_w, m_screen_h) );    
-   
-      //Wyslanie adresu glownego surface do engine (a potem do klas uzywajacych tego np.renderer)
-    Engine::Get().SetScreen(m_screen, m_screen_w, m_screen_h);
+    m_game.reset( new Game( m_screen, m_screen_w, m_screen_h) );    
     
     //Klasa Menu ma dostep do zmiennej, ktora decyduje o tym czy zakonczyc applikacje
-    m_menu->SetQuitFlag( m_is_done );   
+    m_game->SetQuitFlag( m_is_done );   
 }
 
 void App::Run() {
@@ -76,17 +73,15 @@ void App::Run() {
         last_ticks = ticks;
         accumulator += dt;
     
-        m_menu-> ProcessEvents();
+        m_game-> ProcessEvents();
 
         while (accumulator > TIME_STEP){
-          m_menu-> Update(TIME_STEP);
+          m_game-> Update(TIME_STEP);
             accumulator -= TIME_STEP;
 	}
 
-        m_menu->Draw();
+        m_game->Draw();
     }
-
-  SDL_Quit();
 }
 
 App::~App(){
