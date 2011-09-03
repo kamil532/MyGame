@@ -8,7 +8,11 @@ public:
     Treasure():m_grid(NULL){};
     bool CheckScore( SDL_Rect&);    
     void SetGrid(SpriteGrid* Grid){ m_grid=Grid; }
-    bool AddTreasure( const SDL_Rect& );
+    bool AddTreasure( const SDL_Rect& );   
+    bool WasFoundAll(void) const { 
+		  if(m_treasure.empty()) return true; 
+		  else return false;
+	  }   
 private:
     bool Contain(const SDL_Rect&);
 

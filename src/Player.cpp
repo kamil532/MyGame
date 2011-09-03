@@ -1,9 +1,7 @@
 #include "Player.hpp"
 
-Player::Player():m_x(PLAYER_X), m_y(PLAYER_Y),m_state(PS::Stand),m_vx(0.0f), 
-m_vy(0.0f), m_running_factor(1.0f),m_live(1.0),m_live_dt(0.0),m_speed(1.0),
-m_speed_dt(0.0){
-m_x=PLAYER_X;
+Player::Player():m_live(1.0),m_live_dt(0.0),m_speed(1.0),m_speed_dt(0.0){
+
     m_sprites.insert(std::make_pair(PS::Stand,
                                     *(new SpritePtr(new Sprite("stand")))));
 
@@ -33,6 +31,7 @@ m_x=PLAYER_X;
 void Player::CorectPos(float& next_x, float& next_y){
     //Funkcja zmienia polozenie postaci
     //tak aby latwiej bylo skrecic
+    // Algorytm wlasny :P
     
     ushort margin_x= ( static_cast<int>(next_x-CORNER_X) ) % TILE_SIZE;
     ushort margin_y= ( static_cast<int>(next_y-CORNER_Y) ) % TILE_SIZE;

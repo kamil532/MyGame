@@ -4,9 +4,9 @@
 #include <map>
 #include <vector>
 #include <list>
-#include <SDL/SDL.h>
 #include <boost/smart_ptr.hpp>
 #include <boost/foreach.hpp>
+#include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 #include <iostream>
@@ -46,6 +46,14 @@ namespace PS {
         GoUp,
 	GoDown
     };
+}
+
+namespace GS{
+  enum GameState{
+    MainMenu,
+    PlayMenu,
+    Play    
+  };  
 }
 
 #include "Consts.hpp"

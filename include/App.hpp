@@ -8,7 +8,6 @@
 #include "Menu.hpp"
 
 class App {
-
 public:
     explicit App(const string*);
     ~App();
@@ -16,23 +15,14 @@ public:
     void SetAppMode(const string*);
 
 private:
-    void Draw() const;
-    void ProcessEvents();
-    void Update(double);
     void InitSDL() throw (const char*);
 
 private:
+    bool* m_is_done;
     SDL_Surface* m_screen;
-    bool m_is_done;
-    size_t m_screen_h, m_screen_w;
-    
-    LevelPtr m_level;
-    SpriteGrid m_grid;
-    PlayerPtr m_player;
+    size_t m_screen_h, m_screen_w;    
     Uint32 m_full;
-    Menuptr m_menu;
-    SDL_Event event;
-    
+    Menuptr m_menu;     
 };
 
 #endif

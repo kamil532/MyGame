@@ -6,6 +6,15 @@
 #include "Aabb.hpp"
 #include "Writer.hpp"
 
+/* Klasa singleton, dzieki ktorej uzuskuje sie dostep do
+ * klas, ktore rowniez powinny miec tylko jedna instacje.
+ * Wazna jest tutaj klasa renderer, ktora posiada funkcje rysujace
+ * funkcje te sa przeznaczone dla innych klas, ktore nie maja 
+ * prawa rysowac po ekranie bezposrednio (Jezeli jakas klasa tak robi,
+ * to jest to blad. Pozostalosc po testowaniu pewnych modulow ).
+ * Funckcja Load musi zostac uzyta przed uzyciem jakiegolwiek funkcji
+ * z suffiksem Get, bo tworzy ona wszystkie obiekty
+ */ 
 
 class Engine {
 public:
@@ -16,11 +25,21 @@ public:
     
 public:
     void Load() {
-        m_SpriteConfig.reset( new SpriteConfig() );
-        m_Renderer.reset( new Renderer( m_screen , ATLAS_PATH) );
-	m_aabb.reset( new Aabb() );
-	m_Writer.reset( new Writer() );
-	m_treasure.reset( new Treasure );
+    m_SpriteConfig.reset( new SpriteConfig() );
+    m_Renderer.reset( new Renderer( m_screen , ATLAS_PATH) );
+    m_aabb.reset( new Aabb() );
+    m_Writer.reset( new Writer() );
+    m_treasure.reset( new Treasure ); 
+  
+    m_level.reset(new Level());
+    m_level->LoadFromFile("data/1.lvl");
+
+    m_grid.StoreSprite(FT::PlatformLeftEnd,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_left"))));
+    m_grid.StoreSprite(FT::PlatformMidPart,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_mid"))));
+    m_grid.StoreSprite(FT::PlatformRightEnd, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_right"))));
+    m_grid.StoreSprite(FT::Fruit, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("fruit"))));
+    m_grid.SetLevel(m_level);
+	
     }
 
     void SetScreen(SDL_Surface* Screen,ushort w,ushort h) { 
@@ -37,6 +56,7 @@ public:
     AabbPtr 	    GetAabb() const{ return m_aabb; }
     WriterPtr       GetWriter() const { return m_Writer; }
     TreasurePtr	    GetTreasure() const { return m_treasure; }
+    SpriteGrid*	    GetGrid()  { return &m_grid; }
     
 private:
     SpriteConfigPtr m_SpriteConfig;
@@ -44,6 +64,8 @@ private:
     AabbPtr m_aabb;
     WriterPtr m_Writer;
     TreasurePtr m_treasure;
+    LevelPtr m_level;
+    SpriteGrid m_grid;
     
     SDL_Surface* m_screen;
     ushort m_screen_h;

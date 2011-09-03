@@ -1,6 +1,11 @@
 #ifndef HEDERS_HPP
 #define HEDERS_HPP
 
+/* Plik dolacza do projektu pliki bibliotek
+ * oraz zawiera enumeratory uzywany w klasach
+ * Dolacza plik Consts.hpp zawiera zmienne globalne 
+ * uzywane w miejscu liczb magicznych */
+
 #include <map>
 #include <vector>
 #include <list>
@@ -46,6 +51,14 @@ namespace PS {
         GoUp,
 	GoDown
     };
+}
+
+namespace GS{
+  enum GameState{
+    MainMenu,
+    PlayMenu,
+    Play    
+  };  
 }
 
 #include "Consts.hpp"

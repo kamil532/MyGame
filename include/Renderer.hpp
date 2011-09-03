@@ -8,9 +8,9 @@ public:
 
     Renderer(SDL_Surface* Screen, const string& filename);
 
-    void Draw(size_t tex_x, size_t tex_y,
-              size_t pos_x, size_t pos_y,
-              size_t width, size_t height );
+    void Draw( size_t tex_x, size_t tex_y,
+               size_t pos_x, size_t pos_y,
+               size_t width, size_t height );
     void Draw( const SpritePtr _Sprite );
     void Draw( const Sprite* _Sprite, uint frame);
     void Draw( SDL_Surface* _Surface ,SDL_Rect dest);
