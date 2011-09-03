@@ -1,4 +1,4 @@
-/*     MyGame - main.cpp
+/*     MyGame 
 *      
 *      Copyright 2011 Lolcio < kamil532@interia.eu >
 *      
@@ -20,11 +20,15 @@
 
 #include "App.hpp"
 
-int main( void ){
+int main( int argc, char** argv ){
 
  std::cout<<INFO;	
 	try{
-	App* application=new App();
+	  App* application;
+	
+	if(argc == 2)
+	 application =new App(new string(argv[1]));
+	else  application=new App(new string(""));
 	application->Run();
 	}
 	catch(const char* Error){

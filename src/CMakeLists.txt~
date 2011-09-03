@@ -29,15 +29,8 @@ add_executable(game ${SOURCES})
 ADD_DEFINITIONS( "-Wall -ansi -pedantic")
 
 ############################################################################
-#add_library("lua5.1/src/lua.cpp")
-
-# -I lua-5.1/include/ -L lua-5.1/lib/ -llua5.1 -o tmp 2
  enable_testing()
-#set(LUA_VERSION "")
-include_directories("./lua5.1/src")
-include_directories("./lua5.1/include")
-add_library("lua-5.1/include" )
-target_link_libraries( "-lua5.1")
+
 
 
 

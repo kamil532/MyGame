@@ -5,12 +5,15 @@
 #include "Level.hpp"
 #include "SpriteGrid.hpp"
 #include "Player.hpp"
+#include "Menu.hpp"
 
 class App {
 
 public:
-    explicit App();
-    void Run() ;
+    explicit App(const string*);
+    ~App();
+    void Run() ;	
+    void SetAppMode(const string*);
 
 private:
     void Draw() const;
@@ -26,6 +29,9 @@ private:
     LevelPtr m_level;
     SpriteGrid m_grid;
     PlayerPtr m_player;
+    Uint32 m_full;
+    Menuptr m_menu;
+    SDL_Event event;
     
 };
 

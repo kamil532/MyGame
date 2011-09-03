@@ -30,7 +30,7 @@ void ProgressBar::Update( const double& Current_state){
 }
 
 bool ProgressBar::LessThen(const double& Value) const{
-    if(m_width_uses < Value) return true;
+    if(m_width_uses > Value) return true;
     else return false;  
 }
 

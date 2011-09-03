@@ -17,7 +17,7 @@ const double PLAYER_X( 124 );
 const double PLAYER_Y( 124 );
 const ushort PLAYER_SIZE( 40 );
 const string FONT_PATH ("data/font.ttf");
-const float SPEED(200.0f);
+const float SPEED(180.0f);
 
 
 #endif

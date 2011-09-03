@@ -5,6 +5,7 @@
 #include "SpriteGrid.hpp"
 #include "Engine.hpp"
 #include "ProgressBar.hpp"
+#include "PlayerBase.hpp"
 
 class Player{
 public:
@@ -55,8 +56,8 @@ public:
         m_vy-=SPEED;
         m_state=PS::Stand;}
     }
-    void StartRun(){m_running_factor=1.6 ; }
-    void StopRun(){ m_running_factor=1; }    
+    void StartRun(){m_running_factor= 2 ; }
+    void StopRun(){ m_running_factor= 1; }    
     void SetGrid( SpriteGrid* Grid ){ m_grid=Grid; }
     void StopState(){
       //znajduje aktualny stan postaci i wylacza go
@@ -89,7 +90,7 @@ private:
      void ControlLive(SDL_Rect&,const double&);
      
 private:  
-      float m_x;
+   
       float m_y;
       PS::PlayerState m_state;    
       float m_vx;

@@ -18,6 +18,7 @@ const double PLAYER_Y( 124 );
 const ushort PLAYER_SIZE( 40 );
 const string FONT_PATH ("data/font.ttf");
 const float SPEED(180.0f);
+const ushort INTRO_TIME(1000);
 
 
 #endif

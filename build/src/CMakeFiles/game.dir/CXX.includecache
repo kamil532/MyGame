@@ -21,6 +21,8 @@ SpriteGrid.hpp
 ../include/SpriteGrid.hpp
 Player.hpp
 ../include/Player.hpp
+Menu.hpp
+../include/Menu.hpp
 
 ../include/Consts.hpp
 Heders.hpp
@@ -67,6 +69,18 @@ Consts.hpp
 ../include/Level.hpp
 Heders.hpp
 ../include/Heders.hpp
+
+../include/Menu.hpp
+Heders.hpp
+../include/Heders.hpp
+Engine.hpp
+../include/Engine.hpp
+Level.hpp
+../include/Level.hpp
+SpriteGrid.hpp
+../include/SpriteGrid.hpp
+Player.hpp
+../include/Player.hpp
 
 ../include/Player.hpp
 Heders.hpp
@@ -123,10 +137,12 @@ Heders.hpp
 /home/lolcio/safarix/src/App.cpp
 App.hpp
 /home/lolcio/safarix/src/App.hpp
-lua.h
-/home/lolcio/safarix/src/lua.h
-lualib.h
-/home/lolcio/safarix/src/lualib.h
-lauxlib.h
-/home/lolcio/safarix/src/lauxlib.h
+
+/home/lolcio/safarix/src/Menu.cpp
+Menu.hpp
+/home/lolcio/safarix/src/Menu.hpp
+
+/home/lolcio/safarix/src/main.cpp
+App.hpp
+/home/lolcio/safarix/src/App.hpp
 

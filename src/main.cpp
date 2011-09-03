@@ -20,16 +20,20 @@
 
 #include "App.hpp"
 
-int main( void ){
+int main( int argc, char** argv ){
 
- std::cout<<INFO;	
-	try{
-	App* application=new App();
-	application->Run();
-	}
-	catch(const char* Error){
-	    std::cout<<Error<<std::endl;
-	    return -1;		
-	}
-  return 0;	
+    std::cout<<INFO;
+    App* application;
+
+    try {
+        if (argc == 2) application = new App(new string(argv[1]));
+        else  application = new App(new string(""));
+        application->Run();
+    }
+    catch (const char* Error) {
+        std::cout<<Error<<std::endl;
+        return -1;
+    }
+    
+ return 0;	
 }	

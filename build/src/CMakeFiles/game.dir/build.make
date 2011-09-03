@@ -345,6 +345,29 @@ src/CMakeFiles/game.dir/ProgressBar.cpp.o.provides: src/CMakeFiles/game.dir/Prog
 
 src/CMakeFiles/game.dir/ProgressBar.cpp.o.provides.build: src/CMakeFiles/game.dir/ProgressBar.cpp.o
 
+src/CMakeFiles/game.dir/Menu.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/Menu.cpp.o: ../src/Menu.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Menu.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Menu.cpp.o -c /home/lolcio/safarix/src/Menu.cpp
+
+src/CMakeFiles/game.dir/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Menu.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Menu.cpp > CMakeFiles/game.dir/Menu.cpp.i
+
+src/CMakeFiles/game.dir/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Menu.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Menu.cpp -o CMakeFiles/game.dir/Menu.cpp.s
+
+src/CMakeFiles/game.dir/Menu.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/Menu.cpp.o.requires
+
+src/CMakeFiles/game.dir/Menu.cpp.o.provides: src/CMakeFiles/game.dir/Menu.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Menu.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/Menu.cpp.o.provides
+
+src/CMakeFiles/game.dir/Menu.cpp.o.provides.build: src/CMakeFiles/game.dir/Menu.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/main.cpp.o" \
@@ -359,7 +382,8 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/Writer.cpp.o" \
 "CMakeFiles/game.dir/Treasure.cpp.o" \
 "CMakeFiles/game.dir/Entity.cpp.o" \
-"CMakeFiles/game.dir/ProgressBar.cpp.o"
+"CMakeFiles/game.dir/ProgressBar.cpp.o" \
+"CMakeFiles/game.dir/Menu.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -377,6 +401,7 @@ game: src/CMakeFiles/game.dir/Writer.cpp.o
 game: src/CMakeFiles/game.dir/Treasure.cpp.o
 game: src/CMakeFiles/game.dir/Entity.cpp.o
 game: src/CMakeFiles/game.dir/ProgressBar.cpp.o
+game: src/CMakeFiles/game.dir/Menu.cpp.o
 game: src/CMakeFiles/game.dir/build.make
 game: src/CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../game"
@@ -399,6 +424,7 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Writer.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Treasure.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Entity.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/ProgressBar.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Menu.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

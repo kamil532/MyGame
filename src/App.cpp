@@ -1,13 +1,17 @@
 #include "App.hpp"
 
-extern "C" {
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
+
+void App::SetAppMode(const string* Mode){
+  
+  if( Mode->compare("windowMode") == 0 ){
+	  m_full=0;
+	  cout<<"[Info] Window mode is set\n";
+    }
 }
+
 void App::InitSDL() throw (const char*) {
 
-    //![1] Inicjacja SDL-a
+    //![ Inicjacja SDL-a ]
     if (SDL_Init( SDL_INIT_AUDIO
                   |SDL_INIT_VIDEO
                   |SDL_INIT_TIMER ) == -1) 
@@ -15,11 +19,14 @@ void App::InitSDL() throw (const char*) {
 
     
     if( TTF_Init() == -1 ) throw "[Critical] Inicjacja SDL_ttf";
-    
+       
+    //Cala obsluga wejscia przejmuje klawiatura
     SDL_ShowCursor(false);
-    SDL_WM_SetCaption( STITLE.c_str() , STITLE.c_str() );
+    
+    //Ustawienie tytulu okna, oraz ikony
+    SDL_WM_SetCaption( STITLE.c_str() , NULL );
 
-    /// Pobranie rozdzielczosci ekranu
+    //![ Pobranie rozdzielczosci ekranu ]
     const SDL_VideoInfo* myPointer = SDL_GetVideoInfo();
     m_screen_h=myPointer->current_h;
     m_screen_w=myPointer->current_w;
@@ -27,37 +34,48 @@ void App::InitSDL() throw (const char*) {
     m_screen = SDL_SetVideoMode(m_screen_w, m_screen_h, 32, 0
                                 |SDL_HWSURFACE
                                 |SDL_DOUBLEBUF
-                              //|SDL_HWACCEL
-                                |SDL_FULLSCREEN
+                                |m_full
                                 |SDL_ANYFORMAT    );
 
     if (m_screen==NULL) throw "[Critical] Nie udalo sie utworzyc powierchni glownej\n";
 
 }
 
-App::App(): m_screen(NULL), m_is_done(false) {
+App::App(const string* Parameters): m_screen(NULL), m_is_done(false), m_full(SDL_FULLSCREEN) {
 
+    //Parametry przekazane z maina
+    SetAppMode(Parameters);
+    
+    //Inicjacja SDL-a
     InitSDL();
+    
+    //Wyslanie adresu glownego surface do engine (a potem do klas uzywajacych tego np.renderer)
     Engine::Get().SetScreen(m_screen, m_screen_w, m_screen_h);
+    
+    //Inicjowanie klasy Menu, ktora "przejmie" kontrole nad applikacja
+    m_menu.reset( new Menu( m_screen, m_screen_w, m_screen_h) );    
+    
+    //Pokazanie intro do gry na poczatku
+    m_menu->DrawIntro();
+    
+    //Wywolanie konstruktorow klas ktore przechowuje Engine
     Engine::Get().Load();
-
+    
+        
     m_level.reset(new Level());
     m_level->LoadFromFile("data/1.lvl");
-  
-m_grid.StoreSprite(FT::PlatformLeftEnd,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_left"))));
-m_grid.StoreSprite(FT::PlatformMidPart,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_mid"))));
-m_grid.StoreSprite(FT::PlatformRightEnd, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_right"))));
-m_grid.StoreSprite(FT::Fruit, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("fruit"))));
-m_grid.SetLevel(m_level);
+
+    m_grid.StoreSprite(FT::PlatformLeftEnd,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_left"))));
+    m_grid.StoreSprite(FT::PlatformMidPart,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_mid"))));
+    m_grid.StoreSprite(FT::PlatformRightEnd, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_right"))));
+    m_grid.StoreSprite(FT::Fruit, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("fruit"))));
+    m_grid.SetLevel(m_level);
 
 
 m_player.reset( new Player() );
 m_player->SetGrid(&m_grid);
 Engine::Get().GetTreasure()->SetGrid(&m_grid);
 
-
- //lua_State *L = lua_open();
-  //lua_close(L);
 }
 
 void App::Run() {
@@ -66,6 +84,9 @@ void App::Run() {
     float accumulator (0.0f);
     float last_ticks = SDL_GetTicks();
     size_t ticks=0;
+    
+    SDL_Delay(INTRO_TIME); //Czas na pokazanie intro
+    
     /// Glowna petla programu
     while ( !m_is_done ) {
         ticks = SDL_GetTicks();
@@ -101,6 +122,7 @@ void App::Draw() const {
     }*/
 
   //SDL_FillRect( m_screen,NULL,0x0f);
+  SDL_FillRect( m_screen,NULL,SDL_MapRGB(m_screen->format,68,68,68));
     m_grid.Draw();
     m_player->Draw();
     Engine::Get().GetWriter()->Render();
@@ -121,13 +143,16 @@ void App::ProcessEvents() {
         return;
     }
 
-    SDL_Event event;
+    
+   
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
             m_is_done = true;
             break;
         }
-        else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE) {
+        else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
+	{
+	    m_menu->ShowMenu();
             m_is_done=true;
             break;
         }
@@ -168,3 +193,9 @@ void App::ProcessEvents() {
     }
 }
 
+App::~App(){
+  //Dokonczyc odsmiecanie [!!]
+  
+  SDL_Quit();
+  TTF_Quit(); 
+}

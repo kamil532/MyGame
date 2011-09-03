@@ -21,7 +21,6 @@ void ProgressBar::Update( const double& Current_state){
     return;    
   }
   m_width_uses = m_long_bar * Current_state;
-  cout<<m_width_uses<<" "<<Current_state<< endl;
   if( m_width_uses == m_long_bar ){ m_full=true; m_empty=false; }
   if( m_width_uses == 0 ){ m_empty=true; m_full=false;}
   
