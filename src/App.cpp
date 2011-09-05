@@ -59,16 +59,14 @@ m_is_done( new bool(false) ), m_screen(NULL), m_full(SDL_FULLSCREEN){
 
 void App::Run() {
 
-    float dt (0.0f);
-    float accumulator (0.0f);
-    float last_ticks = SDL_GetTicks();
-    size_t ticks=0;
-    
-    SDL_Delay(INTRO_TIME); //Czas na pokazanie intro
+   register float dt (0.0f);
+   register float accumulator (0.0f);
+   register float last_ticks = SDL_GetTicks();
+   register size_t ticks=0;
     
     //! [ Glowna petla programu ]    
     while ( !(*m_is_done) ){
-        ticks = SDL_GetTicks();
+       ticks = SDL_GetTicks();
         dt = (ticks - last_ticks) / 1000.0;
         last_ticks = ticks;
         accumulator += dt;
@@ -77,7 +75,7 @@ void App::Run() {
 
         while (accumulator > TIME_STEP){
           m_game-> Update(TIME_STEP);
-            accumulator -= TIME_STEP;
+          accumulator -= TIME_STEP;
 	}
         m_game->Draw();
     }

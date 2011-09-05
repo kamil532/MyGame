@@ -1,3 +1,7 @@
+
+
+
+
 # Minimalna wersja cmake`a
 CMAKE_MINIMUM_REQUIRED (VERSION 2.6)
 
@@ -6,7 +10,7 @@ set(SOURCES main.cpp			App.cpp			Renderer.cpp
 	    Sprite.cpp			SpriteConfig.cpp	Level.cpp
 	    SpriteGrid.cpp		Player.cpp		Aabb.cpp
 	    Writer.cpp			Treasure.cpp    	Entity.cpp
-	    ProgressBar.cpp		Game.cpp
+	    ProgressBar.cpp		Menu.cpp		Game.cpp		
     ) 
 
 # Ustawienia katalogow
@@ -26,10 +30,8 @@ find_package(SDL REQUIRED)
 add_executable(game ${SOURCES})
 
 #flagi kompilatora
-ADD_DEFINITIONS( "-Wall -ansi -pedantic")
+ADD_DEFINITIONS( "-Wall -ansi -pedantic -lSDL_gfx")
 
-############################################################################
- enable_testing()
 
 
 

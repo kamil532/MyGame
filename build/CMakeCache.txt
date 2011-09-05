@@ -28,7 +28,7 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //Flags used by the compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=-lSDL -lSDL_image -lSDL_ttf -lSDL_mixer
+CMAKE_CXX_FLAGS:STRING=-lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_gfx
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -175,6 +175,12 @@ OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLU.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//Path to a file.
+SDLGFX_INCLUDE_DIR:PATH=/usr/include/SDL
+
+//Path to a library.
+SDLGFX_LIBRARY:FILEPATH=/usr/lib/libSDL_gfx.so
+
 //Path to a library.
 SDLMAIN_LIBRARY:FILEPATH=/usr/lib/libSDLmain.a
 
@@ -183,6 +189,12 @@ SDL_INCLUDE_DIR:PATH=/usr/include/SDL
 
 //Where the SDL Library can be found
 SDL_LIBRARY:STRING=/usr/lib/libSDLmain.a;/usr/lib/libSDL.so;-lpthread
+
+//Path to a file.
+SDL_gfx_INCLUDE_DIR:PATH=/usr/include/SDL
+
+//Path to a library.
+SDL_gfx_LIBRARY:FILEPATH=/usr/lib/libSDL_gfx.so
 
 //Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
@@ -534,7 +546,11 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+//ADVANCED property for variable: SDL_gfx_INCLUDE_DIR
+SDL_gfx_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL_gfx_LIBRARY
+SDL_gfx_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_INCLUDE_PATH
 X11_ICE_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_ICE_LIB

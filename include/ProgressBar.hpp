@@ -2,7 +2,6 @@
 #define PROGRESSBAR_HPP
 #include "Heders.hpp"
 #include "Sprite.hpp"
-#include "Engine.hpp"
 
 class ProgressBar{
 public:  

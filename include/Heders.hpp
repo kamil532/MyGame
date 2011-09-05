@@ -22,6 +22,7 @@
 
 namespace GAMESPACE{
 	using std::cout;
+	using std::cerr;
 	using std::endl;
 	using std::string;
 	using std::vector;
@@ -79,6 +80,14 @@ inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Su
   return SDL_CreateRGBSurface(flags,width,height,
                   fmt.BitsPerPixel,
                   fmt.Rmask,fmt.Gmask,fmt.Bmask,fmt.Amask );
+}
+
+inline bool EqualRect(const SDL_Rect& A, const SDL_Rect& B){
+  if( A.x ==B.x
+      && A.y == B.y
+      && A.h == B.h
+      && A.w == B.w ) return true;
+  else return false; 
 }
 
 #endif 

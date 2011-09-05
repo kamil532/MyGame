@@ -19,6 +19,7 @@
 */      
 
 #include "App.hpp"
+#include <exception>
 
 int main( int argc, char** argv ){
 
@@ -30,10 +31,14 @@ int main( int argc, char** argv ){
         else  application = new App(new string(""));
         application->Run();
     }
+    catch (std::exception& e)  {
+	cout << e.what() << endl;
+	return -1;
+    }
     catch (const char* Error) {
         std::cout<<Error<<std::endl;
         return -1;
-    }
+    }    
     
  return 0;	
 }	

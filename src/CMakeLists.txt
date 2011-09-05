@@ -6,7 +6,7 @@ set(SOURCES main.cpp			App.cpp			Renderer.cpp
 	    Sprite.cpp			SpriteConfig.cpp	Level.cpp
 	    SpriteGrid.cpp		Player.cpp		Aabb.cpp
 	    Writer.cpp			Treasure.cpp    	Entity.cpp
-	    ProgressBar.cpp		Game.cpp		Menu.cpp
+	    ProgressBar.cpp		Menu.cpp		Game.cpp		
     ) 
 
 # Ustawienia katalogow
@@ -26,11 +26,4 @@ find_package(SDL REQUIRED)
 add_executable(game ${SOURCES})
 
 #flagi kompilatora
-ADD_DEFINITIONS( "-Wall -ansi -pedantic")
-
-############################################################################
- enable_testing()
-
-
-
-
+ADD_DEFINITIONS( "-Wall -ansi -pedantic ")

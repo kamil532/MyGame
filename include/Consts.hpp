@@ -15,11 +15,13 @@ const ushort CORNER_Y( 100 );
 
 const double PLAYER_X( 124 );
 const double PLAYER_Y( 124 );
-const ushort PLAYER_SIZE( 40 );
+const ushort PLAYER_SIZE( 42 );
+
 const string FONT_PATH ("data/font.ttf");
+const string INTRO_PATH("data/intro.jpg");
 const float SPEED(180.0f);
-const ushort INTRO_TIME(1000);
-const ushort RUN_FACTOR(2);
+const ushort INTRO_TIME(3000);
+const ushort RUN_FACTOR(1.8);
 const ushort FONT_SIZE(42);
 
 

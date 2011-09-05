@@ -1,10 +1,6 @@
 #ifndef CLASS_HPP
 #define CLASS_HPP
 #include "Heders.hpp"
-#include "Engine.hpp"
-#include "Level.hpp"
-#include "SpriteGrid.hpp"
-#include "Player.hpp"
 #include "Game.hpp"
 
 class App {

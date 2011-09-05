@@ -23,7 +23,7 @@ public:
         return engine;
     }
     
-public:
+public:  
     void Load() {
     m_SpriteConfig.reset( new SpriteConfig() );
     m_Renderer.reset( new Renderer( m_screen , ATLAS_PATH) );

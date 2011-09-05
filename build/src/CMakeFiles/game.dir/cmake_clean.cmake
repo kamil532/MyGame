@@ -12,8 +12,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/Treasure.cpp.o"
   "CMakeFiles/game.dir/Entity.cpp.o"
   "CMakeFiles/game.dir/ProgressBar.cpp.o"
-  "CMakeFiles/game.dir/Game.cpp.o"
   "CMakeFiles/game.dir/Menu.cpp.o"
+  "CMakeFiles/game.dir/Game.cpp.o"
   "../game.pdb"
   "../game"
 )
