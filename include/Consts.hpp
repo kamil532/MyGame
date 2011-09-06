@@ -1,13 +1,8 @@
 #ifndef CONSTS_HPP
 #define CONSTS_HPP
 #include "Heders.hpp"
-
-const string ATLAS_PATH ("data/atlas.png");
-const string STITLE ("Game");
-const string INFO ("My app start\n"); 
-
+/*
 const float  TIME_STEP ( 1.0f / 60.0f);
-
 const ushort TILE_SIZE ( 22) ;
 
 const ushort CORNER_X( 100 );
@@ -23,6 +18,6 @@ const float SPEED(180.0f);
 const ushort INTRO_TIME(3000);
 const ushort RUN_FACTOR(1.8);
 const ushort FONT_SIZE(42);
-
+*/
 
 #endif

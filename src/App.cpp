@@ -24,7 +24,7 @@ void App::InitSDL() throw (const char*) {
     SDL_ShowCursor(false);
     
     //Ustawienie tytulu okna, oraz ikony
-    SDL_WM_SetCaption( STITLE.c_str() , NULL );
+    SDL_WM_SetCaption( Engine::GetLua()->APP_TITLE.c_str() , NULL );
 
     //![ Pobranie rozdzielczosci ekranu ]
     const SDL_VideoInfo* myPointer = SDL_GetVideoInfo();
@@ -73,9 +73,9 @@ void App::Run() {
     
         m_game-> ProcessEvents();
 
-        while (accumulator > TIME_STEP){
-          m_game-> Update(TIME_STEP);
-          accumulator -= TIME_STEP;
+        while (accumulator > Engine::GetLua()->TIME_STEP){
+          m_game-> Update(Engine::GetLua()->TIME_STEP);
+          accumulator -= Engine::GetLua()->TIME_STEP;
 	}
         m_game->Draw();
     }

@@ -14,8 +14,11 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/ProgressBar.cpp.o"
   "CMakeFiles/game.dir/Menu.cpp.o"
   "CMakeFiles/game.dir/Game.cpp.o"
-  "../game.pdb"
-  "../game"
+  "CMakeFiles/game.dir/Lua.cpp.o"
+  "CMakeFiles/game.dir/Engine.cpp.o"
+  "CMakeFiles/game.dir/GlobFun.cpp.o"
+  "../../game.pdb"
+  "../../game"
 )
 
 # Per-language clean rules from dependency scanning.

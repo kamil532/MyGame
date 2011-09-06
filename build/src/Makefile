@@ -157,6 +157,30 @@ App.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/App.cpp.s
 .PHONY : App.cpp.s
 
+Engine.o: Engine.cpp.o
+.PHONY : Engine.o
+
+# target to build an object file
+Engine.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Engine.cpp.o
+.PHONY : Engine.cpp.o
+
+Engine.i: Engine.cpp.i
+.PHONY : Engine.i
+
+# target to preprocess a source file
+Engine.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Engine.cpp.i
+.PHONY : Engine.cpp.i
+
+Engine.s: Engine.cpp.s
+.PHONY : Engine.s
+
+# target to generate assembly for a file
+Engine.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Engine.cpp.s
+.PHONY : Engine.cpp.s
+
 Entity.o: Entity.cpp.o
 .PHONY : Entity.o
 
@@ -205,6 +229,30 @@ Game.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+GlobFun.o: GlobFun.cpp.o
+.PHONY : GlobFun.o
+
+# target to build an object file
+GlobFun.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/GlobFun.cpp.o
+.PHONY : GlobFun.cpp.o
+
+GlobFun.i: GlobFun.cpp.i
+.PHONY : GlobFun.i
+
+# target to preprocess a source file
+GlobFun.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/GlobFun.cpp.i
+.PHONY : GlobFun.cpp.i
+
+GlobFun.s: GlobFun.cpp.s
+.PHONY : GlobFun.s
+
+# target to generate assembly for a file
+GlobFun.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/GlobFun.cpp.s
+.PHONY : GlobFun.cpp.s
+
 Level.o: Level.cpp.o
 .PHONY : Level.o
 
@@ -228,6 +276,30 @@ Level.s: Level.cpp.s
 Level.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Level.cpp.s
 .PHONY : Level.cpp.s
+
+Lua.o: Lua.cpp.o
+.PHONY : Lua.o
+
+# target to build an object file
+Lua.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Lua.cpp.o
+.PHONY : Lua.cpp.o
+
+Lua.i: Lua.cpp.i
+.PHONY : Lua.i
+
+# target to preprocess a source file
+Lua.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Lua.cpp.i
+.PHONY : Lua.cpp.i
+
+Lua.s: Lua.cpp.s
+.PHONY : Lua.s
+
+# target to generate assembly for a file
+Lua.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Lua.cpp.s
+.PHONY : Lua.cpp.s
 
 Menu.o: Menu.cpp.o
 .PHONY : Menu.o
@@ -484,15 +556,24 @@ help:
 	@echo "... App.o"
 	@echo "... App.i"
 	@echo "... App.s"
+	@echo "... Engine.o"
+	@echo "... Engine.i"
+	@echo "... Engine.s"
 	@echo "... Entity.o"
 	@echo "... Entity.i"
 	@echo "... Entity.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... GlobFun.o"
+	@echo "... GlobFun.i"
+	@echo "... GlobFun.s"
 	@echo "... Level.o"
 	@echo "... Level.i"
 	@echo "... Level.s"
+	@echo "... Lua.o"
+	@echo "... Lua.i"
+	@echo "... Lua.s"
 	@echo "... Menu.o"
 	@echo "... Menu.i"
 	@echo "... Menu.s"

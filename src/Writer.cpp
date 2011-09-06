@@ -3,7 +3,7 @@
 
 Writer::Writer(void):m_font_a(NULL){
   
- m_font_a = TTF_OpenFont( FONT_PATH.c_str(), FONT_SIZE);
+ m_font_a = TTF_OpenFont( Engine::GetLua()->FONT_PATH.c_str(), Engine::GetLua()->FONT_SIZE);
  if( !m_font_a)	throw "[Critical] Nie znaleziono fontu"; 
   
  m_font_color.b = 250;

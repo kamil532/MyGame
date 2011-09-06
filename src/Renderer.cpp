@@ -2,14 +2,11 @@
 
 
 Renderer::Renderer(SDL_Surface* Screen, const string& filename)
-		:m_screen(Screen), m_atlas(NULL) {				
-			m_atlas =
-			//SDL_DisplayFormat(
-			IMG_Load(filename.c_str())
-			//	 )
-			; 
-
-			if (!m_atlas) {	throw "[Critical] Not found sprite atlas file\n"; }			
+:m_screen(Screen), m_atlas(NULL)
+{  
+  m_atlas =IMG_Load(filename.c_str());
+  if (!m_atlas) {	throw "[Critical] Not found sprite atlas file\n"; }	
+  
 }
 
 void Renderer::Draw(size_t tex_x, size_t tex_y,

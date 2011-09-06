@@ -1,10 +1,12 @@
 #ifndef ENGINE_HPP
 #define ENGINE_HPP
+
 #include "Heders.hpp"
 #include "Treasure.hpp"
 #include "Renderer.hpp"
 #include "Aabb.hpp"
 #include "Writer.hpp"
+#include "Lua.hpp"
 
 /* Klasa singleton, dzieki ktorej uzuskuje sie dostep do
  * klas, ktore rowniez powinny miec tylko jedna instacje.
@@ -18,36 +20,15 @@
 
 class Engine {
 public:
- static Engine& Get() {
+    static Engine& Get() {
         static Engine engine;
         return engine;
     }
+    void Load();
+    void LoadLua(); 
+    void SetScreen(SDL_Surface* Screen,ushort w,ushort h);
     
-public:  
-    void Load() {
-    m_SpriteConfig.reset( new SpriteConfig() );
-    m_Renderer.reset( new Renderer( m_screen , ATLAS_PATH) );
-    m_aabb.reset( new Aabb() );
-    m_Writer.reset( new Writer() );
-    m_treasure.reset( new Treasure ); 
-  
-    m_level.reset(new Level());
-    m_level->LoadFromFile("data/1.lvl");
-
-    m_grid.StoreSprite(FT::PlatformLeftEnd,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_left"))));
-    m_grid.StoreSprite(FT::PlatformMidPart,  SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_mid"))));
-    m_grid.StoreSprite(FT::PlatformRightEnd, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("platform_right"))));
-    m_grid.StoreSprite(FT::Fruit, SpritePtr(new Sprite(Engine::Get().GetSpriteConfig()->Get("fruit"))));
-    m_grid.SetLevel(m_level);
-	
-    }
-
-    void SetScreen(SDL_Surface* Screen,ushort w,ushort h) { 
-			m_screen = Screen;
-			m_screen_h = h;
-			m_screen_w = w;
-    }
-    
+    static LuaPtr   GetLua() { return m_lua; }   
     ushort 	    GetScreenWidth() const { return m_screen_w;}
     ushort 	    GetScreenHeight() const {return m_screen_h; }
     SpriteConfigPtr GetSpriteConfig() const { return m_SpriteConfig; }
@@ -59,18 +40,35 @@ public:
     SpriteGrid*	    GetGrid()  { return &m_grid; }
     
 private:
+    //Ustawienia globalne dla calej aplikacji, wczytywane z pliku
+    static LuaPtr m_lua;
+    
+    //Informacje o polozeniu spritow w atlasie
     SpriteConfigPtr m_SpriteConfig;
+    
+    //Wskaznik do klasy obslugujacej wyswietlanie
     RendererPtr m_Renderer;
+    
+    //Klasa pozwalajaca wykryc kolizje miedzy obiektami
     AabbPtr m_aabb;
+    
+    //Klasa wypisujaca text na ekranie
     WriterPtr m_Writer;
+    
+    //Klasa przechowujaca rzeczy do zebrania na planszy
     TreasurePtr m_treasure;
+    
+    //Klasa wczytujaca ustawienia levelu z pliku
     LevelPtr m_level;
+    
+    //Klasa przechowujaca i rysujaca mape
     SpriteGrid m_grid;
     
-    // Informacje o glownym Surface
+    //Informacje o glownym Surface
     SDL_Surface* m_screen;
     ushort m_screen_h;
     ushort m_screen_w;
-  };
+};
+
 
 #endif

@@ -46,7 +46,7 @@ void Player::Update(const double& dt) {
     CorectPos(next_x, next_y);
     
     //Kwadrat na ktorym sie miesci sprite gracza
-    SDL_Rect tmp={next_x, next_y, PLAYER_SIZE, PLAYER_SIZE};
+    SDL_Rect tmp={next_x, next_y, Engine::GetLua()->PLAYER_SIZE, Engine::GetLua()->PLAYER_SIZE};
     
     
     //okreslenie w ktora strone sie porusza postac 
@@ -133,22 +133,22 @@ void Player::CorectPos(float& next_x, float& next_y){
     //tak aby latwiej bylo skrecic
     // Algorytm wlasny :P
     
-    ushort margin_x= ( static_cast<int>(next_x-CORNER_X) ) % TILE_SIZE;
-    ushort margin_y= ( static_cast<int>(next_y-CORNER_Y) ) % TILE_SIZE;
+    ushort margin_x= ( static_cast<int>(next_x-Engine::GetLua()->CORNER_X) ) % Engine::GetLua()->TILE_SIZE;
+    ushort margin_y= ( static_cast<int>(next_y-Engine::GetLua()->CORNER_Y) ) % Engine::GetLua()->TILE_SIZE;
 
     ushort tile_x = next_x - margin_x;
     ushort tile_y = next_y - margin_y;
 
-    SDL_Rect tmp={next_x, next_y, PLAYER_SIZE, PLAYER_SIZE};
+    SDL_Rect tmp={next_x, next_y, Engine::GetLua()->PLAYER_SIZE, Engine::GetLua()->PLAYER_SIZE};
 
 
     if ( m_state == PS::GoDown || m_state == PS::GoUp ) {
 
         if (  Engine::Get().GetAabb()->IsOver(tmp)) {
-            SDL_Rect checker_ld={ tile_x+1, tile_y+TILE_SIZE+1, TILE_SIZE,TILE_SIZE };
-            SDL_Rect checker_rd={ (tile_x + TILE_SIZE)+1, tile_y+TILE_SIZE+1, TILE_SIZE,TILE_SIZE };
+            SDL_Rect checker_ld={ tile_x+1, tile_y+Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
+            SDL_Rect checker_rd={ (tile_x + Engine::GetLua()->TILE_SIZE)+1, tile_y+Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
             if ( !Engine::Get().GetAabb()->Collides(checker_rd)) {
-                next_x= tile_x + TILE_SIZE + 1;
+                next_x= tile_x + Engine::GetLua()->TILE_SIZE + 1;
 	    next_y=m_y;
             }
 
@@ -159,12 +159,12 @@ void Player::CorectPos(float& next_x, float& next_y){
         }
 
         if ( Engine::Get().GetAabb()->IsUnder(tmp)) {
-            SDL_Rect checker_lu={ tile_x+1, tile_y-TILE_SIZE+1, TILE_SIZE,TILE_SIZE };
-            SDL_Rect checker_ru={ (tile_x + TILE_SIZE)+1, tile_y-TILE_SIZE+1, TILE_SIZE,TILE_SIZE };
+            SDL_Rect checker_lu={ tile_x+1, tile_y-Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
+            SDL_Rect checker_ru={ (tile_x + Engine::GetLua()->TILE_SIZE)+1, tile_y-Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
 
             if ( !Engine::Get().GetAabb()->Collides(checker_ru)
                    ) {
-                next_x= tile_x + TILE_SIZE + 1;
+                next_x= tile_x + Engine::GetLua()->TILE_SIZE + 1;
 	       next_y=m_y;
             }
 
@@ -179,8 +179,8 @@ void Player::CorectPos(float& next_x, float& next_y){
   if ( m_state == PS::GoRight || m_state == PS::GoLeft ) {
 	
 	    if (  Engine::Get().GetAabb()->IsOnLeftOf(tmp)){
-	        SDL_Rect checker_ul={ tile_x + TILE_SIZE, tile_y+1, TILE_SIZE,TILE_SIZE };
-	        SDL_Rect checker_dl={ tile_x + TILE_SIZE, tile_y+TILE_SIZE+1, TILE_SIZE, TILE_SIZE };
+	        SDL_Rect checker_ul={ tile_x + Engine::GetLua()->TILE_SIZE, tile_y+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
+	        SDL_Rect checker_dl={ tile_x + Engine::GetLua()->TILE_SIZE, tile_y+Engine::GetLua()->TILE_SIZE+1,Engine::GetLua()-> TILE_SIZE, Engine::GetLua()->TILE_SIZE };
 	      
 	      if ( !Engine::Get().GetAabb()->Collides(checker_ul)
          
@@ -191,15 +191,15 @@ void Player::CorectPos(float& next_x, float& next_y){
              if ( !Engine::Get().GetAabb()->Collides(checker_dl)
 
 		 ) {
-                next_y= tile_y + TILE_SIZE + 1;
+                next_y= tile_y + Engine::GetLua()->TILE_SIZE + 1;
 	       next_x=m_x;
             }
 	      
 	    }
 	    
 	   if (  Engine::Get().GetAabb()->IsOnRightOf(tmp)){
-		SDL_Rect checker_ur={ tile_x + TILE_SIZE, tile_y+1, TILE_SIZE,TILE_SIZE };
-	        SDL_Rect checker_dr={ tile_x + TILE_SIZE, (tile_y+TILE_SIZE)+1, TILE_SIZE, TILE_SIZE };
+		SDL_Rect checker_ur={ tile_x + Engine::GetLua()->TILE_SIZE, tile_y+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
+	        SDL_Rect checker_dr={ tile_x + Engine::GetLua()->TILE_SIZE, (tile_y+Engine::GetLua()->TILE_SIZE)+1, Engine::GetLua()->TILE_SIZE, Engine::GetLua()->TILE_SIZE };
 		 
 		     if ( !Engine::Get().GetAabb()->Collides(checker_ur)
 		     ){
@@ -208,7 +208,7 @@ void Player::CorectPos(float& next_x, float& next_y){
             }
             
                  if ( !Engine::Get().GetAabb()->Collides(checker_dr)) {
-                next_y= (tile_y + TILE_SIZE) + 1 ;
+                next_y= (tile_y + Engine::GetLua()->TILE_SIZE) + 1 ;
 		  next_x=m_x;
             }
 		  

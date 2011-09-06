@@ -391,6 +391,75 @@ src/CMakeFiles/game.dir/Game.cpp.o.provides: src/CMakeFiles/game.dir/Game.cpp.o.
 
 src/CMakeFiles/game.dir/Game.cpp.o.provides.build: src/CMakeFiles/game.dir/Game.cpp.o
 
+src/CMakeFiles/game.dir/Lua.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/Lua.cpp.o: ../src/Lua.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Lua.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Lua.cpp.o -c /home/lolcio/safarix/src/Lua.cpp
+
+src/CMakeFiles/game.dir/Lua.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Lua.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Lua.cpp > CMakeFiles/game.dir/Lua.cpp.i
+
+src/CMakeFiles/game.dir/Lua.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Lua.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Lua.cpp -o CMakeFiles/game.dir/Lua.cpp.s
+
+src/CMakeFiles/game.dir/Lua.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/Lua.cpp.o.requires
+
+src/CMakeFiles/game.dir/Lua.cpp.o.provides: src/CMakeFiles/game.dir/Lua.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Lua.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/Lua.cpp.o.provides
+
+src/CMakeFiles/game.dir/Lua.cpp.o.provides.build: src/CMakeFiles/game.dir/Lua.cpp.o
+
+src/CMakeFiles/game.dir/Engine.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/Engine.cpp.o: ../src/Engine.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Engine.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Engine.cpp.o -c /home/lolcio/safarix/src/Engine.cpp
+
+src/CMakeFiles/game.dir/Engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Engine.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Engine.cpp > CMakeFiles/game.dir/Engine.cpp.i
+
+src/CMakeFiles/game.dir/Engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Engine.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Engine.cpp -o CMakeFiles/game.dir/Engine.cpp.s
+
+src/CMakeFiles/game.dir/Engine.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/Engine.cpp.o.requires
+
+src/CMakeFiles/game.dir/Engine.cpp.o.provides: src/CMakeFiles/game.dir/Engine.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Engine.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/Engine.cpp.o.provides
+
+src/CMakeFiles/game.dir/Engine.cpp.o.provides.build: src/CMakeFiles/game.dir/Engine.cpp.o
+
+src/CMakeFiles/game.dir/GlobFun.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/GlobFun.cpp.o: ../src/GlobFun.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/GlobFun.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/GlobFun.cpp.o -c /home/lolcio/safarix/src/GlobFun.cpp
+
+src/CMakeFiles/game.dir/GlobFun.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/GlobFun.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/GlobFun.cpp > CMakeFiles/game.dir/GlobFun.cpp.i
+
+src/CMakeFiles/game.dir/GlobFun.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/GlobFun.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/GlobFun.cpp -o CMakeFiles/game.dir/GlobFun.cpp.s
+
+src/CMakeFiles/game.dir/GlobFun.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
+
+src/CMakeFiles/game.dir/GlobFun.cpp.o.provides: src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/GlobFun.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/GlobFun.cpp.o.provides
+
+src/CMakeFiles/game.dir/GlobFun.cpp.o.provides.build: src/CMakeFiles/game.dir/GlobFun.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/main.cpp.o" \
@@ -407,33 +476,39 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/Entity.cpp.o" \
 "CMakeFiles/game.dir/ProgressBar.cpp.o" \
 "CMakeFiles/game.dir/Menu.cpp.o" \
-"CMakeFiles/game.dir/Game.cpp.o"
+"CMakeFiles/game.dir/Game.cpp.o" \
+"CMakeFiles/game.dir/Lua.cpp.o" \
+"CMakeFiles/game.dir/Engine.cpp.o" \
+"CMakeFiles/game.dir/GlobFun.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
-game: src/CMakeFiles/game.dir/main.cpp.o
-game: src/CMakeFiles/game.dir/App.cpp.o
-game: src/CMakeFiles/game.dir/Renderer.cpp.o
-game: src/CMakeFiles/game.dir/Sprite.cpp.o
-game: src/CMakeFiles/game.dir/SpriteConfig.cpp.o
-game: src/CMakeFiles/game.dir/Level.cpp.o
-game: src/CMakeFiles/game.dir/SpriteGrid.cpp.o
-game: src/CMakeFiles/game.dir/Player.cpp.o
-game: src/CMakeFiles/game.dir/Aabb.cpp.o
-game: src/CMakeFiles/game.dir/Writer.cpp.o
-game: src/CMakeFiles/game.dir/Treasure.cpp.o
-game: src/CMakeFiles/game.dir/Entity.cpp.o
-game: src/CMakeFiles/game.dir/ProgressBar.cpp.o
-game: src/CMakeFiles/game.dir/Menu.cpp.o
-game: src/CMakeFiles/game.dir/Game.cpp.o
-game: src/CMakeFiles/game.dir/build.make
-game: src/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../game"
+../game: src/CMakeFiles/game.dir/main.cpp.o
+../game: src/CMakeFiles/game.dir/App.cpp.o
+../game: src/CMakeFiles/game.dir/Renderer.cpp.o
+../game: src/CMakeFiles/game.dir/Sprite.cpp.o
+../game: src/CMakeFiles/game.dir/SpriteConfig.cpp.o
+../game: src/CMakeFiles/game.dir/Level.cpp.o
+../game: src/CMakeFiles/game.dir/SpriteGrid.cpp.o
+../game: src/CMakeFiles/game.dir/Player.cpp.o
+../game: src/CMakeFiles/game.dir/Aabb.cpp.o
+../game: src/CMakeFiles/game.dir/Writer.cpp.o
+../game: src/CMakeFiles/game.dir/Treasure.cpp.o
+../game: src/CMakeFiles/game.dir/Entity.cpp.o
+../game: src/CMakeFiles/game.dir/ProgressBar.cpp.o
+../game: src/CMakeFiles/game.dir/Menu.cpp.o
+../game: src/CMakeFiles/game.dir/Game.cpp.o
+../game: src/CMakeFiles/game.dir/Lua.cpp.o
+../game: src/CMakeFiles/game.dir/Engine.cpp.o
+../game: src/CMakeFiles/game.dir/GlobFun.cpp.o
+../game: src/CMakeFiles/game.dir/build.make
+../game: src/CMakeFiles/game.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../game"
 	cd /home/lolcio/safarix/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-src/CMakeFiles/game.dir/build: game
+src/CMakeFiles/game.dir/build: ../game
 .PHONY : src/CMakeFiles/game.dir/build
 
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/main.cpp.o.requires
@@ -451,6 +526,9 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Entity.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/ProgressBar.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Menu.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Game.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Lua.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Engine.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

@@ -23,12 +23,14 @@
 
 int main( int argc, char** argv ){
 
-    std::cout<<INFO;
     App* application;
 
     try {
+        Engine::Get().LoadLua();
+        cout<<Engine::GetLua()->INFO;
+      
         if (argc == 2) application = new App(new string(argv[1]));
-        else  application = new App(new string(""));
+        else  application = new App(new string(" "));
         application->Run();
     }
     catch (std::exception& e)  {

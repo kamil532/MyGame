@@ -16,9 +16,17 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
+#include <luabind/luabind.hpp>
+#include "lua.hpp"
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
+extern "C" {
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+}
 
 namespace GAMESPACE{
 	using std::cout;
@@ -66,29 +74,12 @@ namespace GS{
 
 #include "Consts.hpp"
 
-inline void ShowBox( SDL_Rect& checkBox ){
-        cout<<checkBox.x<<" : "<<checkBox.y<<" : "
-            <<checkBox.w<<" : "<<checkBox.h<<endl;  
-}
+//Naglowki funkcji globalnych, ktore sa umieszczone w pliku GlobFun.cpp
+inline void ShowBox( SDL_Rect& checkBox );
+inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Surface* display);
+inline bool EqualRect(const SDL_Rect& A, const SDL_Rect& B);
+template <typename Typ> Typ Lua_cast( lua_State*, string&);
 
-inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Surface* display)
-{
-  // 'display' is the surface whose format you want to match
-  //  if this is really the display format, then use the surface returned from SDL_SetVideoMode
-
-  const SDL_PixelFormat& fmt = *(display->format);
-  return SDL_CreateRGBSurface(flags,width,height,
-                  fmt.BitsPerPixel,
-                  fmt.Rmask,fmt.Gmask,fmt.Bmask,fmt.Amask );
-}
-
-inline bool EqualRect(const SDL_Rect& A, const SDL_Rect& B){
-  if( A.x ==B.x
-      && A.y == B.y
-      && A.h == B.h
-      && A.w == B.w ) return true;
-  else return false; 
-}
 
 #endif 
 

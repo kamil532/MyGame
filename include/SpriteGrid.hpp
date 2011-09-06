@@ -4,6 +4,7 @@
 #include "Level.hpp"
 #include "Sprite.hpp"
 
+
 class SpriteGrid{
 public:
     explicit SpriteGrid();
@@ -11,12 +12,7 @@ public:
     void Draw() const;
     void StoreSprite(FT::FieldType, SpritePtr);
     
-    void DeleteGrid(SDL_Rect Rect){
-	  int x=(Rect.x-CORNER_X)/TILE_SIZE;
-	  int y=(Rect.y-CORNER_Y)/TILE_SIZE;
-	 if(x>=0 && y>=0)
-	  m_grid.at(y).at(x).reset();      
-    }  
+    void DeleteGrid(SDL_Rect Rect);  
     
     FT::FieldType GetType(SDL_Rect&);
     

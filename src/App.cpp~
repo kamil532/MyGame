@@ -24,7 +24,7 @@ void App::InitSDL() throw (const char*) {
     SDL_ShowCursor(false);
     
     //Ustawienie tytulu okna, oraz ikony
-    SDL_WM_SetCaption( STITLE.c_str() , NULL );
+    SDL_WM_SetCaption( Engine::GetLua()->APP_TITLE.c_str() , NULL );
 
     //![ Pobranie rozdzielczosci ekranu ]
     const SDL_VideoInfo* myPointer = SDL_GetVideoInfo();
@@ -63,9 +63,6 @@ void App::Run() {
    register float accumulator (0.0f);
    register float last_ticks = SDL_GetTicks();
    register size_t ticks=0;
-    
-  // SDL_Delay(3000); //Czas na pokazanie intro
- //   m_game->Draw();
     
     //! [ Glowna petla programu ]    
     while ( !(*m_is_done) ){

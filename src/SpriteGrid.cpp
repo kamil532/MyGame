@@ -13,6 +13,13 @@ void SpriteGrid::StoreSprite(FT::FieldType ft, SpritePtr Sprite){
   m_sprites.at(ft) = Sprite;  
 }
 
+void SpriteGrid::DeleteGrid(SDL_Rect Rect){
+    int x=(Rect.x-Engine::GetLua()->CORNER_X)/Engine::GetLua()->TILE_SIZE;
+	  int y=(Rect.y-Engine::GetLua()->CORNER_Y)/Engine::GetLua()->TILE_SIZE;
+	 if(x>=0 && y>=0)
+	  m_grid.at(y).at(x).reset();     
+}
+
 void SpriteGrid::SetLevel( LevelPtr Level){
 
     m_level = Level;
@@ -32,9 +39,9 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 	    if( ft>0 ){
 	      SetSprite( x, y, m_sprites.at(ft),ft); 		
 	      }	if (ft>=4){
-		SDL_Rect tmp={CORNER_X + TILE_SIZE * x,
-			      CORNER_X + TILE_SIZE * y,
-			      TILE_SIZE*2,TILE_SIZE*2};
+		SDL_Rect tmp={Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * x,
+			      Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * y,
+			      Engine::GetLua()->TILE_SIZE*2,Engine::GetLua()->TILE_SIZE*2};
 			      
 			      Engine::Get().GetTreasure()->AddTreasure(tmp);
 	      }
@@ -49,13 +56,13 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 		for (size_t x = 0; x < row.size(); ++x) {
 		  const SpritePtr& sprite = row.at(x);
 		  if(sprite){		
-			  sprite->SetX(CORNER_X + TILE_SIZE * x);
-			  sprite->SetY(CORNER_X + TILE_SIZE * y);
+			  sprite->SetX(Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * x);
+			  sprite->SetY(Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * y);
 			  SDL_Rect tmp;
 			  tmp.x = sprite->GetX();
 			  tmp.y = sprite->GetY();
-			  tmp.h = TILE_SIZE;
-			  tmp.w = TILE_SIZE;
+			  tmp.h = Engine::GetLua()->TILE_SIZE;
+			  tmp.w = Engine::GetLua()->TILE_SIZE;
 			  
 			  if(sprite->GetType() < 4 ) //![ilosc elementow mapy]
 			  Engine::Get().GetAabb()->AddBox(tmp);
@@ -74,8 +81,8 @@ void SpriteGrid::Draw() const{
 		for (size_t x = 0; x < row.size(); ++x) {
 		  const SpritePtr& sprite = row.at(x);
 			if (sprite) {
-			  sprite->Draw(CORNER_X + TILE_SIZE * x,
-				       CORNER_Y + TILE_SIZE * y );
+			  sprite->Draw(Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * x,
+				       Engine::GetLua()->CORNER_Y + Engine::GetLua()->TILE_SIZE * y );
 			  
 			}
 		}
