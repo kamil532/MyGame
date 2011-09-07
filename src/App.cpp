@@ -1,15 +1,5 @@
 #include "App.hpp"
 
-void App::SetAppMode(const string* Mode){
-  
-  // Argument podany mainowi podczas uruchamiania
-  // Moze wlaczyc opcje przydatne przy debugowaniu  
-  if( Mode->compare("windowMode") == 0 ){
-	  m_full=0;
-	  cout<<"[Info] Window mode is set\n";
-    }
-}
-
 void App::InitSDL() throw (const char*) {
 
     //![ Inicjacja SDL-a ]
@@ -41,12 +31,13 @@ void App::InitSDL() throw (const char*) {
 
 }
 
-App::App(const string* Parameters): 
-m_is_done( new bool(false) ), m_screen(NULL), m_full(SDL_FULLSCREEN){
-
-    //Parametry przekazane z maina
-    SetAppMode(Parameters);
-    
+App::App():m_is_done( new bool(false) ), m_screen(NULL),
+m_full(SDL_FULLSCREEN)
+{    
+  
+   //Wczytanie flagi pelnego okna
+    if( (Engine::GetLua()->FULL_SCREEN) != true) m_full=0;
+  
     //Inicjacja SDL-a
     InitSDL();
     
@@ -54,7 +45,7 @@ m_is_done( new bool(false) ), m_screen(NULL), m_full(SDL_FULLSCREEN){
     m_game.reset( new Game( m_screen, m_screen_w, m_screen_h) );    
     
     //Klasa Menu ma dostep do zmiennej, ktora decyduje o tym czy zakonczyc applikacje
-    m_game->SetQuitFlag( m_is_done );   
+    m_game->SetQuitFlag( m_is_done );      
 }
 
 void App::Run() {

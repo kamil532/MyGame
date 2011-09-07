@@ -5,10 +5,9 @@
 
 class App {
 public:
-    explicit App(const string*);
+    explicit App();
     ~App();
     void Run() ;	
-    void SetAppMode(const string*);
 
 private:
     void InitSDL() throw (const char*);

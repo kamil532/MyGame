@@ -20,12 +20,12 @@ Player::Player():m_live(1.0),m_live_dt(0.0),m_speed(1.0),m_speed_dt(0.0)
     m_sprites.insert(std::make_pair(PS::GoDown,
                                     *(new SpritePtr(new Sprite("goDown")))));
   
-    SDL_Rect ProgressRamka={110,40,130,30};
-    SDL_Rect ProgressWypelnienie={112,42,122,20};    
+    SDL_Rect ProgressRamka={110,25,270,55};
+    SDL_Rect ProgressWypelnienie={113,30,245,23};    
     m_progressBar.reset(new ProgressBar(ProgressRamka,ProgressWypelnienie));
     
-    SDL_Rect SpeedRamka={310,40,130,30};
-    SDL_Rect SpeedWypelnienie={312,42,122,20}; 
+    SDL_Rect SpeedRamka={110,25,270,55};
+    SDL_Rect SpeedWypelnienie={135,53,205,10}; 
     m_speedBar.reset(new ProgressBar(SpeedRamka, SpeedWypelnienie));   
 
     

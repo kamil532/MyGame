@@ -72,8 +72,6 @@ namespace GS{
   };  
 }
 
-#include "Consts.hpp"
-
 //Naglowki funkcji globalnych, ktore sa umieszczone w pliku GlobFun.cpp
 inline void ShowBox( SDL_Rect& checkBox );
 inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Surface* display);
