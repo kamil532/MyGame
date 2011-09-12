@@ -39,8 +39,8 @@ Player::Player():m_live(1.0),m_live_dt(0.0),m_speed(1.0),m_speed_dt(0.0)
 void Player::Update(const double& dt) {
         
     //funckcja obliaczajaca nastepne wspolrzedne postaci
-    float next_x=GetNextXPosition(dt);
-    float next_y=GetNextYPosition(dt);
+    double next_x=GetNextXPosition(dt);
+    double next_y=GetNextYPosition(dt);
 
     //Funckcje wpsomaga skrecanie playera w sciezce
     CorectPos(next_x, next_y);
@@ -64,7 +64,7 @@ void Player::Update(const double& dt) {
         next_y=m_y;
     }
 
-  tmp.x=next_x+10; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35; 
+  tmp.x=next_x+20; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35; 
   ControlLive(tmp,dt);
   ControlSpeed(dt);
 
@@ -89,7 +89,7 @@ void Player::ControlSpeed(const double& dt){
     if(m_running_factor > 1 && m_speed < 0.1) StopRun();    
 
     if (m_speed_dt > 0.1 && m_running_factor > 1) {
-        m_speed-=0.02;
+        m_speed-=0.01;
         m_speed_dt-=0.05;
     }
     else if (m_speed_dt > 0.01 && m_running_factor == 1 ) {
@@ -128,7 +128,7 @@ void Player::Draw() const {
     Engine::Get().GetWriter()->DrawScore(m_score, m_score_rect);
 }
 
-void Player::CorectPos(float& next_x, float& next_y){
+void Player::CorectPos( double& next_x,double& next_y){
     //Funkcja zmienia polozenie postaci
     //tak aby latwiej bylo skrecic
     // Algorytm wlasny :P
@@ -162,8 +162,7 @@ void Player::CorectPos(float& next_x, float& next_y){
             SDL_Rect checker_lu={ tile_x+1, tile_y-Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
             SDL_Rect checker_ru={ (tile_x + Engine::GetLua()->TILE_SIZE)+1, tile_y-Engine::GetLua()->TILE_SIZE+1, Engine::GetLua()->TILE_SIZE,Engine::GetLua()->TILE_SIZE };
 
-            if ( !Engine::Get().GetAabb()->Collides(checker_ru)
-                   ) {
+            if ( !Engine::Get().GetAabb()->Collides(checker_ru)) {
                 next_x= tile_x + Engine::GetLua()->TILE_SIZE + 1;
 	       next_y=m_y;
             }

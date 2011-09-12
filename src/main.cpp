@@ -21,7 +21,7 @@
 #include "App.hpp"
 #include <exception>
 
-int main( int argc, char** argv ){
+int main( void ){
 
     App* application;
 

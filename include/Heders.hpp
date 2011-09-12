@@ -13,6 +13,7 @@
 #include <list>
 #include <boost/smart_ptr.hpp>
 #include <boost/foreach.hpp>
+#include <boost/random.hpp>
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
@@ -68,8 +69,20 @@ namespace GS{
   enum GameState{
     MainMenu,
     PlayMenu,
-    Play    
+    Play,
+    NewGame
   };  
+}
+
+namespace ES{
+  enum EntityState{
+    Up=0,
+    Right,
+    Down,
+    Left   
+  };
+  
+  
 }
 
 //Naglowki funkcji globalnych, ktore sa umieszczone w pliku GlobFun.cpp

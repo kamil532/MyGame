@@ -7,6 +7,7 @@
 #include "Aabb.hpp"
 #include "Writer.hpp"
 #include "Lua.hpp"
+#include "Entity.hpp"
 
 /* Klasa singleton, dzieki ktorej uzuskuje sie dostep do
  * klas, ktore rowniez powinny miec tylko jedna instacje.
@@ -26,20 +27,29 @@ public:
     }
     void Load();
     void LoadLua(); 
-    void SetScreen(SDL_Surface* Screen,ushort w,ushort h);
+    void SetScreen(SDL_Surface* Screen,ushort w,ushort h);    
+    void NewGame();
+    void NextLevel();
     
-    static LuaPtr   GetLua() { return m_lua; }   
-    ushort 	    GetScreenWidth() const { return m_screen_w;}
-    ushort 	    GetScreenHeight() const {return m_screen_h; }
-    SpriteConfigPtr GetSpriteConfig() const { return m_SpriteConfig; }
-    RendererPtr     GetRenderer() const { return m_Renderer; }
-    SDL_Surface*    GetScreen() const { return m_screen; }
-    AabbPtr 	    GetAabb() const{ return m_aabb; }
-    WriterPtr       GetWriter() const { return m_Writer; }
-    TreasurePtr	    GetTreasure() const { return m_treasure; }
-    SpriteGrid*	    GetGrid()  { return &m_grid; }
+    static LuaPtr    GetLua() { return m_lua; }   
+    ushort 	     GetScreenWidth() const { return m_screen_w;}
+    ushort 	     GetScreenHeight() const {return m_screen_h; }
+    SpriteConfigPtr  GetSpriteConfig() const { return m_SpriteConfig; }
+    RendererPtr      GetRenderer() const { return m_Renderer; }
+    SDL_Surface*     GetScreen() const { return m_screen; }
+    AabbPtr 	     GetAabb() const{ return m_aabb; }
+    WriterPtr        GetWriter() const { return m_Writer; }
+    TreasurePtr	     GetTreasure() const { return m_treasure; }
+    SpriteGrid*	     GetGrid()  { return &m_grid; }
+    EntityFactoryPtr GetEntityFactory() { return m_entity_factory; }
     
 private:
+    //ustawienie poziomu poczatkowego gry
+    Engine():m_level_of_game(1){}
+  
+    //Numer poziomu ktory jest aktualnie grany
+    uint m_level_of_game;
+  
     //Ustawienia globalne dla calej aplikacji, wczytywane z pliku
     static LuaPtr m_lua;
     
@@ -63,6 +73,9 @@ private:
     
     //Klasa przechowujaca i rysujaca mape
     SpriteGrid m_grid;
+    
+    //Klasa przechowujaca przeciwnikow
+    EntityFactoryPtr m_entity_factory;
     
     //Informacje o glownym Surface
     SDL_Surface* m_screen;

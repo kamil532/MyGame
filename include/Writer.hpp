@@ -12,6 +12,16 @@ public:
   void WriteString(const string& Text,
 		   const SDL_Rect& WhereRect);
   
+   void WriteString(const string& Text,
+		   const SDL_Rect& WhereRect,
+		   const uint& Size);
+  
+  void WriteString(const string& Text, 
+		   const SDL_Rect& WhereRect,
+		   const SDL_Color& FColor,
+		   const SDL_Color& BColor);
+		   
+  
   void DrawScore(const ulong& Number, const SDL_Rect& Where);
   
   

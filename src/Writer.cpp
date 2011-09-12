@@ -40,3 +40,19 @@ void Writer::DrawScore(const ulong& Number, const SDL_Rect& Where){
   WriteString(Text, Where); 
 }
 
+void Writer::WriteString(const string& Text, 
+		   const SDL_Rect& WhereRect,
+		   const uint& Size){
+		    
+  TTF_Font* tmp= 
+	  TTF_OpenFont( Engine::GetLua()->FONT_PATH.c_str(), Size);
+	  
+  SDL_Surface* tmp_surf = 
+	  TTF_RenderText_Blended( tmp, Text.c_str(),m_font_color );   
+	  
+  Engine::Get().GetRenderer()->Draw(tmp_surf, WhereRect);    
+}
+		   
+		   
+		   
+		   

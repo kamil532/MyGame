@@ -1,12 +1,13 @@
 #include "Level.hpp"
 
 void Level::LoadFromFile( const string& FileName){
-    std::ifstream lvl(FileName.c_str());
+  
+  std::ifstream lvl(FileName.c_str());
+  
+
     
-    if (!lvl) {
-        throw("[Critical] Brak pliku levelu: "+ FileName);
-    }
-    
+  if (!lvl) throw("[Critical] Brak pliku levelu: "+ FileName);
+      
     lvl >> m_width >> m_height;
     m_data.resize(m_height);
     
@@ -21,6 +22,19 @@ void Level::LoadFromFile( const string& FileName){
             m_data.at(y).at(x) = FT::FieldType(tmp);
         }
     }
+    
+  int EntityAmount=0;  
+  lvl>> EntityAmount;
+    //m_entityF.reset(new EntityFactory());
+  
+  
+  for (size_t i=0; i<EntityAmount; ++i){
+    ushort x=0,y=0;
+    string name;
+    lvl>>x>>y>>name;
+   ( m_entityF)->AddEntity(x,y,name);
+  }  
+    
 }
 
 

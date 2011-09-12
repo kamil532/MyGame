@@ -23,6 +23,14 @@ Writer.hpp
 ../include/Writer.hpp
 Lua.hpp
 ../include/Lua.hpp
+Entity.hpp
+../include/Entity.hpp
+
+../include/Entity.hpp
+Heders.hpp
+../include/Heders.hpp
+Sprite.hpp
+../include/Sprite.hpp
 
 ../include/Heders.hpp
 map
@@ -34,6 +42,8 @@ list
 boost/smart_ptr.hpp
 -
 boost/foreach.hpp
+-
+boost/random.hpp
 -
 SDL/SDL.h
 -
@@ -61,6 +71,8 @@ lauxlib.h
 ../include/Level.hpp
 Heders.hpp
 ../include/Heders.hpp
+Entity.hpp
+../include/Entity.hpp
 
 ../include/Lua.hpp
 Heders.hpp
@@ -100,9 +112,15 @@ SpriteGrid.hpp
 Heders.hpp
 ../include/Heders.hpp
 
-/home/lolcio/safarix/src/SpriteConfig.cpp
-SpriteConfig.hpp
-/home/lolcio/safarix/src/SpriteConfig.hpp
+/home/lolcio/safarix/src/Entity.cpp
+Entity.hpp
+/home/lolcio/safarix/src/Entity.hpp
 Engine.hpp
 /home/lolcio/safarix/src/Engine.hpp
+boost/random/mersenne_twister.hpp
+-
+boost/random/uniform_int.hpp
+-
+boost/random/variate_generator.hpp
+-
 

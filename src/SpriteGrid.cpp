@@ -4,7 +4,7 @@
 SpriteGrid::SpriteGrid():m_level_height(0),m_level_width(0),
  m_background( IMG_Load("data/tex.bmp"))
 { 	  
-  if( m_background == NULL ) throw "[ERROR] No background found";	}
+  if( m_background == NULL ) std::cerr<< "[ERROR] No background found\n";	}
 
 void SpriteGrid::StoreSprite(FT::FieldType ft, SpritePtr Sprite){
   //dodawanie sprite do bazy danych tej klasy

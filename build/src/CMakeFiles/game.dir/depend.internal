@@ -9,6 +9,7 @@ src/CMakeFiles/game.dir/App.cpp.o
  ../include/Aabb.hpp
  ../include/App.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
@@ -28,6 +29,7 @@ src/CMakeFiles/game.dir/App.cpp.o
 src/CMakeFiles/game.dir/Engine.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -39,12 +41,23 @@ src/CMakeFiles/game.dir/Engine.cpp.o
  ../include/Writer.hpp
  /home/lolcio/safarix/src/Engine.cpp
 src/CMakeFiles/game.dir/Entity.cpp.o
+ ../include/Aabb.hpp
+ ../include/Engine.hpp
  ../include/Entity.hpp
  ../include/Heders.hpp
+ ../include/Level.hpp
+ ../include/Lua.hpp
+ ../include/Renderer.hpp
+ ../include/Sprite.hpp
+ ../include/SpriteConfig.hpp
+ ../include/SpriteGrid.hpp
+ ../include/Treasure.hpp
+ ../include/Writer.hpp
  /home/lolcio/safarix/src/Entity.cpp
 src/CMakeFiles/game.dir/Game.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
@@ -66,12 +79,16 @@ src/CMakeFiles/game.dir/GlobFun.cpp.o
  ../include/Heders.hpp
  /home/lolcio/safarix/src/GlobFun.cpp
 src/CMakeFiles/game.dir/Level.cpp.o
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
+ ../include/Sprite.hpp
+ ../include/SpriteConfig.hpp
  /home/lolcio/safarix/src/Level.cpp
 src/CMakeFiles/game.dir/Lua.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -86,6 +103,7 @@ src/CMakeFiles/game.dir/Lua.cpp.o
 src/CMakeFiles/game.dir/Menu.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -101,6 +119,7 @@ src/CMakeFiles/game.dir/Menu.cpp.o
 src/CMakeFiles/game.dir/Player.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -129,6 +148,7 @@ src/CMakeFiles/game.dir/Renderer.cpp.o
 src/CMakeFiles/game.dir/Sprite.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -142,6 +162,7 @@ src/CMakeFiles/game.dir/Sprite.cpp.o
 src/CMakeFiles/game.dir/SpriteConfig.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -155,6 +176,7 @@ src/CMakeFiles/game.dir/SpriteConfig.cpp.o
 src/CMakeFiles/game.dir/SpriteGrid.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -168,6 +190,7 @@ src/CMakeFiles/game.dir/SpriteGrid.cpp.o
 src/CMakeFiles/game.dir/Treasure.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -184,6 +207,7 @@ src/CMakeFiles/game.dir/Treasure.cpp.o
 src/CMakeFiles/game.dir/Writer.cpp.o
  ../include/Aabb.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Heders.hpp
  ../include/Level.hpp
  ../include/Lua.hpp
@@ -198,6 +222,7 @@ src/CMakeFiles/game.dir/main.cpp.o
  ../include/Aabb.hpp
  ../include/App.hpp
  ../include/Engine.hpp
+ ../include/Entity.hpp
  ../include/Game.hpp
  ../include/Heders.hpp
  ../include/Level.hpp

@@ -1,12 +1,7 @@
 #include "SpriteConfig.hpp"
 #include "Engine.hpp"
 
-SpriteConfig::SpriteConfig(){
-
-  //Wczytywanie ustawien spritow przeniesione do skryptu lua - sprite.lua		
-
-  
-}
+SpriteConfig::SpriteConfig(){}
 
 bool SpriteConfig::Contains(const string& name) const{
 		

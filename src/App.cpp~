@@ -13,13 +13,20 @@ void App::InitSDL() throw (const char*) {
     //Cala obsluga wejscia przejmuje klawiatura
     SDL_ShowCursor(false);
     
+   //Ustawianie ikony aplikacji 
+   SDL_Surface* icon = IMG_Load("data/icon.png");
+   if(icon!=NULL)  SDL_WM_SetIcon(icon, NULL);
+   else std::cerr<<"[Error] Not found icon file\n";
+    
+    
     //Ustawienie tytulu okna, oraz ikony
     SDL_WM_SetCaption( Engine::GetLua()->APP_TITLE.c_str() , NULL );
 
     //![ Pobranie rozdzielczosci ekranu ]
     const SDL_VideoInfo* myPointer = SDL_GetVideoInfo();
-    m_screen_h=myPointer->current_h;
-    m_screen_w=myPointer->current_w;
+    m_screen_w=1260;//myPointer->current_w;
+    m_screen_h=800;//myPointer->current_h;
+    
 
     m_screen = SDL_SetVideoMode(m_screen_w, m_screen_h, 32, 0
                                 |SDL_HWSURFACE
@@ -31,8 +38,13 @@ void App::InitSDL() throw (const char*) {
 
 }
 
-App::App():m_is_done( new bool(false) ), m_screen(NULL)
+App::App():m_is_done( new bool(false) ), m_screen(NULL),
+m_full(SDL_FULLSCREEN)
 {    
+  
+   //Wczytanie flagi pelnego okna
+    if( (Engine::GetLua()->FULL_SCREEN) != true) m_full=0;
+  
     //Inicjacja SDL-a
     InitSDL();
     
@@ -40,16 +52,7 @@ App::App():m_is_done( new bool(false) ), m_screen(NULL)
     m_game.reset( new Game( m_screen, m_screen_w, m_screen_h) );    
     
     //Klasa Menu ma dostep do zmiennej, ktora decyduje o tym czy zakonczyc applikacje
-    m_game->SetQuitFlag( m_is_done );  
-    
-    //Wczytanie flagi pelnego okna
-    if( (Engine::GetLua()->FULL_SCREEN) != true) m_full=0;
-    else m_full=SDL_FULLSCREEN;
-    
-    bool tmp=Engine::GetLua()->FULL_SCREEN;
-    if(tmp) cout<<"zonk";
-    else cout<<"kwa kwa";
-    
+    m_game->SetQuitFlag( m_is_done );      
 }
 
 void App::Run() {

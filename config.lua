@@ -1,7 +1,7 @@
 print("[LUA] Load setting");
 
 -- This value must be in sprite.lue file!
-TILE_SIZE = 23;
+TILE_SIZE = 22;
 PLAYER_SIZE = 42;
 
 -- Main setting of app

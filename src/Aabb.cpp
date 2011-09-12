@@ -66,8 +66,8 @@ bool Aabb::IsOver( SDL_Rect& checkBox ){
   }
   
   return Collides(checkBox)
-	 && tmp.y < (checkBox.y + checkBox.h)
-	 && (checkBox.y + checkBox.h) < (tmp.y + tmp.h);
+	 && tmp.y <= (checkBox.y + checkBox.h)
+	 && (checkBox.y + checkBox.h) <= (tmp.y + tmp.h);
 }
 
 bool Aabb::IsOnLeftOf ( SDL_Rect& checkBox){
@@ -79,8 +79,8 @@ bool Aabb::IsOnLeftOf ( SDL_Rect& checkBox){
    } 
    
    return Collides(checkBox) 
-	  && tmp.x < checkBox.x 
-	  && checkBox.x < ( tmp.x + tmp.w );  
+	  && tmp.x <= checkBox.x 
+	  && checkBox.x <= ( tmp.x + tmp.w );  
 }
 
 bool Aabb::IsOnRightOf ( SDL_Rect& checkBox){
@@ -92,8 +92,8 @@ bool Aabb::IsOnRightOf ( SDL_Rect& checkBox){
   }
   
   return Collides(checkBox) 
-	  && tmp.x < ( checkBox.x + checkBox.w)
-	  && ( checkBox.x + checkBox.w) < ( tmp.x + tmp.w ); 
+	  && tmp.x <= ( checkBox.x + checkBox.w)
+	  && ( checkBox.x + checkBox.w) <= ( tmp.x + tmp.w ); 
 }
 
 bool Aabb::IsUnder( SDL_Rect& checkBox ){
@@ -106,8 +106,8 @@ bool Aabb::IsUnder( SDL_Rect& checkBox ){
   }
   
   return Collides(checkbox)
-	 && tmp.y < (checkbox.y + checkbox.h)
-	 && (checkbox.y + checkbox.h) < (tmp.y + tmp.h);
+	 && tmp.y <= (checkbox.y + checkbox.h)
+	 && (checkbox.y + checkbox.h) <= (tmp.y + tmp.h);
  
 }
 

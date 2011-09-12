@@ -19,7 +19,7 @@ public:
     }
 
 private:         
-     void CorectPos(float& x, float& y);
+     void CorectPos(double& x, double& y);
      void ControlSpeed(const double&);
      void ControlLive(SDL_Rect&,const double&);
      
@@ -32,7 +32,7 @@ private:
      double m_speed;
      double m_speed_dt;
       
-     SpriteGrid* m_grid; //adres obiektu nalezacego do engine  
+     SpriteGrid* m_grid;//adres obiektu nalezacego do engine  
      map<PS::PlayerState, SpritePtr > m_sprites;
      
      static ulong m_score;

@@ -13,13 +13,20 @@ void App::InitSDL() throw (const char*) {
     //Cala obsluga wejscia przejmuje klawiatura
     SDL_ShowCursor(false);
     
+   //Ustawianie ikony aplikacji 
+   SDL_Surface* icon = IMG_Load("data/icon.png");
+   if(icon!=NULL)  SDL_WM_SetIcon(icon, NULL);
+   else std::cerr<<"[Error] Not found icon file\n";
+    
+    
     //Ustawienie tytulu okna, oraz ikony
     SDL_WM_SetCaption( Engine::GetLua()->APP_TITLE.c_str() , NULL );
 
     //![ Pobranie rozdzielczosci ekranu ]
     const SDL_VideoInfo* myPointer = SDL_GetVideoInfo();
-    m_screen_h=myPointer->current_h;
     m_screen_w=myPointer->current_w;
+    m_screen_h=myPointer->current_h;
+    
 
     m_screen = SDL_SetVideoMode(m_screen_w, m_screen_h, 32, 0
                                 |SDL_HWSURFACE
