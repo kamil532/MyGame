@@ -1,16 +1,17 @@
 #include "Entity.hpp"
 #include "Engine.hpp"
-
 #include <boost/random/mersenne_twister.hpp>
-#include <boost/random/uniform_int.hpp>
 #include <boost/random/variate_generator.hpp>
+#include <boost/typeof/typeof.hpp> 
+
 boost::mt19937 gen;
 int roll_die() {
+    //zakres losowania lizb
     boost::uniform_int<> dist(1, 4);
     boost::variate_generator<boost::mt19937&, boost::uniform_int<> > die(gen, dist);
     return die();
 }
-bool tmp;
+
 Entity::Entity(const ushort& X, const ushort& Y,const string& Name):
 m_vx(0), m_vy(0),m_state(ES::Left)
 {
@@ -79,6 +80,11 @@ void Entity::Update(const double& dt){
 	    next_y=m_y;
         }      
   }
+  if(Engine::Get().GetEntityFactory()-> CollidesWithEntity(tmp,this)){
+    SearchWay( next_x,next_y );
+    next_y=m_y;
+     next_x=m_x;
+  }
   
   m_x=next_x;
   m_y=next_y; 
@@ -89,9 +95,9 @@ void Entity::SearchWay(double& next_x, double& next_y ){
    SDL_Rect posRect={next_x,next_y,Engine::Get().GetLua()->PLAYER_SIZE,
 		    Engine::Get().GetLua()->PLAYER_SIZE};   
 		    
-for(int j=0; j<=3; ++j){
-roll_die();
-}
+  for(int j=0; j<=3; ++j){
+      roll_die();
+  }
 		    
 	int tmp=roll_die();
 	
@@ -106,39 +112,7 @@ roll_die();
 	}
 	else if(tmp==4){
 	  GoDown();
-	}
-	
-		    
-	/*	    
- if(!(Engine::Get().GetAabb()->IsOnRightOf(posRect))){
-     
-      cout<<"chce isc w prawo";
-      return;
-    }      		    
-
-		 	    
-
-if(  !(Engine::Get().GetAabb()->IsOver(posRect))){
-       
-      return;
-    }
-    
-
- if(  !(Engine::Get().GetAabb()->IsUnder(posRect))){
-      GoDown();
-      return;
-    }		    
-		    
- if(  !(Engine::Get().GetAabb()->IsOnLeftOf(posRect))){
-      GoLeft();
-      return;
-    } */
-
-    
-    
-    
-    
-    
+	}  
 }
 
 
@@ -185,10 +159,26 @@ void Entity::GoLeft(){
   m_state=ES::Left;
 }
 
+bool EntityFactory::CollidesWithEntity(const SDL_Rect& checkBox,Entity* Ptr){
+ BOOST_FOREACH(Entity it, m_entity ) {
+   if( (*Ptr) == it ) continue;
+        if (   (it.m_x) > ( checkBox.x + checkBox.w )
+                ||(it.m_x +  Engine::Get().GetLua()->PLAYER_SIZE) < ( checkBox.x)
+                ||(it.m_y) > ( checkBox.y + checkBox.h )
+                ||(it.m_y +  Engine::Get().GetLua()->PLAYER_SIZE) < ( checkBox.y )
+           ) continue;
+        else return true;
+    }
+    return false;
+}
 
 
-
-
+bool Entity::operator==(Entity it) const{
+    if( it.GetX() == m_x 
+        && it.GetY() == m_y ) return true;
+    
+return false; 
+}
 
 
 

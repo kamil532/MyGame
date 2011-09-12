@@ -1,11 +1,9 @@
 #include "Level.hpp"
 
 void Level::LoadFromFile( const string& FileName){
-  
+
   std::ifstream lvl(FileName.c_str());
   
-
-    
   if (!lvl) throw("[Critical] Brak pliku levelu: "+ FileName);
       
     lvl >> m_width >> m_height;

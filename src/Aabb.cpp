@@ -13,7 +13,6 @@ bool Aabb::AddBox( SDL_Rect& newBox ){
     m_boxMap.push_back( newBox ); return true; 
 }
 
-
 bool Aabb::Contain( const SDL_Rect& Box){
 
   for ( vector<SDL_Rect>::iterator it=m_boxMap.begin();
@@ -40,7 +39,6 @@ bool Aabb::Collides( SDL_Rect& checkBox ){
 
     return false;
 }
-
 
 SDL_Rect Aabb::CollidesBox( SDL_Rect& checkBox ){
 

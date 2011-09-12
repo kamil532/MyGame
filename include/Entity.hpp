@@ -13,7 +13,13 @@ public:
    inline void GoDown();
    inline void GoLeft();
    inline void GoRight();
-  
+   
+   bool operator==(Entity) const;
+
+   ushort GetX()const { return m_x; }
+   ushort GetY()const { return m_y; }
+   
+   
 private:  
     Entity(const ushort& X, const ushort& Y,const string& name);
     double NextXPosition(const double& dt){
@@ -43,6 +49,7 @@ public:
     bool Colidies(const SDL_Rect&);
     void Update(const double& dt);
     void Draw();
+    bool CollidesWithEntity(const SDL_Rect&,Entity*);
     
 private:
     vector<Entity> m_entity; 

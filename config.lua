@@ -21,7 +21,7 @@ RUN_FACTOR = 1.8;
 FONT_SIZE = 42;
 INTRO_PATH = "data/intro.jpg";
 SPEED = 180.0;
-FULL_SCREEN= true;
+FULL_SCREEN= false;
 IMAGINATION = false;	--Loadbar while starting
 LEVEL_AMOUNT = 2; 
 

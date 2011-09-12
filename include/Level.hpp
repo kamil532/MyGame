@@ -21,6 +21,7 @@ private:
     ushort m_height;
     std::vector<std::vector<FT::FieldType> > m_data;
     EntityFactory* m_entityF;
+    EntityFactoryPtr m_entity_fPtr;
     
 };
 typedef boost::shared_ptr<Level> LevelPtr;

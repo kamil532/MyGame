@@ -15,6 +15,7 @@ private:
 private:
     bool* m_is_done;
     SDL_Surface* m_screen;
+    SDL_Surface* m_icon;
     size_t m_screen_h, m_screen_w;    
     Uint32 m_full;
     Gameptr m_game;     

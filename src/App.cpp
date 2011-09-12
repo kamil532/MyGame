@@ -14,8 +14,9 @@ void App::InitSDL() throw (const char*) {
     SDL_ShowCursor(false);
     
    //Ustawianie ikony aplikacji 
-   SDL_Surface* icon = IMG_Load("data/icon.png");
-   if(icon!=NULL)  SDL_WM_SetIcon(icon, NULL);
+   m_icon = IMG_Load("data/icon.png");
+   
+   if(m_icon!=NULL)  SDL_WM_SetIcon(m_icon, NULL);
    else std::cerr<<"[Error] Not found icon file\n";
     
     
@@ -27,8 +28,9 @@ void App::InitSDL() throw (const char*) {
     m_screen_w=myPointer->current_w;
     m_screen_h=myPointer->current_h;
     
-
-    m_screen = SDL_SetVideoMode(m_screen_w, m_screen_h, 32, 0
+  if( m_screen_w <1280 || m_screen_h< 800 ) m_full=0;
+   
+    m_screen = SDL_SetVideoMode(1280, 800, 32, 0
                                 |SDL_HWSURFACE
                                 |SDL_DOUBLEBUF
                                 |m_full
@@ -72,15 +74,17 @@ void App::Run() {
         m_game-> ProcessEvents();
 
         while (accumulator > Engine::GetLua()->TIME_STEP){
-          m_game-> Update(Engine::GetLua()->TIME_STEP);
+           m_game-> Update(Engine::GetLua()->TIME_STEP);
           accumulator -= Engine::GetLua()->TIME_STEP;
 	}
-        m_game->Draw();
+         m_game->Draw();
     }
 }
 
 App::~App(){
   //Dokonczyc odsmiecanie [!!]  
   SDL_Quit();
-  TTF_Quit(); 
+  TTF_Quit();
+  
+  SDL_FreeSurface( m_icon );  
 }
