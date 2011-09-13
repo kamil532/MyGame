@@ -20,6 +20,8 @@ void Writer::WriteString( const string& Text,
 						   Color);
    
    Engine::Get().GetRenderer()->Draw(tmp_surf, WhereRect);   
+   
+   SDL_FreeSurface( tmp_surf );
 }
 
 void Writer::WriteString( const string& Text, const SDL_Rect& WhereRect){
@@ -28,7 +30,9 @@ void Writer::WriteString( const string& Text, const SDL_Rect& WhereRect){
 						   Text.c_str(),
 						   m_font_color);
    
-   Engine::Get().GetRenderer()->Draw(tmp_surf, WhereRect);   
+   Engine::Get().GetRenderer()->Draw(tmp_surf, WhereRect);  
+   
+   SDL_FreeSurface( tmp_surf );
 }
 
 void Writer::DrawScore(const ulong& Number, const SDL_Rect& Where){
@@ -42,8 +46,7 @@ void Writer::DrawScore(const ulong& Number, const SDL_Rect& Where){
 
 void Writer::WriteString(const string& Text, 
 		   const SDL_Rect& WhereRect,
-		   const uint& Size){
-		    
+		   const uint& Size){		    
   TTF_Font* tmp= 
 	  TTF_OpenFont( Engine::GetLua()->FONT_PATH.c_str(), Size);
 	  
@@ -51,6 +54,10 @@ void Writer::WriteString(const string& Text,
 	  TTF_RenderText_Blended( tmp, Text.c_str(),m_font_color );   
 	  
   Engine::Get().GetRenderer()->Draw(tmp_surf, WhereRect);    
+  
+  SDL_FreeSurface( tmp_surf );
+  TTF_CloseFont( tmp );
+  
 }
 		   
 		   

@@ -72,10 +72,7 @@ void SpriteGrid::SetLevel( LevelPtr Level){
      
 }
 
-void SpriteGrid::Draw() const{
-
-//Engine::Get().GetRenderer()->Draw(m_background);
-  
+void SpriteGrid::Draw() const{ 
      for (size_t y = 0; y < m_grid.size(); ++y) {
             const std::vector<SpritePtr>& row = m_grid.at(y);
 		for (size_t x = 0; x < row.size(); ++x) {

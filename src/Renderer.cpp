@@ -49,7 +49,7 @@ void Renderer::Draw(const Sprite* _Sprite, uint frame=0 ){
 	
 void Renderer::Draw(const SpritePtr _Sprite ){
 	
-	 if (m_screen==NULL) throw "[Critical] Renderer don`t have draw surface";
+  if (m_screen==NULL) throw "[Critical] Renderer don`t have draw surface";
 	 
    /// Info o surface w atlasie 
    SDL_Rect b={ _Sprite->GetTexX() + (_Sprite->GetFrame() * _Sprite->GetWidth() ),
@@ -74,5 +74,5 @@ void Renderer::Draw( SDL_Surface* _Surface,SDL_Rect dest){
 
 void Renderer::Draw(SDL_Surface* _Surface){
       
-      SDL_BlitSurface(_Surface,NULL , m_screen, NULL);	 
+    SDL_BlitSurface(_Surface,NULL , m_screen, NULL);	 
 }
