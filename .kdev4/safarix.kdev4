@@ -6,7 +6,6 @@ BuildDirs=/home/lolcio/safarix/build
 CMakeDir=/usr/share/cmake-2.8/Modules
 Current CMake Binary=file:///usr/bin/cmake
 CurrentBuildDir=file:///home/lolcio/safarix/build
-CurrentBuildType=Debug
 CurrentInstallDir=file:///usr/local
 Extra Arguments=-lSDL -lSDL_image -lSDL_ttf -lSDL_mixer
 ProjectRootRelative=./

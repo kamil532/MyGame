@@ -13,6 +13,8 @@ Heders.hpp
 ../include/Engine.hpp
 Heders.hpp
 ../include/Heders.hpp
+Leveling.hpp
+../include/Leveling.hpp
 Treasure.hpp
 ../include/Treasure.hpp
 Renderer.hpp
@@ -54,7 +56,7 @@ SDL/SDL_ttf.h
 luabind/luabind.hpp
 -
 lua.hpp
-../include/lua.hpp
+-
 iostream
 -
 fstream
@@ -74,11 +76,29 @@ Heders.hpp
 Entity.hpp
 ../include/Entity.hpp
 
+../include/Leveling.hpp
+Heders.hpp
+../include/Heders.hpp
+Sprite.hpp
+../include/Sprite.hpp
+
 ../include/Lua.hpp
 Heders.hpp
 ../include/Heders.hpp
 SpriteConfig.hpp
 ../include/SpriteConfig.hpp
+
+../include/Menu.hpp
+Heders.hpp
+../include/Heders.hpp
+MenuData.hpp
+../include/MenuData.hpp
+
+../include/MenuData.hpp
+Heders.hpp
+../include/Heders.hpp
+Engine.hpp
+../include/Engine.hpp
 
 ../include/Renderer.hpp
 Heders.hpp
@@ -112,9 +132,7 @@ SpriteGrid.hpp
 Heders.hpp
 ../include/Heders.hpp
 
-/home/lolcio/safarix/src/Writer.cpp
-Writer.hpp
-/home/lolcio/safarix/src/Writer.hpp
-Engine.hpp
-/home/lolcio/safarix/src/Engine.hpp
+/home/lolcio/safarix/src/Menu.cpp
+Menu.hpp
+/home/lolcio/safarix/src/Menu.hpp
 

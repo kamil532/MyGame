@@ -18,7 +18,7 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 #include <luabind/luabind.hpp>
-#include "lua.hpp"
+#include <lua.hpp>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -47,10 +47,13 @@ using namespace GAMESPACE;
 namespace FT {
     enum FieldType {
         None = 0,
-        PlatformLeftEnd = 1,
-        PlatformMidPart = 2,
-        PlatformRightEnd = 3,
-	Fruit = 4,
+        PlatformLeft = 1,
+        PlatformUp = 2,
+        PlatformRight = 3,
+	PlatformDown = 4,
+	PlatformVertical = 5,
+	PlatformHorizontal= 6,
+	Coin = 7,
         COUNT
     };
 }
@@ -68,9 +71,10 @@ namespace PS {
 namespace GS{
   enum GameState{
     MainMenu,
-    PlayMenu,
     Play,
-    NewGame
+    NewGame,
+    About,
+    SelectLevel
   };  
 }
 

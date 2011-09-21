@@ -1,4 +1,4 @@
-/*     MyGame 
+/*     Pyrex 2D 
 *      
 *      Copyright 2011 Lolcio < kamil532@interia.eu >
 *      
@@ -27,7 +27,6 @@ int main( void ){
 
     try {
         Engine::Get().LoadLua();
-        cout<<Engine::GetLua()->INFO;
         application = new App();
         application->Run();
     }

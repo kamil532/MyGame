@@ -6,13 +6,11 @@
 class Entity{ 
 public:  
     void Update(const double&);
-    void Draw(){ 
-      m_sprite->Draw(m_x,m_y);      
-    }
    inline void GoUp();
    inline void GoDown();
    inline void GoLeft();
    inline void GoRight();
+   void Draw();
    
    bool operator==(Entity) const;
 
@@ -21,7 +19,7 @@ public:
    
    
 private:  
-    Entity(const ushort& X, const ushort& Y,const string& name);
+    Entity(const ushort& X, const ushort& Y );
     double NextXPosition(const double& dt){
 	return m_x + m_vx * dt;    
     }
@@ -30,7 +28,10 @@ private:
     }
    void SearchWay(double&, double&);
 private:    
-    SpritePtr m_sprite;    
+    SpritePtr m_sprite; 
+    SpritePtr m_left;
+    SpritePtr m_right;
+    
     ES::EntityState m_state;
     ushort m_x;
     ushort m_y;

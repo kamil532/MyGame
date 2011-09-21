@@ -25,7 +25,7 @@ private:
 private:
     ushort m_level_height;
     ushort m_level_width;    
-    SDL_Surface* m_background;
+
     std::vector<SpritePtr> m_sprites;  
     std::vector< std::vector< SpritePtr > > m_grid;
     LevelPtr m_level;

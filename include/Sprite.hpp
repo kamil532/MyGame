@@ -16,9 +16,13 @@ public:
       FT::FieldType GetType() const { return m_type; }
       
       bool IsMap() const { 
-	  if(  m_type == FT::PlatformLeftEnd
-	     ||m_type == FT::PlatformMidPart
-	     ||m_type == FT::PlatformRightEnd )
+	  if(  m_type == FT::PlatformLeft
+	     ||m_type == FT::PlatformDown
+	     ||m_type == FT::PlatformRight
+	     ||m_type == FT::PlatformUp
+	     ||m_type == FT::PlatformHorizontal
+	     ||m_type == FT::PlatformVertical	    
+	  )
 	    return true;
 	  return false;
       }

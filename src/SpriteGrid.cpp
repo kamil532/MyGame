@@ -1,10 +1,8 @@
 #include "SpriteGrid.hpp"
 #include "Engine.hpp"
 
-SpriteGrid::SpriteGrid():m_level_height(0),m_level_width(0),
- m_background( IMG_Load("data/tex.bmp"))
-{ 	  
-  if( m_background == NULL ) std::cerr<< "[ERROR] No background found\n";	}
+SpriteGrid::SpriteGrid():m_level_height(0),m_level_width(0)
+{ }	  
 
 void SpriteGrid::StoreSprite(FT::FieldType ft, SpritePtr Sprite){
   //dodawanie sprite do bazy danych tej klasy
@@ -38,7 +36,7 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 	    const FT::FieldType& ft = m_level ->GetField(x,y);
 	    if( ft>0 ){
 	      SetSprite( x, y, m_sprites.at(ft),ft); 		
-	      }	if (ft>=4){
+	      }	if ( ft>=7 ){
 		SDL_Rect tmp={Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * x,
 			      Engine::GetLua()->CORNER_X + Engine::GetLua()->TILE_SIZE * y,
 			      Engine::GetLua()->TILE_SIZE*2,Engine::GetLua()->TILE_SIZE*2};
@@ -64,7 +62,7 @@ void SpriteGrid::SetLevel( LevelPtr Level){
 			  tmp.h = Engine::GetLua()->TILE_SIZE;
 			  tmp.w = Engine::GetLua()->TILE_SIZE;
 			  
-			  if(sprite->GetType() < 4 ) //![ilosc elementow mapy]
+			  if( sprite->GetType() < 7 ) //![ilosc elementow mapy]
 			  Engine::Get().GetAabb()->AddBox(tmp);
 		  }
 		}

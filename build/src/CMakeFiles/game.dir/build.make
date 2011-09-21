@@ -50,15 +50,15 @@ src/CMakeFiles/game.dir/main.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/main.cpp.o: ../src/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/main.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cpp.o -c /home/lolcio/safarix/src/main.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cpp.o -c /home/lolcio/safarix/src/main.cpp
 
 src/CMakeFiles/game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/main.cpp > CMakeFiles/game.dir/main.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/main.cpp > CMakeFiles/game.dir/main.cpp.i
 
 src/CMakeFiles/game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/main.cpp -o CMakeFiles/game.dir/main.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/main.cpp -o CMakeFiles/game.dir/main.cpp.s
 
 src/CMakeFiles/game.dir/main.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/main.cpp.o.requires
@@ -73,15 +73,15 @@ src/CMakeFiles/game.dir/App.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/App.cpp.o: ../src/App.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/App.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/App.cpp.o -c /home/lolcio/safarix/src/App.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/App.cpp.o -c /home/lolcio/safarix/src/App.cpp
 
 src/CMakeFiles/game.dir/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/App.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/App.cpp > CMakeFiles/game.dir/App.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/App.cpp > CMakeFiles/game.dir/App.cpp.i
 
 src/CMakeFiles/game.dir/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/App.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/App.cpp -o CMakeFiles/game.dir/App.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/App.cpp -o CMakeFiles/game.dir/App.cpp.s
 
 src/CMakeFiles/game.dir/App.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/App.cpp.o.requires
@@ -96,15 +96,15 @@ src/CMakeFiles/game.dir/Renderer.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Renderer.cpp.o: ../src/Renderer.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Renderer.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Renderer.cpp.o -c /home/lolcio/safarix/src/Renderer.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Renderer.cpp.o -c /home/lolcio/safarix/src/Renderer.cpp
 
 src/CMakeFiles/game.dir/Renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Renderer.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Renderer.cpp > CMakeFiles/game.dir/Renderer.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Renderer.cpp > CMakeFiles/game.dir/Renderer.cpp.i
 
 src/CMakeFiles/game.dir/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Renderer.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Renderer.cpp -o CMakeFiles/game.dir/Renderer.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Renderer.cpp -o CMakeFiles/game.dir/Renderer.cpp.s
 
 src/CMakeFiles/game.dir/Renderer.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Renderer.cpp.o.requires
@@ -119,15 +119,15 @@ src/CMakeFiles/game.dir/Sprite.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Sprite.cpp.o: ../src/Sprite.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Sprite.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Sprite.cpp.o -c /home/lolcio/safarix/src/Sprite.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Sprite.cpp.o -c /home/lolcio/safarix/src/Sprite.cpp
 
 src/CMakeFiles/game.dir/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Sprite.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Sprite.cpp > CMakeFiles/game.dir/Sprite.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Sprite.cpp > CMakeFiles/game.dir/Sprite.cpp.i
 
 src/CMakeFiles/game.dir/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Sprite.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Sprite.cpp -o CMakeFiles/game.dir/Sprite.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Sprite.cpp -o CMakeFiles/game.dir/Sprite.cpp.s
 
 src/CMakeFiles/game.dir/Sprite.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Sprite.cpp.o.requires
@@ -142,15 +142,15 @@ src/CMakeFiles/game.dir/SpriteConfig.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/SpriteConfig.cpp.o: ../src/SpriteConfig.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/SpriteConfig.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/SpriteConfig.cpp.o -c /home/lolcio/safarix/src/SpriteConfig.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/SpriteConfig.cpp.o -c /home/lolcio/safarix/src/SpriteConfig.cpp
 
 src/CMakeFiles/game.dir/SpriteConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/SpriteConfig.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/SpriteConfig.cpp > CMakeFiles/game.dir/SpriteConfig.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/SpriteConfig.cpp > CMakeFiles/game.dir/SpriteConfig.cpp.i
 
 src/CMakeFiles/game.dir/SpriteConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/SpriteConfig.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/SpriteConfig.cpp -o CMakeFiles/game.dir/SpriteConfig.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/SpriteConfig.cpp -o CMakeFiles/game.dir/SpriteConfig.cpp.s
 
 src/CMakeFiles/game.dir/SpriteConfig.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/SpriteConfig.cpp.o.requires
@@ -165,15 +165,15 @@ src/CMakeFiles/game.dir/Level.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Level.cpp.o: ../src/Level.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Level.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Level.cpp.o -c /home/lolcio/safarix/src/Level.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Level.cpp.o -c /home/lolcio/safarix/src/Level.cpp
 
 src/CMakeFiles/game.dir/Level.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Level.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Level.cpp > CMakeFiles/game.dir/Level.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Level.cpp > CMakeFiles/game.dir/Level.cpp.i
 
 src/CMakeFiles/game.dir/Level.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Level.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Level.cpp -o CMakeFiles/game.dir/Level.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Level.cpp -o CMakeFiles/game.dir/Level.cpp.s
 
 src/CMakeFiles/game.dir/Level.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Level.cpp.o.requires
@@ -188,15 +188,15 @@ src/CMakeFiles/game.dir/SpriteGrid.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/SpriteGrid.cpp.o: ../src/SpriteGrid.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/SpriteGrid.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/SpriteGrid.cpp.o -c /home/lolcio/safarix/src/SpriteGrid.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/SpriteGrid.cpp.o -c /home/lolcio/safarix/src/SpriteGrid.cpp
 
 src/CMakeFiles/game.dir/SpriteGrid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/SpriteGrid.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/SpriteGrid.cpp > CMakeFiles/game.dir/SpriteGrid.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/SpriteGrid.cpp > CMakeFiles/game.dir/SpriteGrid.cpp.i
 
 src/CMakeFiles/game.dir/SpriteGrid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/SpriteGrid.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/SpriteGrid.cpp -o CMakeFiles/game.dir/SpriteGrid.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/SpriteGrid.cpp -o CMakeFiles/game.dir/SpriteGrid.cpp.s
 
 src/CMakeFiles/game.dir/SpriteGrid.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/SpriteGrid.cpp.o.requires
@@ -211,15 +211,15 @@ src/CMakeFiles/game.dir/Player.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Player.cpp.o: ../src/Player.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Player.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Player.cpp.o -c /home/lolcio/safarix/src/Player.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Player.cpp.o -c /home/lolcio/safarix/src/Player.cpp
 
 src/CMakeFiles/game.dir/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Player.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Player.cpp > CMakeFiles/game.dir/Player.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Player.cpp > CMakeFiles/game.dir/Player.cpp.i
 
 src/CMakeFiles/game.dir/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Player.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Player.cpp -o CMakeFiles/game.dir/Player.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Player.cpp -o CMakeFiles/game.dir/Player.cpp.s
 
 src/CMakeFiles/game.dir/Player.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Player.cpp.o.requires
@@ -234,15 +234,15 @@ src/CMakeFiles/game.dir/Aabb.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Aabb.cpp.o: ../src/Aabb.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Aabb.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Aabb.cpp.o -c /home/lolcio/safarix/src/Aabb.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Aabb.cpp.o -c /home/lolcio/safarix/src/Aabb.cpp
 
 src/CMakeFiles/game.dir/Aabb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Aabb.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Aabb.cpp > CMakeFiles/game.dir/Aabb.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Aabb.cpp > CMakeFiles/game.dir/Aabb.cpp.i
 
 src/CMakeFiles/game.dir/Aabb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Aabb.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Aabb.cpp -o CMakeFiles/game.dir/Aabb.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Aabb.cpp -o CMakeFiles/game.dir/Aabb.cpp.s
 
 src/CMakeFiles/game.dir/Aabb.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Aabb.cpp.o.requires
@@ -257,15 +257,15 @@ src/CMakeFiles/game.dir/Writer.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Writer.cpp.o: ../src/Writer.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Writer.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Writer.cpp.o -c /home/lolcio/safarix/src/Writer.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Writer.cpp.o -c /home/lolcio/safarix/src/Writer.cpp
 
 src/CMakeFiles/game.dir/Writer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Writer.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Writer.cpp > CMakeFiles/game.dir/Writer.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Writer.cpp > CMakeFiles/game.dir/Writer.cpp.i
 
 src/CMakeFiles/game.dir/Writer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Writer.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Writer.cpp -o CMakeFiles/game.dir/Writer.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Writer.cpp -o CMakeFiles/game.dir/Writer.cpp.s
 
 src/CMakeFiles/game.dir/Writer.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Writer.cpp.o.requires
@@ -280,15 +280,15 @@ src/CMakeFiles/game.dir/Treasure.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Treasure.cpp.o: ../src/Treasure.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Treasure.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Treasure.cpp.o -c /home/lolcio/safarix/src/Treasure.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Treasure.cpp.o -c /home/lolcio/safarix/src/Treasure.cpp
 
 src/CMakeFiles/game.dir/Treasure.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Treasure.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Treasure.cpp > CMakeFiles/game.dir/Treasure.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Treasure.cpp > CMakeFiles/game.dir/Treasure.cpp.i
 
 src/CMakeFiles/game.dir/Treasure.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Treasure.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Treasure.cpp -o CMakeFiles/game.dir/Treasure.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Treasure.cpp -o CMakeFiles/game.dir/Treasure.cpp.s
 
 src/CMakeFiles/game.dir/Treasure.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Treasure.cpp.o.requires
@@ -303,15 +303,15 @@ src/CMakeFiles/game.dir/Entity.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Entity.cpp.o: ../src/Entity.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Entity.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Entity.cpp.o -c /home/lolcio/safarix/src/Entity.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Entity.cpp.o -c /home/lolcio/safarix/src/Entity.cpp
 
 src/CMakeFiles/game.dir/Entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Entity.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Entity.cpp > CMakeFiles/game.dir/Entity.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Entity.cpp > CMakeFiles/game.dir/Entity.cpp.i
 
 src/CMakeFiles/game.dir/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Entity.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Entity.cpp -o CMakeFiles/game.dir/Entity.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Entity.cpp -o CMakeFiles/game.dir/Entity.cpp.s
 
 src/CMakeFiles/game.dir/Entity.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Entity.cpp.o.requires
@@ -326,15 +326,15 @@ src/CMakeFiles/game.dir/ProgressBar.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/ProgressBar.cpp.o: ../src/ProgressBar.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/ProgressBar.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/ProgressBar.cpp.o -c /home/lolcio/safarix/src/ProgressBar.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/ProgressBar.cpp.o -c /home/lolcio/safarix/src/ProgressBar.cpp
 
 src/CMakeFiles/game.dir/ProgressBar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/ProgressBar.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/ProgressBar.cpp > CMakeFiles/game.dir/ProgressBar.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/ProgressBar.cpp > CMakeFiles/game.dir/ProgressBar.cpp.i
 
 src/CMakeFiles/game.dir/ProgressBar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/ProgressBar.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/ProgressBar.cpp -o CMakeFiles/game.dir/ProgressBar.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/ProgressBar.cpp -o CMakeFiles/game.dir/ProgressBar.cpp.s
 
 src/CMakeFiles/game.dir/ProgressBar.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/ProgressBar.cpp.o.requires
@@ -349,15 +349,15 @@ src/CMakeFiles/game.dir/Menu.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Menu.cpp.o: ../src/Menu.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Menu.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Menu.cpp.o -c /home/lolcio/safarix/src/Menu.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Menu.cpp.o -c /home/lolcio/safarix/src/Menu.cpp
 
 src/CMakeFiles/game.dir/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Menu.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Menu.cpp > CMakeFiles/game.dir/Menu.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Menu.cpp > CMakeFiles/game.dir/Menu.cpp.i
 
 src/CMakeFiles/game.dir/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Menu.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Menu.cpp -o CMakeFiles/game.dir/Menu.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Menu.cpp -o CMakeFiles/game.dir/Menu.cpp.s
 
 src/CMakeFiles/game.dir/Menu.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Menu.cpp.o.requires
@@ -372,15 +372,15 @@ src/CMakeFiles/game.dir/Game.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/Game.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Game.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Game.cpp.o -c /home/lolcio/safarix/src/Game.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Game.cpp.o -c /home/lolcio/safarix/src/Game.cpp
 
 src/CMakeFiles/game.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Game.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Game.cpp > CMakeFiles/game.dir/Game.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Game.cpp > CMakeFiles/game.dir/Game.cpp.i
 
 src/CMakeFiles/game.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Game.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Game.cpp -o CMakeFiles/game.dir/Game.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Game.cpp -o CMakeFiles/game.dir/Game.cpp.s
 
 src/CMakeFiles/game.dir/Game.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Game.cpp.o.requires
@@ -395,15 +395,15 @@ src/CMakeFiles/game.dir/Lua.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Lua.cpp.o: ../src/Lua.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Lua.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Lua.cpp.o -c /home/lolcio/safarix/src/Lua.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Lua.cpp.o -c /home/lolcio/safarix/src/Lua.cpp
 
 src/CMakeFiles/game.dir/Lua.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Lua.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Lua.cpp > CMakeFiles/game.dir/Lua.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Lua.cpp > CMakeFiles/game.dir/Lua.cpp.i
 
 src/CMakeFiles/game.dir/Lua.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Lua.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Lua.cpp -o CMakeFiles/game.dir/Lua.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Lua.cpp -o CMakeFiles/game.dir/Lua.cpp.s
 
 src/CMakeFiles/game.dir/Lua.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Lua.cpp.o.requires
@@ -418,15 +418,15 @@ src/CMakeFiles/game.dir/Engine.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Engine.cpp.o: ../src/Engine.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Engine.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Engine.cpp.o -c /home/lolcio/safarix/src/Engine.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Engine.cpp.o -c /home/lolcio/safarix/src/Engine.cpp
 
 src/CMakeFiles/game.dir/Engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Engine.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Engine.cpp > CMakeFiles/game.dir/Engine.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Engine.cpp > CMakeFiles/game.dir/Engine.cpp.i
 
 src/CMakeFiles/game.dir/Engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Engine.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Engine.cpp -o CMakeFiles/game.dir/Engine.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Engine.cpp -o CMakeFiles/game.dir/Engine.cpp.s
 
 src/CMakeFiles/game.dir/Engine.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/Engine.cpp.o.requires
@@ -441,15 +441,15 @@ src/CMakeFiles/game.dir/GlobFun.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/GlobFun.cpp.o: ../src/GlobFun.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/GlobFun.cpp.o"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/GlobFun.cpp.o -c /home/lolcio/safarix/src/GlobFun.cpp
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/GlobFun.cpp.o -c /home/lolcio/safarix/src/GlobFun.cpp
 
 src/CMakeFiles/game.dir/GlobFun.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/GlobFun.cpp.i"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/GlobFun.cpp > CMakeFiles/game.dir/GlobFun.cpp.i
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/GlobFun.cpp > CMakeFiles/game.dir/GlobFun.cpp.i
 
 src/CMakeFiles/game.dir/GlobFun.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/GlobFun.cpp.s"
-	cd /home/lolcio/safarix/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/GlobFun.cpp -o CMakeFiles/game.dir/GlobFun.cpp.s
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/GlobFun.cpp -o CMakeFiles/game.dir/GlobFun.cpp.s
 
 src/CMakeFiles/game.dir/GlobFun.cpp.o.requires:
 .PHONY : src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
@@ -459,6 +459,52 @@ src/CMakeFiles/game.dir/GlobFun.cpp.o.provides: src/CMakeFiles/game.dir/GlobFun.
 .PHONY : src/CMakeFiles/game.dir/GlobFun.cpp.o.provides
 
 src/CMakeFiles/game.dir/GlobFun.cpp.o.provides.build: src/CMakeFiles/game.dir/GlobFun.cpp.o
+
+src/CMakeFiles/game.dir/Leveling.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/Leveling.cpp.o: ../src/Leveling.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Leveling.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Leveling.cpp.o -c /home/lolcio/safarix/src/Leveling.cpp
+
+src/CMakeFiles/game.dir/Leveling.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Leveling.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Leveling.cpp > CMakeFiles/game.dir/Leveling.cpp.i
+
+src/CMakeFiles/game.dir/Leveling.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Leveling.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Leveling.cpp -o CMakeFiles/game.dir/Leveling.cpp.s
+
+src/CMakeFiles/game.dir/Leveling.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/Leveling.cpp.o.requires
+
+src/CMakeFiles/game.dir/Leveling.cpp.o.provides: src/CMakeFiles/game.dir/Leveling.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Leveling.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/Leveling.cpp.o.provides
+
+src/CMakeFiles/game.dir/Leveling.cpp.o.provides.build: src/CMakeFiles/game.dir/Leveling.cpp.o
+
+src/CMakeFiles/game.dir/Sounder.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/Sounder.cpp.o: ../src/Sounder.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/Sounder.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/Sounder.cpp.o -c /home/lolcio/safarix/src/Sounder.cpp
+
+src/CMakeFiles/game.dir/Sounder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Sounder.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/Sounder.cpp > CMakeFiles/game.dir/Sounder.cpp.i
+
+src/CMakeFiles/game.dir/Sounder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Sounder.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/Sounder.cpp -o CMakeFiles/game.dir/Sounder.cpp.s
+
+src/CMakeFiles/game.dir/Sounder.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/Sounder.cpp.o.requires
+
+src/CMakeFiles/game.dir/Sounder.cpp.o.provides: src/CMakeFiles/game.dir/Sounder.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Sounder.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/Sounder.cpp.o.provides
+
+src/CMakeFiles/game.dir/Sounder.cpp.o.provides.build: src/CMakeFiles/game.dir/Sounder.cpp.o
 
 # Object files for target game
 game_OBJECTS = \
@@ -479,7 +525,9 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/Game.cpp.o" \
 "CMakeFiles/game.dir/Lua.cpp.o" \
 "CMakeFiles/game.dir/Engine.cpp.o" \
-"CMakeFiles/game.dir/GlobFun.cpp.o"
+"CMakeFiles/game.dir/GlobFun.cpp.o" \
+"CMakeFiles/game.dir/Leveling.cpp.o" \
+"CMakeFiles/game.dir/Sounder.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -502,6 +550,8 @@ game_EXTERNAL_OBJECTS =
 ../game: src/CMakeFiles/game.dir/Lua.cpp.o
 ../game: src/CMakeFiles/game.dir/Engine.cpp.o
 ../game: src/CMakeFiles/game.dir/GlobFun.cpp.o
+../game: src/CMakeFiles/game.dir/Leveling.cpp.o
+../game: src/CMakeFiles/game.dir/Sounder.cpp.o
 ../game: src/CMakeFiles/game.dir/build.make
 ../game: src/CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../game"
@@ -529,6 +579,8 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Game.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Lua.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Engine.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Leveling.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Sounder.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

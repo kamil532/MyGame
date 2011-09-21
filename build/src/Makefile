@@ -277,6 +277,30 @@ Level.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Level.cpp.s
 .PHONY : Level.cpp.s
 
+Leveling.o: Leveling.cpp.o
+.PHONY : Leveling.o
+
+# target to build an object file
+Leveling.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Leveling.cpp.o
+.PHONY : Leveling.cpp.o
+
+Leveling.i: Leveling.cpp.i
+.PHONY : Leveling.i
+
+# target to preprocess a source file
+Leveling.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Leveling.cpp.i
+.PHONY : Leveling.cpp.i
+
+Leveling.s: Leveling.cpp.s
+.PHONY : Leveling.s
+
+# target to generate assembly for a file
+Leveling.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Leveling.cpp.s
+.PHONY : Leveling.cpp.s
+
 Lua.o: Lua.cpp.o
 .PHONY : Lua.o
 
@@ -396,6 +420,30 @@ Renderer.s: Renderer.cpp.s
 Renderer.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Renderer.cpp.s
 .PHONY : Renderer.cpp.s
+
+Sounder.o: Sounder.cpp.o
+.PHONY : Sounder.o
+
+# target to build an object file
+Sounder.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Sounder.cpp.o
+.PHONY : Sounder.cpp.o
+
+Sounder.i: Sounder.cpp.i
+.PHONY : Sounder.i
+
+# target to preprocess a source file
+Sounder.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Sounder.cpp.i
+.PHONY : Sounder.cpp.i
+
+Sounder.s: Sounder.cpp.s
+.PHONY : Sounder.s
+
+# target to generate assembly for a file
+Sounder.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Sounder.cpp.s
+.PHONY : Sounder.cpp.s
 
 Sprite.o: Sprite.cpp.o
 .PHONY : Sprite.o
@@ -571,6 +619,9 @@ help:
 	@echo "... Level.o"
 	@echo "... Level.i"
 	@echo "... Level.s"
+	@echo "... Leveling.o"
+	@echo "... Leveling.i"
+	@echo "... Leveling.s"
 	@echo "... Lua.o"
 	@echo "... Lua.i"
 	@echo "... Lua.s"
@@ -586,6 +637,9 @@ help:
 	@echo "... Renderer.o"
 	@echo "... Renderer.i"
 	@echo "... Renderer.s"
+	@echo "... Sounder.o"
+	@echo "... Sounder.i"
+	@echo "... Sounder.s"
 	@echo "... Sprite.o"
 	@echo "... Sprite.i"
 	@echo "... Sprite.s"

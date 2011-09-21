@@ -2,12 +2,14 @@
 #define ENGINE_HPP
 
 #include "Heders.hpp"
+#include "Leveling.hpp"
 #include "Treasure.hpp"
 #include "Renderer.hpp"
 #include "Aabb.hpp"
 #include "Writer.hpp"
 #include "Lua.hpp"
 #include "Entity.hpp"
+
 
 /* Klasa singleton, dzieki ktorej uzuskuje sie dostep do
  * klas, ktore rowniez powinny miec tylko jedna instacje.
@@ -41,8 +43,8 @@ public:
     WriterPtr        GetWriter() const { return m_Writer; }
     TreasurePtr	     GetTreasure() const { return m_treasure; }
     SpriteGrid*	     GetGrid()  { return &m_grid; }
-    EntityFactoryPtr GetEntityFactory() { return m_entity_factory; }
-    
+    EntityFactoryPtr GetEntityFactory() const { return m_entity_factory; }
+    LevelingPtr	     GetLeveling() const { return m_leveling; }
 private:
     //ustawienie poziomu poczatkowego gry
     Engine():m_level_of_game(1){}
@@ -76,6 +78,9 @@ private:
     
     //Klasa przechowujaca przeciwnikow
     EntityFactoryPtr m_entity_factory;
+    
+    //Klasa zarzadzajaca levelami
+    LevelingPtr m_leveling;
     
     //Informacje o glownym Surface
     SDL_Surface* m_screen;

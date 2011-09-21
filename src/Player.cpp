@@ -1,7 +1,5 @@
 #include "Player.hpp"
 
-ulong Player::m_score;
-
 Player::Player():m_live(1.0),m_live_dt(0.0),m_speed(1.0),m_speed_dt(0.0)
 {
 
@@ -52,7 +50,7 @@ void Player::Update(const double& dt) {
     //okreslenie w ktora strone sie porusza postac 
     //tak aby nie bylo ruchu w dwoch plaszczyznach jednoczesnie
     if ( next_x > m_x && Engine::Get().GetAabb()->IsOnRightOf(tmp)) {
-        next_x=m_x;
+         next_x=m_x;
     }
     if ( next_x < m_x && Engine::Get().GetAabb()->IsOnLeftOf(tmp)) {
         next_x=m_x;
@@ -63,6 +61,10 @@ void Player::Update(const double& dt) {
     if ( next_y < m_y && Engine::Get().GetAabb()->IsUnder(tmp)) {
         next_y=m_y;
     }
+
+  if( Engine::Get().GetEntityFactory()->Colidies(tmp) )
+	  Engine::Get().GetLeveling()->PlayerDie();
+
 
   tmp.x=next_x+20; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35; 
   ControlLive(tmp,dt);
@@ -116,16 +118,23 @@ void Player::ControlLive(SDL_Rect& tmp ,const double& dt){
         if (m_live<=0.95) m_live+=0.1;
     }  
     
-    if(m_live<0) m_live=0;
+    if( m_live<=0.1 ){
+      m_live=1;
+      Engine::Get().GetLeveling()->PlayerDie();
+    }
 }
 
 void Player::Draw() const {
+  
     if (m_sprites.find(m_state) !=m_sprites.end()) ;
     else throw ("[Critical] Player state not found");
+    
     m_sprites.find(m_state)->second->Draw( m_x, m_y );
     m_progressBar->Draw();   
     m_speedBar->Draw();
-    Engine::Get().GetWriter()->DrawScore(m_score, m_score_rect);
+    Engine::Get().GetWriter()->DrawScore(
+				  Engine::Get().GetLeveling()->GetScore(),
+				  m_score_rect );
 }
 
 void Player::CorectPos( double& next_x,double& next_y){

@@ -62,4 +62,3 @@ void Writer::WriteString(const string& Text,
 		   
 		   
 		   
-		   

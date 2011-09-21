@@ -23,14 +23,13 @@ void Level::LoadFromFile( const string& FileName){
     
   int EntityAmount=0;  
   lvl>> EntityAmount;
-    //m_entityF.reset(new EntityFactory());
   
   
-  for (size_t i=0; i<EntityAmount; ++i){
+  for (ushort i=0; i<EntityAmount; ++i){
     ushort x=0,y=0;
     string name;
     lvl>>x>>y>>name;
-   ( m_entityF)->AddEntity(x,y,name);
+   ( m_entityF )->AddEntity(x,y,name);
   }  
     
 }

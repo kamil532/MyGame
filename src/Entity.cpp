@@ -1,10 +1,9 @@
 #include "Entity.hpp"
 #include "Engine.hpp"
-#include <boost/random/mersenne_twister.hpp>
 #include <boost/random/variate_generator.hpp>
-#include <boost/typeof/typeof.hpp> 
 
 boost::mt19937 gen;
+
 int roll_die() {
     //zakres losowania lizb
     boost::uniform_int<> dist(1, 4);
@@ -12,8 +11,8 @@ int roll_die() {
     return die();
 }
 
-Entity::Entity(const ushort& X, const ushort& Y,const string& Name):
-m_vx(0), m_vy(0),m_state(ES::Left)
+Entity::Entity(const ushort& X, const ushort& Y ):
+m_state(ES::Left), m_vx(0), m_vy(0)
 {
    m_x = Engine::Get().GetLua()->CORNER_X - 
          Engine::Get().GetLua()->TILE_SIZE +
@@ -23,7 +22,9 @@ m_vx(0), m_vy(0),m_state(ES::Left)
 	 Engine::Get().GetLua()->TILE_SIZE+
 	 Engine::Get().GetLua()->TILE_SIZE * Y+2;	 
 	 
-   m_sprite.reset(new Sprite(Name)); 	   
+   m_sprite.reset( new Sprite("angry") ); 
+   m_left.reset( new Sprite("angryLeft") );
+   m_right.reset( new Sprite("angryRight") );
 	 
 }
 
@@ -33,7 +34,7 @@ void Entity::Update(const double& dt){
       case (ES::Up):{
 	m_vx=0;
 	m_vy=Engine::Get().GetLua()->SPEED;
-	  break;
+	break;
       }
        case (ES::Down):{
 	m_vx=0;
@@ -91,9 +92,6 @@ void Entity::Update(const double& dt){
 }
 
 void Entity::SearchWay(double& next_x, double& next_y ){
-    
-   SDL_Rect posRect={next_x,next_y,Engine::Get().GetLua()->PLAYER_SIZE,
-		    Engine::Get().GetLua()->PLAYER_SIZE};   
 		    
   for(int j=0; j<=3; ++j){
       roll_die();
@@ -118,7 +116,7 @@ void Entity::SearchWay(double& next_x, double& next_y ){
 
 void EntityFactory::AddEntity(const ushort& X, const ushort& Y,
 			      const string& Name){ 
-     m_entity.push_back(*(new Entity(X,Y,Name)));
+     m_entity.push_back( *(new Entity(X,Y)) );
 
 }
 
@@ -137,11 +135,28 @@ void EntityFactory::Draw(){
   }  
 }
 
-EntityFactory::EntityFactory(){  
-  
-  
-}
+EntityFactory::EntityFactory(){}
 
+void Entity::Draw(){
+    switch (m_state){
+      case (ES::Up):{
+	m_sprite->Draw( m_x,m_y );
+	return;
+      }
+       case (ES::Down):{
+	m_sprite->Draw( m_x,m_y );
+	return;
+       }	
+       case (ES::Left):{
+      m_left->Draw( m_x,m_y );
+	return;
+      }
+       case (ES::Right):{
+	m_right->Draw( m_x,m_y );
+	return;
+       }	
+     }      
+}
 
 void Entity::GoUp(){
   m_state=ES::Up;
@@ -180,5 +195,13 @@ bool Entity::operator==(Entity it) const{
 return false; 
 }
 
-
+bool EntityFactory::Colidies(const SDL_Rect& Box){
+  if( m_entity.empty() ) std::cerr<<"[Error] Don`t load entity\n";
+  
+   BOOST_FOREACH(Entity it, m_entity ) {
+      if(CollidesWithEntity(Box,&it))
+	  return true;     
+   }
+   return false;  
+}
 

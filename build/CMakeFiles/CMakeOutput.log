@@ -13,7 +13,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "/home/lolcio/safarix/build/CMakeFiles/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
+Compiler: /usr/bin/gcc 
 Build flags: 
 Id flags: 
 
@@ -141,10 +141,10 @@ Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
 make[1]: Wejście do katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building CXX object CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o -c /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+/usr/bin/gcc     -o CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o -c /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
 Linking CXX executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
-/usr/bin/c++          CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec -rdynamic 
+/usr/bin/gcc          CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec -rdynamic 
 make[1]: Opuszczenie katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 
 
@@ -156,12 +156,12 @@ Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
 make[1]: Wejście do katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+/usr/bin/gcc     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
 Linking CXX executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
-/usr/bin/c++        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  
+/usr/bin/gcc        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  
 Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
+COLLECT_GCC=/usr/bin/gcc
 COLLECT_LTO_WRAPPER=/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/lto-wrapper
 Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 4.6.1-5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++,go --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-multiarch --with-multiarch-defaults=x86_64-linux-gnu --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib/x86_64-linux-gnu --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib/x86_64-linux-gnu --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-plugin --enable-objc-gc --with-arch-32=i586 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
@@ -169,8 +169,8 @@ Thread model: posix
 gcc version 4.6.1 (Debian 4.6.1-5) 
 COMPILER_PATH=/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/collect2 --build-id --no-add-needed --eh-frame-hdr -m elf_x86_64 --hash-style=both -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtbegin.o -L/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1 -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/collect2 --build-id --no-add-needed --eh-frame-hdr -m elf_x86_64 --hash-style=both -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtbegin.o -L/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1 -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o
 make[1]: Opuszczenie katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 
 
@@ -183,12 +183,12 @@ Parsed CXX implicit link information from above output:
   ignore line: [make[1]: Wejście do katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
   ignore line: [Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [/usr/bin/gcc     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Linking CXX executable cmTryCompileExec]
   ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: [/usr/bin/gcc        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_GCC=/usr/bin/gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/lto-wrapper]
   ignore line: [Target: x86_64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 4.6.1-5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++,go --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-multiarch --with-multiarch-defaults=x86_64-linux-gnu --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib/x86_64-linux-gnu --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib/x86_64-linux-gnu --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-plugin --enable-objc-gc --with-arch-32=i586 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
@@ -196,8 +196,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.6.1 (Debian 4.6.1-5) ]
   ignore line: [COMPILER_PATH=/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/:/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/collect2 --build-id --no-add-needed --eh-frame-hdr -m elf_x86_64 --hash-style=both -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtbegin.o -L/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1 -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/collect2 --build-id --no-add-needed --eh-frame-hdr -m elf_x86_64 --hash-style=both -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtbegin.o -L/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1 -L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/collect2] ==> ignore
     arg [--build-id] ==> ignore
     arg [--no-add-needed] ==> ignore
@@ -218,24 +218,26 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1] ==> dir [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1]
     arg [-L/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../..] ==> dir [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../..]
     arg [CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-    arg [-lstdc++] ==> lib [stdc++]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
     arg [-lc] ==> lib [c]
-    arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
     arg [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/crtend.o] ==> ignore
     arg [/usr/lib/x86_64-linux-gnu/crtn.o] ==> ignore
-  remove lib [gcc_s]
   remove lib [gcc]
   remove lib [gcc_s]
   remove lib [gcc]
+  remove lib [gcc_s]
   collapse dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
   collapse dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse dir [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1] ==> [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1]
   collapse dir [/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1/../../..] ==> [/usr/lib/x86_64-linux-gnu]
-  implicit libs: [stdc++;m;c]
+  implicit libs: [c]
   implicit dirs: [/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu/gcc/x86_64-linux-gnu/4.6.1]
 
 
@@ -243,33 +245,29 @@ Determining if files pthread.h exist passed with the following output:
 Change Dir: /home/lolcio/safarix/build/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-make[1]: Entering directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[2]: Entering directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
+make[1]: Wejście do katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFiles.c.o
 /usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFiles.c.o   -c /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
 Linking C executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
 /usr/bin/gcc         CMakeFiles/cmTryCompileExec.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec -rdynamic 
-make[2]: Leaving directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
+make[1]: Opuszczenie katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/lolcio/safarix/build/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-make[1]: Entering directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[2]: Entering directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
+make[1]: Wejście do katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o
 /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
 Linking C executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
 /usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec.dir/CheckFunctionExists.c.o  -o cmTryCompileExec -rdynamic -lpthread 
-make[2]: Leaving directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
+make[1]: Opuszczenie katalogu `/home/lolcio/safarix/build/CMakeFiles/CMakeTmp'
 
 

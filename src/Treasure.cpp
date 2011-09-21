@@ -7,7 +7,8 @@ bool Treasure::CheckScore( SDL_Rect& Box){
 list_rec_it it_tmp = FindTreasure( Box , find );
  if (find){
     m_grid->DeleteGrid(CollidesTreasure(Box));
-    Player::AddScore(10);
+    Engine::Get().GetLeveling()->AddScore(10);
+
     m_treasure.erase( it_tmp ); 
     return true;
  }
