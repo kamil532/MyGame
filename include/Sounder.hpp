@@ -1,0 +1,16 @@
+#ifndef SOUNDER_HPP
+#define SOUNDER_HPP
+#include "Heders.hpp"
+
+class Sounder{
+public:
+    explicit Sounder();
+    
+  
+private:    
+  
+  
+};
+typedef boost::shared_ptr<Sounder> SounderPtr;
+
+#endif

@@ -1,0 +1,96 @@
+#include "Lua.hpp"
+#include "GlobFun.cpp"
+#include <lua.hpp>
+#include <Engine.hpp>
+
+int add_sprite( lua_State* pL ){
+  //Dostep do tej funkcji ma skrypt lua, ktory dodaje sprite do programu
+  int argc = lua_gettop( pL );
+
+    if ( argc != 10 ){
+        cout << "[Lua,C++] Add_sprite: wrong number of parameters\n";
+        return 0;
+    }
+
+    if ( !lua_isstring( pL, 1 ) && !lua_isnumber( pL, 2 ) 
+	  && !lua_isnumber( pL, 3 ) && !lua_isnumber( pL, 4 )
+	  && !lua_isnumber( pL, 5 ) && !lua_isnumber( pL, 6 )
+	  && !lua_isnumber( pL, 7 ) && !lua_isnumber( pL, 8 )
+	  && !lua_isnumber( pL, 9 ) && !lua_isnumber( pL, 10 ) ){
+        cout << "[Lua,C++] Add_sprite: invalid types passed\n";
+        return 0;
+    }
+
+    string name = lua_tostring( pL, 1 );
+    ushort tex_x=static_cast< ushort >( lua_tonumber( pL, 2 ) );
+    ushort tex_y=static_cast< ushort >( lua_tonumber( pL, 3 ) );
+    short pos_x=static_cast< short >( lua_tonumber( pL, 4 ) );
+    short pos_y=static_cast< short >( lua_tonumber( pL, 5 ) );
+    ushort width=static_cast< ushort >( lua_tonumber( pL, 6 ) );
+    ushort height=static_cast< ushort >( lua_tonumber( pL, 7 ) );
+    ushort frame_count=static_cast< ushort >( lua_tonumber( pL, 8 ) );
+    float frame_time=static_cast< float >( lua_tonumber( pL, 9 ) );
+    bool loop=static_cast< bool >( lua_tonumber( pL, 10 ) );
+
+  Engine::Get().GetSpriteConfig()->Insert(name,tex_x,tex_y,pos_x,pos_y,width,height, frame_count,frame_time,loop   );
+    return 0;  
+}
+
+
+void Lua::LoadSpriteData(){
+
+    lua_State* lua = lua_open();
+    luaL_openlibs(lua);  
+    //Rejestracja funkcji, ktora mozna uzyc w skrypcie lua
+    lua_register( lua, "cxx_add_sprite", add_sprite);
+    
+    //Wykonanie skryptu dodajacego sprity    
+    if ( luaL_dofile( lua, "sprite.lua" ) != 0 )
+      throw "\n[Critical] Problem with lua script file!";
+
+    lua_close(lua);  
+}  
+
+
+LuaLoader::LuaLoader(string& LuaFilePath){
+   
+    lua_State* lua = lua_open();
+    luaL_openlibs(lua);
+    luaL_dofile(lua, "config.lua");
+
+  //Wczytanie wszystkich ustawien ( Zamiast zmiennych globalnych )  
+  m_lua_data.INFO=Lua_cast<string>( lua, *(new string("INFO")) );
+  m_lua_data.ATLAS_PATH=Lua_cast<string>( lua, *(new string("ATLAS_PATH")) );
+  m_lua_data.APP_TITLE=Lua_cast<string>( lua, *(new string("APP_TITLE")) ); 
+  m_lua_data.FONT_PATH=Lua_cast<string>( lua, *(new string("FONT_PATH")) );
+  m_lua_data.TIME_STEP=Lua_cast<float>( lua, *(new string("TIME_STEP")) );  
+  m_lua_data.TILE_SIZE=Lua_cast<ushort>( lua, *(new string("TILE_SIZE")) );    
+  m_lua_data.CORNER_X=Lua_cast<ushort>( lua, *(new string("CORNER_X")) );
+  m_lua_data.CORNER_Y=Lua_cast<ushort>( lua, *(new string("CORNER_Y")) );    
+  m_lua_data.PLAYER_X=Lua_cast<double>( lua, *(new string("PLAYER_X")) );
+  m_lua_data.PLAYER_Y=Lua_cast<double>( lua, *(new string("PLAYER_Y")) );
+  m_lua_data.PLAYER_SIZE=Lua_cast<ushort>( lua, *(new string("PLAYER_SIZE")) );    
+  m_lua_data.FONT_SIZE=Lua_cast<ushort>( lua, *(new string("FONT_SIZE")) );
+  m_lua_data.INTRO_PATH=Lua_cast<string>( lua, *(new string("INTRO_PATH")) );
+  m_lua_data.INTRO_TIME=Lua_cast<ushort>( lua, *(new string("INTRO_TIME")) );
+  m_lua_data.SPEED=Lua_cast<float>( lua, *(new string("SPEED")) );
+  m_lua_data.RUN_FACTOR=Lua_cast<ushort>( lua, *(new string("RUN_FACTOR")) );
+  m_lua_data.FONT_SIZE=Lua_cast<ushort>( lua, *(new string("FONT_SIZE")) );
+  m_lua_data.FULL_SCREEN=Lua_cast<bool>( lua, *(new string("FULL_SCREEN")) );  
+  m_lua_data.IMAGINATION=Lua_cast<bool>( lua, *(new string("IMAGINATION")) );  
+  m_lua_data.LEVEL_MOUNT=Lua_cast<ushort>( lua, *(new string("LEVEL_AMOUNT")) ); 
+   
+lua_close(lua);
+}
+
+
+Lua::Lua( LuaData& Data):
+INFO(Data.INFO),ATLAS_PATH(Data.ATLAS_PATH),APP_TITLE(Data.APP_TITLE),
+FONT_PATH(Data.FONT_PATH),INTRO_PATH(Data.INTRO_PATH),TIME_STEP(Data.TIME_STEP), 
+SPEED(Data.SPEED), PLAYER_X(Data.PLAYER_X),PLAYER_Y(Data.PLAYER_Y),
+PLAYER_SIZE(Data.PLAYER_SIZE), CORNER_X(Data.CORNER_X),CORNER_Y(Data.CORNER_Y),
+TILE_SIZE(Data.TILE_SIZE),INTRO_TIME(Data.INTRO_TIME),RUN_FACTOR(Data.RUN_FACTOR),
+FONT_SIZE(Data.FONT_SIZE),FULL_SCREEN(Data.FULL_SCREEN),IMAGINATION(Data.IMAGINATION),
+LEVEL_MOUNT(Data.LEVEL_MOUNT)
+{}
+

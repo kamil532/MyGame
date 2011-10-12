@@ -1,0 +1,11 @@
+###	PYREX 2D GNU/GPL	###
+# 	  develop version
+
+ Tested only in resolution: 1260 x 600 [!]
+
+# Game similar to pacman, develop on linux
+# and maybye win
+
+# This game use SDL, Lua script and boost library
+
+

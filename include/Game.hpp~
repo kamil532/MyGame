@@ -1,0 +1,45 @@
+#ifndef GAME_HPP
+#define GAME_HPP
+
+#include "Heders.hpp"
+#include "Player.hpp"
+#include "Menu.hpp"
+
+class Game{
+public:  
+    explicit Game(SDL_Surface*, size_t, size_t);  
+
+    void Draw();
+    void SetQuitFlag( bool* Done ){ m_is_done=Done; 
+    m_game_menu->SetQuitFlag(Done);  
+    
+    }  
+    void ProcessEvents();
+    void Update(const double&);
+    void Draw();
+
+private:
+    void ControlGame();
+    void ControlMenu();
+    void NewGame();
+  
+private:
+    MenuPtr m_game_menu;  
+    PlayerPtr m_player;  
+    
+    size_t m_screen_height;
+    size_t m_screen_width;
+    SDL_Surface* m_screen;
+    SDL_Surface* m_intro;
+
+    bool* m_is_done;     
+    SDL_Event event;   
+    GS::GameState* m_game_state; 
+    
+    ushort m_current_level;
+
+    
+};
+typedef boost::shared_ptr<Game> Gameptr;
+
+#endif

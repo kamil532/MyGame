@@ -1,0 +1,168 @@
+#include "Leveling.hpp"
+#include "GlobFun.cpp"
+#include "Engine.hpp"
+#include "Player.hpp"
+
+Leveling::Leveling(): m_score(0UL), m_current(1U),
+m_started_game(false),m_player_life(true), m_background(NULL),
+m_level_surf(NULL)
+{   
+  // Load best highscore from file
+  std::ifstream File;
+  File.open("data/info.lvl");
+  if( !File ) throw "[Critical] Not found info.lvl\n";
+  File>>m_highscore;
+  File.close();
+  
+  m_back_rect.x=0;
+  m_back_rect.y=0;
+  
+  m_background = IMG_Load("data/pic/menu.png");
+  if( !m_background ) throw "[Critical] Not found menu background (class leveling)\n";
+  
+  m_level_surf = IMG_Load("data/pic/level_select.png");
+  if( !m_level_surf ) throw "[Critical] Not found menu background (class leveling)\n";
+   
+  m_level_number_rect.x=400;
+  m_level_number_rect.y=400;  
+}
+
+void Leveling::NextLevel(){
+ 
+  // Fill screen black surface with opacity
+  SDL_Surface* m_menu_background = 
+			    CreateSurface( SDL_SRCALPHA | SDL_HWSURFACE, 
+					    1280,800, Engine::Get().GetScreen()  );
+
+ //Wczytanie obrazka nowego levelu     
+  SDL_Surface* m_level= IMG_Load("data/pic/nextlevel.png");
+
+  SDL_Rect levelRct={ (1280-700)/2, (800-560)/2, 500,400 };
+ 
+  if(m_level==NULL) throw "[Critical] Next level background not found\n";
+ 
+  SDL_SetAlpha( m_menu_background, SDL_SRCALPHA, 220 );  
+
+ Engine::Get().GetRenderer()->Draw(m_menu_background);
+ Engine::Get().GetRenderer()->Draw(m_level,levelRct); 
+
+ SDL_Rect tmpRect={ ((1280-500)/2)+150,
+  ((800-400)/2)+200, 500,400};
+  
+  string Text("");
+  std::ostringstream ss;
+  ss << Engine::Get().GetLeveling()->GetScore();
+  Text+=ss.str();
+
+  Engine::Get().GetWriter()->WriteString(Text,tmpRect);
+  SDL_Flip(Engine::Get().GetScreen());
+  SDL_Delay(1000);
+
+  SDL_Rect napisR={
+   (Engine::Get().GetScreenWidth()-350)/2,
+  Engine::Get().GetScreenHeight()*0.9
+  ,180,50};
+  
+ Engine::Get().GetWriter()->
+		WriteString(*(new string("Prease any key to continue")),
+			      napisR,30);
+	
+ SDL_Flip( Engine::Get().GetScreen() );
+ 
+ // Zatrzymanie programu dopoki nie nacisniemy klawisza
+ SDL_Event event;
+ bool flag=true;
+ 
+ while(flag){
+   while( SDL_PollEvent(&event))
+     if(event.type == SDL_KEYDOWN ) flag=false;  
+ }
+
+ // Zwolnienie pamieci po obrazkach 
+ SDL_FreeSurface( m_menu_background );
+ SDL_FreeSurface( m_level );
+    
+   ++this->m_current;
+ 
+  if ( m_score > m_highscore ){
+    m_highscore=m_score;
+    std::ofstream File;
+    File.open("data/info.lvl");
+    if( !File ) throw "[Critical] Not found info.lvl\n";
+    File<<m_score;
+    File.close();  
+  }
+ 
+  if( m_current > Engine::Get().GetLua()->LEVEL_MOUNT ){
+      throw "You Win!\n End game\n";
+  }
+ 
+}
+
+bool Leveling::PlayerDie(){  
+ 
+  if( m_player_life ) return false;
+  /*
+  //Wypelnienie tla, z lekka przezroczystoscia
+  SDL_Surface* m_menu_background= 
+      CreateSurface( SDL_SRCALPHA | SDL_HWSURFACE, 1280,800, Engine::Get().GetScreen() );
+ 
+if( m_current == NULL ) throw "[Critical] Next level background not found\n";
+ 
+ SDL_SetAlpha(m_menu_background,SDL_SRCALPHA,220);  
+
+Engine::Get().GetRenderer()->Draw(m_menu_background);
+
+
+SpritePtr GameOver;
+GameOver.reset( new Sprite("gameOver") );
+GameOver->Draw();
+SDL_Flip(Engine::Get().GetScreen());
+  
+ SDL_Rect tmpRect={ ((1280-500)/2)+150,
+  ((800-400)/2)+200, 500,400};
+  
+  string Text("");
+  std::ostringstream ss;
+  ss << Engine::Get().GetLeveling()->GetScore();
+  Text+=ss.str();
+
+ Engine::Get().GetWriter()->WriteString(Text,tmpRect);
+  SDL_Flip(Engine::Get().GetScreen());
+ // SDL_Delay(1000);
+
+  SDL_Rect napisR={
+   (Engine::Get().GetScreenWidth()-350)/2,
+  Engine::Get().GetScreenHeight()*0.9
+  ,180,50};
+  
+ Engine::Get().GetWriter()->
+		WriteString(*(new string("Prease any key to continue")),
+			      napisR,30);
+	
+ SDL_Flip( Engine::Get().GetScreen() );
+ 
+ //zatrzymanie programu dopoki nie nacisniemy klawisza
+ SDL_Event event;
+ bool flag=true;
+ 
+ while(flag){
+   while( SDL_PollEvent(&event))
+     if(event.type == SDL_KEYDOWN ) flag=false;  
+ }*/
+
+ // m_current=1; 
+  m_score=0;
+  m_started_game=false;  
+  
+  (*m_game_state) == GS::MainMenu;
+  m_player_life=true;
+  return true;
+
+}
+
+void Leveling::StartGame(){  
+  Engine::Get().PlayLevel( m_current );
+  m_score=0;
+  m_player_life=true;
+}

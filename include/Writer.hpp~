@@ -1,0 +1,38 @@
+#ifndef WRITER_HPP
+#define WRITER_HPP
+#include "Heders.hpp"
+
+class Writer{
+public: 
+  Writer();  
+  void WriteString(const string& Text,
+		   const SDL_Rect& WhereRect,
+		   const SDL_Color& Color);
+  
+  void WriteString(const string& Text,
+		   const SDL_Rect& WhereRect);
+  
+   void WriteString(const string& Text,
+		   const SDL_Rect& WhereRect,
+		   const uint& Size);
+  
+  void WriteString(const string& Text, 
+		   const SDL_Rect& WhereRect,
+		   const SDL_Color& FColor,
+		   const SDL_Color& BColor);
+  void WriteString(const string& Text, 
+		   const SDL_Rect& WhereRect,
+		   const ushort& Size  );
+		   
+  
+  void DrawScore(const ulong& Number, const SDL_Rect& Where);
+  
+  
+private: 
+  TTF_Font *m_font_a;
+  SDL_Color m_font_color; 
+  
+};
+typedef boost::shared_ptr<Writer> WriterPtr;
+
+#endif
