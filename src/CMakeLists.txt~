@@ -8,7 +8,7 @@ set(SOURCES main.cpp			App.cpp			Renderer.cpp
 	    Writer.cpp			Treasure.cpp    	Entity.cpp
 	    ProgressBar.cpp		Menu.cpp		Game.cpp
 	    Lua.cpp			Engine.cpp		GlobFun.cpp
-	    Leveling.cpp
+	    Leveling.cpp		Sounder.cpp
     ) 
 
 # Ustawienia katalogow

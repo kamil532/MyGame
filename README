@@ -1,10 +1,53 @@
-###	TYREX 2D GNU/GPL	###
+		Pyrex 0.1 Release Notes
+	      =============================
+[Warning] We don`t believe that the current version is stable.
+[Warning] Tested only in resolution: 1260 x 600 [!]
 
- Tested only in resolution: 1260 x 600 [!!]
-
-# Game similar to pacman, develop on linux
-# and maybye win
-
-# This game use SDL, Lua script and boost library
+Welcome to the latest release of Pyrex, a cross-platform C++
+2D game. Game similar to pacman.Note about naming: while 0.1
+is called a "development" release,this only means that game 
+is not guaranteed to work stable.
 
 
+Changes in this release
+-----------------------
+...
+
+
+Platforms supported
+-------------------
+
+Pyrex currently (will be )supports the following primary platforms:
+
+- Windows XP, 7
+- Most Linux variants using the SDL lib (version 1.2 or newer)
+
+
+Files
+-----
+The distribution is available in archive formats appropriate to the
+target system. See the download on github.com.
+
+
+Installation
+------------
+
+
+
+Licence information
+-------------------
+GNU/GPL
+
+
+Documentation
+-------------
+
+
+Bug reporting
+-------------
+Please send info: kamil532@interia.eu
+
+
+-------------------------------------
+Have fun!
+Lolcio, Octomber 2011

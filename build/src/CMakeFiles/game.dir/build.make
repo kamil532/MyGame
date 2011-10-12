@@ -506,6 +506,29 @@ src/CMakeFiles/game.dir/Sounder.cpp.o.provides: src/CMakeFiles/game.dir/Sounder.
 
 src/CMakeFiles/game.dir/Sounder.cpp.o.provides.build: src/CMakeFiles/game.dir/Sounder.cpp.o
 
+src/CMakeFiles/game.dir/MenuData.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/MenuData.cpp.o: ../src/MenuData.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lolcio/safarix/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/MenuData.cpp.o"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/MenuData.cpp.o -c /home/lolcio/safarix/src/MenuData.cpp
+
+src/CMakeFiles/game.dir/MenuData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/MenuData.cpp.i"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lolcio/safarix/src/MenuData.cpp > CMakeFiles/game.dir/MenuData.cpp.i
+
+src/CMakeFiles/game.dir/MenuData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/MenuData.cpp.s"
+	cd /home/lolcio/safarix/build/src && /usr/bin/gcc  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lolcio/safarix/src/MenuData.cpp -o CMakeFiles/game.dir/MenuData.cpp.s
+
+src/CMakeFiles/game.dir/MenuData.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/MenuData.cpp.o.requires
+
+src/CMakeFiles/game.dir/MenuData.cpp.o.provides: src/CMakeFiles/game.dir/MenuData.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/MenuData.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/MenuData.cpp.o.provides
+
+src/CMakeFiles/game.dir/MenuData.cpp.o.provides.build: src/CMakeFiles/game.dir/MenuData.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/main.cpp.o" \
@@ -527,7 +550,8 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/Engine.cpp.o" \
 "CMakeFiles/game.dir/GlobFun.cpp.o" \
 "CMakeFiles/game.dir/Leveling.cpp.o" \
-"CMakeFiles/game.dir/Sounder.cpp.o"
+"CMakeFiles/game.dir/Sounder.cpp.o" \
+"CMakeFiles/game.dir/MenuData.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -552,6 +576,7 @@ game_EXTERNAL_OBJECTS =
 ../game: src/CMakeFiles/game.dir/GlobFun.cpp.o
 ../game: src/CMakeFiles/game.dir/Leveling.cpp.o
 ../game: src/CMakeFiles/game.dir/Sounder.cpp.o
+../game: src/CMakeFiles/game.dir/MenuData.cpp.o
 ../game: src/CMakeFiles/game.dir/build.make
 ../game: src/CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../game"
@@ -581,6 +606,7 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Engine.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/GlobFun.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Leveling.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/Sounder.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/MenuData.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

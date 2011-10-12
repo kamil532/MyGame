@@ -14,7 +14,7 @@ void App::InitSDL() throw (const char*) {
     SDL_ShowCursor(false);
     
    //Ustawianie ikony aplikacji 
-   m_icon = IMG_Load("data/icon.png");
+   m_icon = IMG_Load("data/pic/icon.png");
    
    if(m_icon!=NULL)  SDL_WM_SetIcon(m_icon, NULL);
    else std::cerr<<"[Error] Not found icon file\n";
@@ -77,7 +77,7 @@ void App::Run() {
            m_game-> Update(Engine::GetLua()->TIME_STEP);
           accumulator -= Engine::GetLua()->TIME_STEP;
 	}
-        // m_game->Draw();
+         m_game->Draw();
     }
 }
 

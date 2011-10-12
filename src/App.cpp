@@ -14,7 +14,7 @@ void App::InitSDL() throw (const char*) {
     SDL_ShowCursor(false);
     
    //Ustawianie ikony aplikacji 
-   m_icon = IMG_Load("data/icon.png");
+   m_icon = IMG_Load("data/pic/icon.png");
    
    if(m_icon!=NULL)  SDL_WM_SetIcon(m_icon, NULL);
    else std::cerr<<"[Error] Not found icon file\n";
@@ -28,15 +28,15 @@ void App::InitSDL() throw (const char*) {
     m_screen_w=myPointer->current_w;
     m_screen_h=myPointer->current_h;
     
-  if( m_screen_w <1280 || m_screen_h< 800 ) m_full=0;
+   if( m_screen_w <1280 || m_screen_h< 800 ) m_full=0;
    
     m_screen = SDL_SetVideoMode(1280, 800, 32, 0
-                                |SDL_HWSURFACE
-                                |SDL_DOUBLEBUF
-                                |m_full
-                                |SDL_ANYFORMAT    );
+                                 | SDL_HWSURFACE
+                                 | SDL_DOUBLEBUF
+                                 | m_full
+                                 | SDL_ANYFORMAT    );
 
-    if (m_screen==NULL) throw "[Critical] Nie udalo sie utworzyc powierzchni glownej\n";
+  if (m_screen==NULL) throw "[Critical] Nie udalo sie utworzyc powierzchni glownej\n";
 
 }
 

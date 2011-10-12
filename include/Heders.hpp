@@ -6,27 +6,33 @@
  * Dolacza plik Consts.hpp zawiera zmienne globalne 
  * uzywane w miejscu liczb magicznych 
  *
- * Tutaj znajduja sie naglowki funkcji globalnych (badz tez ich ciala) */
+ * Tutaj znajduja sie naglowki funkcji globalnych */
 
 #include <map>
 #include <vector>
 #include <list>
+
 #include <boost/smart_ptr.hpp>
 #include <boost/foreach.hpp>
 #include <boost/random.hpp>
+
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
+
 #include <luabind/luabind.hpp>
 #include <lua.hpp>
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <cstdio>
+#include <ctime>
 
 extern "C" {
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
+  #include "lua.h"
+  #include "lualib.h"
+  #include "lauxlib.h"
 }
 
 namespace GAMESPACE{
@@ -90,10 +96,10 @@ namespace ES{
 }
 
 //Naglowki funkcji globalnych, ktore sa umieszczone w pliku GlobFun.cpp
-inline void ShowBox( SDL_Rect& checkBox );
+inline void ShowBox( SDL_Rect& checkBox ); //Drukuje polozenie SDL_Rect
 inline SDL_Surface* CreateSurface(Uint32 flags,int width,int height,const SDL_Surface* display);
-inline bool EqualRect(const SDL_Rect& A, const SDL_Rect& B);
-template <typename Typ> Typ Lua_cast( lua_State*, string&);
+inline bool EqualRect(const SDL_Rect& A, const SDL_Rect& B); //Porownuje dwa obiekty SDL_Rect
+template <typename Typ> Typ Lua_cast( lua_State*, string&); //Rzutowanie na podany typ
 
 
 #endif 

@@ -349,6 +349,30 @@ Menu.cpp.s:
 	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+MenuData.o: MenuData.cpp.o
+.PHONY : MenuData.o
+
+# target to build an object file
+MenuData.cpp.o:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/MenuData.cpp.o
+.PHONY : MenuData.cpp.o
+
+MenuData.i: MenuData.cpp.i
+.PHONY : MenuData.i
+
+# target to preprocess a source file
+MenuData.cpp.i:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/MenuData.cpp.i
+.PHONY : MenuData.cpp.i
+
+MenuData.s: MenuData.cpp.s
+.PHONY : MenuData.s
+
+# target to generate assembly for a file
+MenuData.cpp.s:
+	cd /home/lolcio/safarix/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/MenuData.cpp.s
+.PHONY : MenuData.cpp.s
+
 Player.o: Player.cpp.o
 .PHONY : Player.o
 
@@ -628,6 +652,9 @@ help:
 	@echo "... Menu.o"
 	@echo "... Menu.i"
 	@echo "... Menu.s"
+	@echo "... MenuData.o"
+	@echo "... MenuData.i"
+	@echo "... MenuData.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"

@@ -22,12 +22,13 @@ cxx_add_sprite("platform_up",  52, 368,  0, 0, TILE_SIZE,  TILE_SIZE,  1, 1,0);
 cxx_add_sprite("platform_down",  52, 368,  0, 0, TILE_SIZE,  TILE_SIZE,  1, 1,0);
 cxx_add_sprite("platform_right",97, 368, 0, 0, TILE_SIZE,  TILE_SIZE, 1, 1,0);
 
-cxx_add_sprite("angry",3, 369, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
-cxx_add_sprite("angryLeft",3, 418, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
-cxx_add_sprite("angryRight",3, 465, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
+cxx_add_sprite("angry",3, 367, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
+cxx_add_sprite("angryLeft",3, 416, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
+cxx_add_sprite("angryRight",3, 464, 30, 30,PLAYER_SIZE, PLAYER_SIZE,1, 1, 1); 
 
-cxx_add_sprite("star",50, 425, 30, 30,50,50,1, 1, 1); 
-cxx_add_sprite("starBackground",100, 425, 30, 30,50,50,1, 1, 1); 
+cxx_add_sprite("star",50, 425, 552, 258,50,50,1, 1, 1); 
+cxx_add_sprite("starBackground",100, 427, 552, 259,50,50,1, 1, 1); 
+cxx_add_sprite("gameOver",262, 397, 475, 200, 350, 170,1, 1, 1); 
 
 
 

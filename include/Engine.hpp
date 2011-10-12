@@ -9,7 +9,7 @@
 #include "Writer.hpp"
 #include "Lua.hpp"
 #include "Entity.hpp"
-
+#include "Sounder.hpp"
 
 /* Klasa singleton, dzieki ktorej uzuskuje sie dostep do
  * klas, ktore rowniez powinny miec tylko jedna instacje.
@@ -32,6 +32,7 @@ public:
     void SetScreen(SDL_Surface* Screen,ushort w,ushort h);    
     void NewGame();
     void NextLevel();
+    void PlayLevel(ushort);
     
     static LuaPtr    GetLua() { return m_lua; }   
     ushort 	     GetScreenWidth() const { return m_screen_w;}
@@ -45,6 +46,8 @@ public:
     SpriteGrid*	     GetGrid()  { return &m_grid; }
     EntityFactoryPtr GetEntityFactory() const { return m_entity_factory; }
     LevelingPtr	     GetLeveling() const { return m_leveling; }
+    SounderPtr	     GetSounder() const { return m_sound; }
+    
 private:
     //ustawienie poziomu poczatkowego gry
     Engine():m_level_of_game(1){}
@@ -81,6 +84,9 @@ private:
     
     //Klasa zarzadzajaca levelami
     LevelingPtr m_leveling;
+    
+    // Klasa zarzadzajaca dzwiekiem
+    SounderPtr m_sound;
     
     //Informacje o glownym Surface
     SDL_Surface* m_screen;

@@ -14,6 +14,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/lolcio/safarix/src/Leveling.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Leveling.cpp.o"
   "/home/lolcio/safarix/src/Lua.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Lua.cpp.o"
   "/home/lolcio/safarix/src/Menu.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Menu.cpp.o"
+  "/home/lolcio/safarix/src/MenuData.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/MenuData.cpp.o"
   "/home/lolcio/safarix/src/Player.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Player.cpp.o"
   "/home/lolcio/safarix/src/ProgressBar.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/ProgressBar.cpp.o"
   "/home/lolcio/safarix/src/Renderer.cpp" "/home/lolcio/safarix/build/src/CMakeFiles/game.dir/Renderer.cpp.o"

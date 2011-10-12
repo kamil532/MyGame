@@ -5,7 +5,7 @@
 boost::mt19937 gen;
 
 int roll_die() {
-    //zakres losowania lizb
+    // Generate random number ( 1 - 4 )
     boost::uniform_int<> dist(1, 4);
     boost::variate_generator<boost::mt19937&, boost::uniform_int<> > die(gen, dist);
     return die();
@@ -95,8 +95,7 @@ void Entity::SearchWay(double& next_x, double& next_y ){
 		    
   for(int j=0; j<=3; ++j){
       roll_die();
-  }
-		    
+  }		    
 	int tmp=roll_die();
 	
 	if(tmp==1){
@@ -195,9 +194,7 @@ bool Entity::operator==(Entity it) const{
 return false; 
 }
 
-bool EntityFactory::Colidies(const SDL_Rect& Box){
-  if( m_entity.empty() ) std::cerr<<"[Error] Don`t load entity\n";
-  
+bool EntityFactory::Colidies(const SDL_Rect& Box){  
    BOOST_FOREACH(Entity it, m_entity ) {
       if(CollidesWithEntity(Box,&it))
 	  return true;     

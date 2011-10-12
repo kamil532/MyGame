@@ -36,12 +36,12 @@ void Writer::WriteString( const string& Text, const SDL_Rect& WhereRect){
 }
 
 void Writer::DrawScore(const ulong& Number, const SDL_Rect& Where){
-  string Text("Score ");
+  string Text("Score:");
   std::ostringstream ss;
   ss << Number;
   Text+=ss.str();
   
-  WriteString(Text, Where); 
+  WriteString(Text, Where, 35); 
 }
 
 void Writer::WriteString(const string& Text, 

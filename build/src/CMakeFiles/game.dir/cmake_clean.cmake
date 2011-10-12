@@ -19,6 +19,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/GlobFun.cpp.o"
   "CMakeFiles/game.dir/Leveling.cpp.o"
   "CMakeFiles/game.dir/Sounder.cpp.o"
+  "CMakeFiles/game.dir/MenuData.cpp.o"
   "../../game.pdb"
   "../../game"
 )

@@ -27,8 +27,8 @@ Player::Player():m_live(1.0),m_live_dt(0.0),m_speed(1.0),m_speed_dt(0.0)
     m_speedBar.reset(new ProgressBar(SpeedRamka, SpeedWypelnienie));   
 
     
-    m_score_rect.x =0.8 * Engine::Get().GetScreenWidth();
-    m_score_rect.y = 10;
+    m_score_rect.x =0.75 * Engine::Get().GetScreenWidth();
+    m_score_rect.y = 40;
     m_score_rect.h = 200;
     m_score_rect.w = 200;    
     
@@ -44,8 +44,9 @@ void Player::Update(const double& dt) {
     CorectPos(next_x, next_y);
     
     //Kwadrat na ktorym sie miesci sprite gracza
-    SDL_Rect tmp={next_x, next_y, Engine::GetLua()->PLAYER_SIZE, Engine::GetLua()->PLAYER_SIZE};
-    
+    SDL_Rect tmp={ next_x, next_y, 
+		  Engine::GetLua()->PLAYER_SIZE, 
+		  Engine::GetLua()->PLAYER_SIZE };    
     
     //okreslenie w ktora strone sie porusza postac 
     //tak aby nie bylo ruchu w dwoch plaszczyznach jednoczesnie
@@ -63,7 +64,7 @@ void Player::Update(const double& dt) {
     }
 
   if( Engine::Get().GetEntityFactory()->Colidies(tmp) )
-	  Engine::Get().GetLeveling()->PlayerDie();
+	  Engine::Get().GetLeveling()->SetPlayerDie();
 
 
   tmp.x=next_x+20; tmp.y=next_y+20; tmp.h-=20; tmp.w-=35; 
@@ -82,7 +83,6 @@ void Player::Update(const double& dt) {
    //aktualizacja sprita, ktory jest aktualnie 
    m_sprites.find(m_state)->second->Update( dt );
 }
-
 
 void Player::ControlSpeed(const double& dt){
 
@@ -118,9 +118,9 @@ void Player::ControlLive(SDL_Rect& tmp ,const double& dt){
         if (m_live<=0.95) m_live+=0.1;
     }  
     
-    if( m_live<=0.1 ){
+    if( m_live<0.1 ){
       m_live=1;
-      Engine::Get().GetLeveling()->PlayerDie();
+    //  Engine::Get().GetLeveling()->PlayerDie();
     }
 }
 
